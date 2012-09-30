@@ -1,0 +1,25 @@
+name: cellular 
+allStates:
+    s1:
+        name: s1 
+        transactionContracts:
+        -   expectedMessage: \+SIND:\s4
+            name: s1t1
+            nextState: s2
+            transitionResponse: AT
+    s2:
+        name: s2
+        transactionContracts:
+        -   expectedMessage: ^$
+            name: s2t1
+            nextState: s3
+            transitionResponse: 
+    s3:
+        name: s3
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s3t1
+            nextState: s2
+            transitionResponse: AT
+currentState: s1
+initialState: s1
