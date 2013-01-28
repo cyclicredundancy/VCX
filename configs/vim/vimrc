@@ -1,0 +1,223 @@
+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+".vimrc - customised by vdhar2
+"`````````````````````````````
+
+"from dsalinas
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  " In text files, always limit the width of text to 78 characters
+  "autocmd BufRead *.txt set tw=78
+  " When editing a file, always jump to the last cursor position
+  autocmd BufReadPost * if line("'\"") | exe "'\"" | endif
+endif
+
+" turn off message 'Thanks for flying vim' for terminals titlebars
+set notitle
+
+"Remember setting across sessions - not always good
+set viminfo='100,f0
+
+"Good tabs
+set expandtab   "et"
+set sw=4        "shiftwidth"
+set smarttab    "spaces for tabs ?"
+set ts=4       "tabstop
+set shiftround
+
+"Indentations and line numbers
+"set number      "nu"
+set autoindent  "ai"
+set cindent     "ci"
+set incsearch   "incremental search
+set hlsearch    "highlight search
+
+"No menu, and no toolbar:
+"set guioptions-=m
+set guioptions-=T
+
+"Display font
+"set guifont=Andale\ Mono\ 9
+"set guifont=Luxi\ Mono\ 10
+set guifont=Luxi\ Mono\ 10
+"set guifont=Fixed\ 11
+
+"line breal - causes word granularity wrapping
+set lbr 
+set wrap
+
+"Folding
+syntax on
+syntax sync fromstart
+set foldmethod=indent
+
+"Show matching braces
+set showmatch  "sm"
+
+"Misc. config.
+set smartcase  "scs      no ignore case when pattern has uppercase
+set backspace=2  "bs       how backspace works at start of line
+
+filetype on    "filetype detection on
+
+"dont indent when pasting with middle clicks
+set paste
+
+""""""""""""""""""""""
+" Plugin configuration
+""""""""""""""""""""""
+
+"DONT need this plugin, vim has tabs builtin now
+"
+""MiniBuf plugin related settings
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1 
+"
+""SearchHighlight related settings
+""let g:MultipleSearchColorSequence = "red" 
+"let g:MultipleSearchMaxColors = 10
+
+
+
+
+"""""""""""""""""""
+" Load Color theme
+"""""""""""""""""""
+colorscheme vik
+"colorscheme morning
+
+"highlight Folded guibg=#333535 guifg=#666666
+
+" set background=dark
+"
+"if version > 580
+"    " no guarantees for version 5.8 and below, but this makes it stop
+"    " complaining
+"    hi clear
+"    if exists("syntax_on")
+"	syntax reset
+"    endif
+"endif
+
+
+""""""""""""""""""""""""""
+" Cool stuff from magarwa2
+""""""""""""""""""""""""""
+
+" Make shift-insert work like in Xterm
+map <S-Insert> <MiddleMouse>
+map! <S-Insert> <MiddleMouse>
+
+
+""""""""""""""""""""""""""
+" From the interweb
+""""""""""""""""""""""""""
+
+" have command-line completion <Tab> (for filenames, help topics, option names)
+" first list the available options and complete the longest common part, then
+" have further <Tab>s cycle through the possibilities:
+set wildmode=list:longest,full
+
+" use <Ctrl>+N/<Ctrl>+P to cycle through files:
+"nnoremap <C-N> :next<CR>
+"nnoremap <C-P> :prev<CR>
+nnoremap <C-N> :tabn<CR>
+nnoremap <C-P> :tabp<CR>
+nnoremap <C-Tab> :tabne<CR>
+nnoremap <C-S-Tab> :tabpr<CR>
+" [<Ctrl>+N by default is like j, and <Ctrl>+P like k.]
+nnoremap <C-Left> <C-W>h
+nnoremap <C-Right> <C-W>l
+nnoremap <C-Up> <C-W>k
+nnoremap <C-Down> <C-W>j
+
+" allow <BkSpc> to delete line breaks, beyond the start of the current
+" insertion, and over indentations:
+set backspace=eol,start,indent
+
+nnoremap <F11> :ConqueTermTab tcsh<CR>
+
+nnoremap <S-F1> :! p4 edit %<CR>
+nnoremap <S-F2> :! p4 diff %<CR>
+nnoremap <S-F3> :! p4 revert -a %<CR>
+nnoremap <M-C-S-F3> :! p4 revert %<CR>
+
+set nocompatible    "dont emulate bugs
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim UI
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+"set lsp=0 " space it out a little more (easier to read)
+"set wildmenu " turn on wild menu
+"set ruler " Always show current positions along the bottom 
+"set cmdheight=2 " the command bar is 2 high
+"set number " turn on line numbers
+"set lz " do not redraw while running macros (much faster) (LazyRedraw)
+set hid " you can change buffer without saving
+set backspace=2 " make backspace work normal
+set whichwrap+=<,>,h,l  " backspace and cursor keys wrap to
+"set mouse=a " use mouse everywhere
+"set shortmess=atI " shortens messages to avoid 'press a key' prompt 
+set report=0 " tell us when anything is changed via :...
+set noerrorbells " don't make noise
+" make the splitters between windows be blank
+"set fillchars=vert:\ ,stl:\ ,stlnc:\
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Files/Backups
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+"set backup " make backup file
+"set backupdir=$VIM\vimfiles\backup " where to put backup file
+"set directory=$VIM\vimfiles\temp " directory is the directory for temp file
+"set makeef=error.err " When using make, where should it dump the file
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual Cues
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+set showmatch " show matching brackets
+set mat=3 " how many tenths of a second to blink matching brackets for
+"set nohlsearch " do not highlight searched for phrases
+set incsearch " BUT do highlight as you type you search phrase
+set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$ " what to show when I hit :set list
+"set lines=50 " 80 lines tall
+"set columns=100 " 160 cols wide
+"set so=10 " Keep 10 lines (top/bottom) for scope
+"set novisualbell " don't blink
+"set noerrorbells " no noises
+
+"Setup the status line to show some extra useful stuff
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+"set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [\%03.3b,0x\%02.2B]\ [%07l,%07v][%p%%]\ [%L]
+set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%07l,%07v][%p%%]\ [%L]
+set laststatus=2 " always show the status line
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Folding
+"    Enable folding, but by default make it act 
+"    like folding is off, because folding is 
+"    annoying in anything but a few rare cases
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldenable " Turn on folding
+set foldmethod=indent " Make folding indent sensitive
+set foldlevel=100 " Don't autofold anything (but I can still fold manually)
+"set foldopen-=search " don't open folds when you search into them
+"set foldopen-=undo " don't open folds when you undo stuff
+
+
+
+""""""""""""""""""""""""""
+" Random stuff
+""""""""""""""""""""""""""
+
+" cool help screens
+" :he group-name
+" :he highlight-groups
+" :he cterm-colors
+
+
+

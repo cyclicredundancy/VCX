@@ -1,0 +1,6 @@
+set prompt="%~ %# "
+bindkey -v
+alias ls "ls --color"
+alias cls "clear"
+alias vim "vim -p"
+alias gvim "gvim -p"
