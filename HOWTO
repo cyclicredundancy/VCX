@@ -1,0 +1,108 @@
+
+http://git-scm.com/book/en/Getting-Started-Git-Basics
+
+===Intro===
+
+Git has three main states that your files can reside in: committed, modified, and staged. Committed means that the data is safely stored in your local database. Modified means that you have changed the file but have not committed it to your database yet. Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+
+This leads us to the three main sections of a Git project: the Git directory, the working directory, and the staging area.
+
+The Git directory is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you clone a repository from another computer.
+
+The working directory is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.
+
+The staging area is a simple file, generally contained in your Git directory, that stores information about what will go into your next commit. It’s sometimes referred to as the index, but it’s becoming standard to refer to it as the staging area.
+
+The basic Git workflow goes something like this:
+
+1. You modify files in your working directory.
+2. You stage the files, adding snapshots of them to your staging area.
+3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+If a particular version of a file is in the git directory, it’s considered committed. If it’s modified but has been added to the staging area, it is staged. And if it was changed since it was checked out but has not been staged, it is modified. In Chapter 2, you’ll learn more about these states and how you can either take advantage of them or skip the staged part entirely.
+
+
+==Remember==
+
+If you get stuck use:
+
+$ git help <command>
+
+==Begin here==
+
+When starting from fresh, init your local directory before the clone:
+
+$ git init
+
+This creates the .git directory structures.
+
+Then you can clone into that directory:
+
+$ git clone https://github.com/cyclicredundancy/VCX.git
+
+The above will create a directory called vcx, which can you change like this:
+
+$ git clone https://github.com/cyclicredundancy/VCX.git myvcx
+
+==Start tracking==
+
+Start tracking a new file for next commit:
+
+$ git add newfile
+
+If you modify something after adding it these modifications will not be included in the commit. Just add then again to update the information for the commit.
+
+To checks what git thinks about your project use:
+
+$ git status
+
+This will also give you hints to perform some common actions on your files.
+
+To see whats been modified/changed but not staged for the next commit use:
+
+$ git diff
+
+To see the staged changes that will go in your next commit use:
+
+$ git diff --cached
+$ git diff --staged
+
+This way you can see both the staged and unstaged changes.
+
+To commit your staged changes:
+
+$ git commit
+
+Then follow instruction in the editor that is launched.
+
+OR specify the comment on the cmd line:
+
+$ git commit -m "this is commit comment"
+
+You can skip the whole staging business if you do the following, which will automatically do the add for you on all files already being tracked:
+
+$ git commit -a
+
+To get a log of changes use:
+
+$ git log
+
+To see the remote servers you have setup with your repository:
+
+$ git remote -v
+
+To examine the remote origin:
+
+$ git remote show origin
+
+The origin is the on that you cloned your repository from.
+
+To push changes to the origin server:
+
+$ git push origin master
+
+To fetch the tracked files from a remote:
+
+$ git fetch [remote-name]
+
+

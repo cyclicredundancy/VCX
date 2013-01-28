@@ -1,0 +1,4300 @@
+[welcome to modem_driver]
+loading state machine setup from YAML: cellular_state_machine.yaml
+about to open handle to serial port, your board will get reset.
+---------------------------------------------------
+current machine state:
+s1
+machine driver received this request of 8 chars/bytes:
++SIND: 1
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s1
+machine driver received this request of 51 chars/bytes:
++SIND: 10,"SM",1,"FD",1,"LD",1,"MC",1,"RC",1,"ME",1
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s1
+machine driver received this request of 9 chars/bytes:
++SIND: 11
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s1
+machine driver received this request of 8 chars/bytes:
++SIND: 3
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s1
+machine driver received this request of 8 chars/bytes:
++SIND: 4
+found matching transaction:
+s1t1
+state changed to s3
+will send this response of 2 chars/bytes:
+AT
+---------------------------------------------------
+current machine state:
+s3
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s3t1
+state changed to s4
+will send this response of 2 chars/bytes:
+AT
+---------------------------------------------------
+current machine state:
+s4
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s4t1
+state changed to s5
+will send this response of 9 chars/bytes:
+AT+CMEE=2
+---------------------------------------------------
+current machine state:
+s5
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s5t1
+state changed to s6
+will send this response of 9 chars/bytes:
+AT+CGATT?
+---------------------------------------------------
+current machine state:
+s6
+machine driver received this request of 9 chars/bytes:
++CGATT: 1
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s6
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s6t1
+state changed to s7
+will send this response of 35 chars/bytes:
+AT+CGDCONT=1,"IP","epc.tmobile.com"
+---------------------------------------------------
+current machine state:
+s7
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s7t1
+state changed to s8
+will send this response of 22 chars/bytes:
+AT+CGPCO=0,"None","",1
+---------------------------------------------------
+current machine state:
+s8
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s8t1
+state changed to s9
+will send this response of 12 chars/bytes:
+AT+CGACT=1,1
+---------------------------------------------------
+current machine state:
+s9
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s9t1
+state changed to s10
+will send this response of 42 chars/bytes:
+AT+SDATACONF=1,"TCP","www.prowlapp.com",80
+---------------------------------------------------
+current machine state:
+s10
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s10t1
+state changed to s11
+will send this response of 18 chars/bytes:
+AT+SDATARXMD=1,1,0
+---------------------------------------------------
+current machine state:
+s11
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s11t1
+state changed to s12
+will send this response of 17 chars/bytes:
+AT+SDATASTART=1,1
+---------------------------------------------------
+current machine state:
+s12
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s12t1
+state changed to s14
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s14
+machine driver received this request of 28 chars/bytes:
++SOCKSTATUS:  1,0,0104,0,0,0
+found matching transaction:
+s14t1
+state changed to s14
+---------------------------------------------------
+current machine state:
+s14
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s14t3
+state changed to s11
+will send this response of 17 chars/bytes:
+AT+SDATASTART=1,0
+---------------------------------------------------
+current machine state:
+s11
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s11t1
+state changed to s12
+will send this response of 17 chars/bytes:
+AT+SDATASTART=1,1
+---------------------------------------------------
+current machine state:
+s12
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s12t1
+state changed to s14
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s14
+machine driver received this request of 28 chars/bytes:
++SOCKSTATUS:  1,1,0102,0,0,0
+found matching transaction:
+s14t2
+state changed to s15
+---------------------------------------------------
+current machine state:
+s15
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s15t1
+state changed to s16
+will send this response of 18 chars/bytes:
+AT+SDATASEND=1,264
+will send this response of 265 chars/bytes with ctrlZ:
+474554202f7075626c69636170692f6164643f6170696b65793d32613762383035306634316334373134373666313932616562343734373430636466326662616261266170706c69636174696f6e3d666f6f266576656e743d66756e6b20485454502f312e300d0a486f73743a207777772e70726f776c6170702e636f6d0d0a0d0a0d0a
+read prompt as:
+
+read prompt as:> 
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 30 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,0,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++SSTR:1,
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,1,0102,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++STCPD:1
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 8 chars/bytes:
++STCPC:1
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 32 chars/bytes:
++SOCKSTATUS:  1,0,0000,132,133,0
+found matching transaction:
+s16t2
+state changed to s16
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s16t1
+state changed to s16
+will send this response of 14 chars/bytes:
+AT+SDATAREAD=1
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 25 chars/bytes:
++CME ERROR: invalid index

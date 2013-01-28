@@ -1,49 +1,19 @@
-#allStates:
-#    stateA:
-#        name: stateA
-#        transactionContracts:
-#        -   expectedMessage: echo
-#            name: tx1A
-#            nextState: stateB
-#            transitionResponse: echo
-#    stateB:
-#        name: stateB
-#        transactionContracts:
-#        -   expectedMessage: cho$
-#            name: tx1B
-#            nextState: stateA
-#            transitionResponse: echo
-#currentState: stateA
-#initialState: stateA
-#name: bistable_echo
-#
 allStates:
-    s1:
-        name: s1 
+    stateA:
+        name: stateA
         transactionContracts:
-        -   expectedMessage: \+SIND
-            name: s1t1
-            nextState: s2
-            transitionResponse: 
-        -   expectedMessage: .*
-            name: s1t2
-            nextState: s1
-            transitionResponse: 
-    s2:
-        name: s2
+        -   expectedMessage: echo
+            name: tx1A
+            nextState: stateB
+            transitionResponse: echo
+    stateB:
+        name: stateB
         transactionContracts:
-        -   expectedMessage: \+SIND
-            name: s2t1
-            nextState: s2
-            transitionResponse: 
-        -   expectedMessage: ^$
-            name: s2t2
-            nextState: s2
-            transitionResponse: AT
-        -   expectedMessage: .*
-            name: s2t2
-            nextState: s2
-            transitionResponse: 
-currentState: s1
-initialState: s1
-name: cellular 
+        -   expectedMessage: cho$
+            name: tx1B
+            nextState: stateA
+            transitionResponse: echo
+currentState: stateA
+initialState: stateA
+name: bistable_echo
+

@@ -5,21 +5,146 @@ allStates:
         transactionContracts:
         -   expectedMessage: \+SIND:\s4
             name: s1t1
-            nextState: s2
-            transitionResponse: AT
-    s2:
-        name: s2
-        transactionContracts:
-        -   expectedMessage: ^$
-            name: s2t1
             nextState: s3
-            transitionResponse: 
+            transitionResponse: AT
     s3:
         name: s3
         transactionContracts:
         -   expectedMessage: OK
             name: s3t1
-            nextState: s2
+            nextState: s4
             transitionResponse: AT
+    s4:
+        name: s4
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s4t1
+            nextState: s5
+            transitionResponse: AT+CMEE=2
+    s5:
+        name: s5
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s5t1
+            nextState: s6
+            transitionResponse: AT+CGATT?
+    s6:
+        name: s6
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s6t1
+            nextState: s7
+            transitionResponse: AT+CGDCONT=1,"IP","epc.tmobile.com"
+    s7:
+        name: s7
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s7t1
+            nextState: s8
+            transitionResponse: AT+CGPCO=0,"None","",1 
+    s8:
+        name: s8
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s8t1
+            nextState: s9
+            transitionResponse: AT+CGACT=1,1
+    s9:
+        name: s9
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s9t1
+            nextState: s10
+#            transitionResponse: AT+SDATACONF=1,"TCP","dhrakin.appspot.com",80
+#            transitionResponse: AT+SDATACONF=1,"TCP","www.google.com",80
+#            transitionResponse: AT+SDATACONF=1,"TCP","c-71-204-133-194.hsd1.ca.comcast.net",9876
+#            transitionResponse: AT+SDATACONF=1,"TCP","71.204.133.194",9876
+#            transitionResponse: AT+SDATACONF=1,"TCP","71.204.133.194",8080
+            transitionResponse: AT+SDATACONF=1,"TCP","www.prowlapp.com",80
+    s10:
+        name: s10
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s10t1
+            nextState: s11
+#            transitionResponse: AT
+            transitionResponse: AT+SDATARXMD=1,1,0
+    s11:
+        name: s11
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s11t1
+            nextState: s12
+            transitionResponse: AT+SDATASTART=1,1
+    s12:
+        name: s12
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s12t1
+            nextState: s14
+            transitionResponse: AT+SDATASTATUS=1
+    s14:
+        name: s14
+        transactionContracts:
+        -   expectedMessage: \+SOCKSTATUS:\s\s1,0
+            name: s14t1
+            nextState: s14
+            transitionResponse: 
+        -   expectedMessage: \+SOCKSTATUS:\s\s1,1
+            name: s14t2
+            nextState: s15
+            transitionResponse: 
+        -   expectedMessage: OK
+            name: s14t3
+            nextState: s11
+            transitionResponse: AT+SDATASTART=1,0
+    s15:
+        name: s15
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s15t1
+            nextState: s16
+#            transitionResponse: AT+SDATASEND=1,90
+#            transitionResponse: AT+SDATASEND=1,94
+            transitionResponse: AT+SDATASEND=1,264
+#            transitionResponse: AT+SDATASEND=1,40
+            ctrlZ: 1
+#            responsePart2: 474554202f20485454502f312e310d0a0d0a0d0a
+#            responsePart2: 474554202f20485454502f312e310d0a486f73743a20646872616b696e2e61707073706f742e636f6d0d0a0d0a
+#            responsePart2: 474554202f20485454502f312e310d0a486f73743a20646872616b696e2e61707073706f742e636f6d0d0a0d0a0d0a
+            responsePart2:            474554202f7075626c69636170692f6164643f6170696b65793d32613762383035306634316334373134373666313932616562343734373430636466326662616261266170706c69636174696f6e3d666f6f266576656e743d66756e6b20485454502f312e300d0a486f73743a207777772e70726f776c6170702e636f6d0d0a0d0a0d0a
+    s16:
+        name: s16
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s16t1
+            nextState: s16
+            transitionResponse: AT+SDATAREAD=1
+            nowait: 1
+        -   expectedMessage: ^\+S
+            name: s16t2
+            nextState: s16
+            transitionResponse: AT+SDATASTATUS=1
+            nowait: 1
+#        -   expectedMessage: 
+#            name: s16t3
+#            nextState: s18
+#            transitionResponse: 
+#            nowait: 1
+    s17:
+        name: s17
+        transactionContracts:
+        -   expectedMessage: OK
+            name: s17t1
+            nextState: s16
+            transitionResponse: AT
+            nowait: 1
+    s18:
+        name: s18
+        transactionContracts:
+        -   expectedMessage: 
+            name: s18t1
+            nextState: s18
+            transitionResponse: 
 currentState: s1
 initialState: s1
