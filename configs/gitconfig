@@ -1,0 +1,10 @@
+[user]
+	name = Vikram Dhar
+	email = cyclicredundancy@gmail.com
+[merge]
+	tool = vimdiff
+[core]
+	editor = vim
+[color]
+	status = auto
+	diff = auto
