@@ -1,5 +1,23 @@
 set prompt="%~ %# "
+set history = 5000
+set savehist = (5000 merge)
+set histfile="$HOME/.tcsh_history"
+history -L
+
+set path =  ( \
+                $path \
+                /usr/local/cuda-5.0/bin \
+            )
+setenv MANPAGER less
+
+# vi like key mapping
 bindkey -v
+
+# Make command history (arrow keys) use history search operations
+bindkey -k down history-search-forward
+bindkey -k up history-search-backward
+
+
 alias ls "ls --color"
 alias l "ls -lh"
 alias cls "clear"
@@ -7,8 +25,3 @@ alias vi "vim"
 alias vim "vim -p"
 alias gvim "gvim -p"
 
-
-set path =  ( \
-                $path \
-                /usr/local/cuda-5.0/bin \
-            )

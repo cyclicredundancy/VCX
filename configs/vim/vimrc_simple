@@ -1,0 +1,36 @@
+set expandtab "et"
+set sw=4 "shiftwidth"
+set smarttab "spaces for tabs ?"
+set ts=4 "tabstop
+set shiftround
+"Indentations and line numbers
+"set number "nu"
+set autoindent
+set cindent "ci"
+set incsearch "incremental search
+set hlsearch "highlight search
+"line break - causes word granularity wrapping
+set lbr
+set wrap
+"Folding
+syntax on
+syntax sync fromstart
+set foldmethod=indent
+filetype plugin indent on
+syntax enable
+"set invlist
+set showmatch "sm"
+set smartcase "scs no ignore case when pattern has uppercase
+set backspace=2 "bs how backspace works at start of line
+filetype on "filetype detection on
+"dont indent when pasting with middle clicks
+set paste
+" Make shift-insert work like in Xterm
+" map  
+" map!  
+set nocompatible "dont emulate bugs
+" configure command line completion
+set wildmode=list:longest,full
+" setup status line
+set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%07l,%07v][%p%%]\ [%L]
+set laststatus=2 " always show the status line
