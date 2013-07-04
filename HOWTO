@@ -1,3 +1,25 @@
+Index:
+
+HOWTO_SCREEN
+HOWTO_GIT
+
+
+HOWTO_SCREEN
+
+screen -ls
+
+screen -r
+
+screen -d -r
+
+set and start sessions name: screen -S sessionname
+
+withing screen:
+
+C+a : sessionname <name>
+
+
+HOWTO_GIT
 
 http://git-scm.com/book/en/Getting-Started-Git-Basics
 
