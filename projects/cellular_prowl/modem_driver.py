@@ -1,9 +1,9 @@
-#!/cygdrive/d/Python27/python2.7 -u
+#!/usr/bin/python -u
 
 #NOTE: using unbuffered IO with -u arg above
 
 import getopt
-import pprint
+# import pprint
 # import jsonpickle
 import serial
 import time
