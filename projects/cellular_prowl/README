@@ -1,2 +1,7 @@
 This projects aims to implement the idea described here:
 http://cyclicredundancy.wordpress.com/2012/09/03/pir-arduino-gsm-cellular-shield-prowl-app/
+
+You might need to install the following modules:
+
+easy_install pyserial
+easy_install pyaml
