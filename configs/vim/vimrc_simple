@@ -15,7 +15,7 @@ set wrap
 "Folding
 syntax on
 syntax sync fromstart
-set foldmethod=indent
+"set foldmethod=indent
 filetype plugin indent on
 syntax enable
 "set invlist
