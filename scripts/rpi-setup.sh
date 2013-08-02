@@ -12,7 +12,7 @@ sudo apt-get update  -y
 sudo apt-get upgrade -y
 
 sudo apt-get install -y \
-        vim ctags git tcsh \
+        vim vim-gtk ctags git tcsh \
         python-setuptools python-dev python-rpi.gpio python-smbus \
         screen tightvncserver minicom \
         cpufrequtils i2c-tools \

@@ -15,7 +15,7 @@ set wrap
 "Folding
 syntax on
 syntax sync fromstart
-set foldmethod=indent
+"set foldmethod=indent
 filetype plugin indent on
 syntax enable
 "set invlist
@@ -34,3 +34,5 @@ set wildmode=list:longest,full
 " setup status line
 set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%07l,%07v][%p%%]\ [%L]
 set laststatus=2 " always show the status line
+
+colorscheme vik

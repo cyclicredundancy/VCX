@@ -1,0 +1,163 @@
+Shortlist of useful SM5100B GSM GPRS modem AT commands
+- compiled by Vikram
+
+Still missing:
+- gprs tcp/ip connection over gprs
+
+===============================================================
+1) Reboot modem
+
+at+cfun=1,1
+
+    +SIND: 1
+    
+    +SIND: 10,"SM",1,"FD",1,"LD",1,"MC",1,"RC",1,"ME",1
+    
+    +SIND: 11
+    
+    +SIND: 3
+    
+    +SIND: 4
+    
+    OK
+
+===============================================================
+2) save some settings to non-volatile memory
+
+at&w
+
+
+===============================================================
+3) display error text instead of error code
+
+at+cmee=2
+
+===============================================================
+4) enable local echo
+
+ate1
+
+===============================================================
+5) check current date time (which will be incorrect)
+
+at+cclk?
+
+    +CCLK: "14/03/15,00:12:18"
+    
+    OK
+
+===============================================================
+6) check misc status flags
+
+at+cind?
+    
+    +CIND: 0,19,1,0,1,0,0,0
+    
+    OK
+
+The format is:
+
++CIND: <battery>, <signal level>, <service>, <sounder>, <message>, <call>,
+<roam>, <smsfull>
+
+<Descr> description
+- battery Voltage of battery
+- signal Strength of signal (0-31)
+- service Availability of network (0-1) (value=1 means registered to network)
+- sounder Stillness (0-1) (1=mute)
+- message Whether receive short messages (0-1)
+- call Existence of a call (0-1)
+- roam Net status (0-1) (1=roam status)
+- smsfull Short message memory storage has become full(1), or memory locations are available(0)
+
+
+===============================================================
+7) display sms in plain text 
+
+at+cmgf=1
+    
+    OK
+
+===============================================================
+8) read sms at specified index (0 is invalid)
+
+at+cmgr=1
+    +CMGR: "REC READ",0,"+14088494245","13/07/26,23:34:24+00"
+    Hello cellular prowl
+    
+    OK
+at+cmgr=2
+    +CMGR: "REC UNREAD",0,"+14088494245","13/07/26,23:36:40+00"
+    Meow meow purrrr
+    
+    OK
+
+===============================================================
+9) delete sms at specified index (1 in this case)
+
+at+cmgd=1,0
+    
+    OK
+at+cmgr=1
+    
+    +CMS ERROR: Invalid memory index
+
+The format is:
+
+AT+CMGD=<index>[,<DelFlag>]
+
+<index>: index num of chosen memory <mem1>,which should be less than the maximum num item of <mem1>
+
+<DelFlag> description
+- 0 Delete an message according to index
+- 1 Delete all readed messages
+- 2 Delete all readed or sent messages
+- 3 Delete all readed or sent or unsent messages
+- 4 Delete all messages
+
+===============================================================
+10) list all sms
+
+at+cmgl="ALL"
+    +CMGL: 2,0,"REC READ","+14088494245","13/07/26,23:36:40+00"
+    Meow meow purrrr
+    
+    OK
+
+===============================================================
+11) make a call
+
+atd0123456789
+
+===============================================================
+12) hang up a call (ringing or received)
+
+ath
+
+===============================================================
+13) answer a call
+
+ata
+
+===============================================================
+14) send sms
+
+at+cmgs="0123456789"
+
+    > hello kitty▒
+    +CMGS: 1
+    
+    OK
+
+NOTE: sending ctrl+z is equivalent to sending a single byte with the hex value: 0x1a
+
+===============================================================
+15) multistep process to do a HTTP GET over GPRS
+
+15)a) TODO FIXME
+
+15)b) TODO FIXME
+
+
+
+
