@@ -37,6 +37,8 @@
 byte second, minute, hour, dayOfWeek, dayOfMonth, month, year;
 
 const int debug = 1;
+const byte INCREM_BY_1HOUR = 0;
+const byte INCREM_BY_5MINUTES = 1;
 
 int led = 0; //used to toggle led state
 
@@ -54,11 +56,10 @@ int analogPin = 0; //pin for 5 way switch/joystick
 
 int dispense_count = 0;
 
-int feed_hour = 5;
-
 const int morn_hour = 5;
 const int nite_hour = 19;
 
+int feed_hour = morn_hour;
 
 void setup() { 
   Serial.begin(57600); 
@@ -71,7 +72,7 @@ void setup() {
     lcd.init(); // Init the display, clears the display
     lcd.setContrast(20);
     lcd.setCursor(0,0);
-    lcd.print("Patch Feeder 1.6");
+    lcd.print("Patch Feeder 1.7");
     lcd.setCursor(1,0);
     lcd.print("Meow certified");
     lcd.setBacklight(1); //turn backlight to minimum
@@ -94,23 +95,35 @@ void setup() {
     lcd.print("Pay attention!");
     lcd.setCursor(1,0);
     lcd.print("use 5 way stick");
-    delay(3000);
+    delay(4000);
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("N S set clock");
     lcd.setCursor(1,0);
     lcd.print("E W feed time");
-    delay(3000);
+    delay(6000);
     lcd.clear();
     lcd.setCursor(0,0);
-    lcd.print("push to feed now");
+    lcd.print("And push button in");
     lcd.setCursor(1,0);
-    lcd.print("Got it?");
-    delay(3000);
+    lcd.print("to give food now.");
+    delay(4000);
+    lcd.setCursor(0,0);
+    lcd.clear();
+    lcd.print("Feed @ 5 means");
+    lcd.setCursor(1,0);
+    lcd.print("feed at 5:00 am");
+    delay(4000);
+    lcd.setCursor(0,0);
+    lcd.clear();
+    lcd.print("got that?");
+    delay(2000);
   }
   fetch_time();
-  if (hour > morn_hour && hour < nite_hour) {
+  if (hour >= morn_hour && hour < nite_hour) {
     feed_hour = nite_hour;
+  } else {
+    feed_hour = morn_hour;
   }
 }
 
@@ -128,13 +141,13 @@ void loop()
     if (k) { //some key was pressed
       lcd.setBacklight(8); //max backlight
       if (k == 1) {
-        set_time(false);
+        set_time(INCREM_BY_1HOUR);
       } 
       else if (k == 2) {
         feed_hour_decrement();
       } 
       else if (k == 3) {
-        set_time(true);
+        set_time(INCREM_BY_5MINUTES);
       } 
       else if (k == 4) {
         feed_hour_increment();
@@ -170,45 +183,24 @@ void loop()
     if ((hour == feed_hour) && (minute == 0) ) {
       Serial.println("Its time to say goodbye (to the food)");
       dispense_food();
+      char buf[17] = { 0 };
+      String s = String("60 sec sleep now ");
+      s.toCharArray(buf, 17);
+      lcd.setCursor(1,0);
+      lcd.print (buf);
       Serial.println("Taking 60 secs to catch my breath");
-      delay(30000);
-      delay(30000);
+      for (int i=0;i<60;i++) delay(1000);
       Serial.println("Back to normal programming");
-      if (feed_hour == morn_hour) {
-        feed_hour = nite_hour;
-      } 
-      else if (feed_hour == nite_hour) {
-        feed_hour = morn_hour;
-      }
       fetch_time();
+      if (feed_hour >= morn_hour && feed_hour < nite_hour) {
+          feed_hour = nite_hour;
+      } else {
+          feed_hour = morn_hour;
+      }
       print_time_serial();
       show_time();
     }
   }
-}
-
-void old_loop()
-{
-  digitalWrite(13, HIGH); // set the LED on
-  delay(1000);
-  int val = 0;
-  val = analogRead(0);    // read the input pin
-  if (val > 300 && val < 500) {
-    dispense_food();
-  }
-  digitalWrite(13, LOW); // set the LED off
-  delay(1000);
-  fetch_time();
-  print_time_serial();
-  show_time();
-  if ((hour == 5) && (minute == 0) ) {
-    Serial.println("Its time to say goodbye (to the food)");
-    dispense_food();
-    Serial.println("Taking some time off to catch my breath");
-    delay(30000);
-    Serial.println("Back to normal programming");
-  }
-  delay(30000);
 }
 
 // Convert normal decimal numbers to binary coded decimal
@@ -267,7 +259,7 @@ void show_time()
   }
 }
 
-void set_time(bool small)
+void set_time(byte change)
 {
   if (use_lcd) {
     String s = String(String("setting time    ") );
@@ -280,11 +272,11 @@ void set_time(bool small)
   }
   second = (byte) (0);
   // Use of (byte) type casting and ascii math to achieve result.
-  if (small) {
+  if (change == INCREM_BY_5MINUTES) {
     minute = (byte) (minute>=55?0:(minute+5));
     hour  = (byte) (hour);
   } 
-  else {
+  if (change == INCREM_BY_1HOUR) {
     minute = (byte) (minute);
     hour  = (byte) (hour>=23?0:(hour+1));
   }
@@ -359,17 +351,16 @@ void dispense_food()
   init_servo();
   if (use_lcd) {
     String s = String(String("dispense ") + String(dispense_count,DEC) + String(" done  "));
-    char buf[17] = {
-      0                                                };
+    char buf[17] = { 0 };
     s.toCharArray(buf, 17);
     lcd.setCursor(1,0);
     lcd.print (buf);
     delay(2000);
-    s = String("60 sec sleep now ");
-    s.toCharArray(buf, 17);
-    lcd.setCursor(1,0);
-    lcd.print (buf);
-    delay(2000);
+    //s = String("60 sec sleep now ");
+    //s.toCharArray(buf, 17);
+    //lcd.setCursor(1,0);
+    //lcd.print (buf);
+    //delay(2000);
   }
 }
 
