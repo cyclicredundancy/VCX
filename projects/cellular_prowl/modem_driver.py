@@ -33,25 +33,27 @@ def serial_cellular_machine_driver(request, machine) :
 def main():
     parser = OptionParser()
     parser.add_option("-f", "--file", help="path to the state machine YAML file", dest="filepath")
+    parser.add_option("-p", "--port", help="name of serial port device", dest="port", default="/dev/ttyAMA0")
+    parser.add_option("-b", "--baud", help="baud rate", dest="baud", default="115200")
     (options, args) = parser.parse_args()
     
     print "[welcome to modem_driver]";
     
     print "loading state machine setup from YAML: %s" % (options.filepath)
-    f = open(options.filepath)
-    my_mach = yaml.load(f)
-    f.close()
+    fd = open(options.filepath)
+    my_mach = yaml.load(fd)
+    fd.close()
     
-    #f = open('cellular_state_machine.yaml', "w")
-    #yaml.dump(my_mach, f, indent=4, default_flow_style=False)
-    #f.close()
+    #fd = open('cellular_state_machine.yaml', "w")
+    #yaml.dump(my_mach, fd, indent=4, default_flow_style=False)
+    #fd.close()
     
     #pprint.pprint(my_mach)
     #time.sleep(1)
     
     print "about to open handle to serial port, your board will get reset."
     time.sleep(1)
-    ser = serial.Serial(port='COM6',baudrate='9600')
+    ser = serial.Serial(port=options.port, baudrate=options.baud)
     #settings = ser.getSettingsDict()
     #print "connection details:\n"+ str(settings)
     #Use this to modify settings on the fly, if allowed

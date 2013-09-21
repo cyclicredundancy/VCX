@@ -1,0 +1,212 @@
+[welcome to modem_driver]
+loading state machine setup from YAML: ptel.yaml
+about to open handle to serial port, your board will get reset.
+---------------------------------------------------
+current machine state:
+s1
+machine driver received this request of 8 chars/bytes:
++SIND: 1
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s1
+machine driver received this request of 51 chars/bytes:
++SIND: 10,"SM",1,"FD",1,"LD",1,"MC",1,"RC",1,"ME",1
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s1
+machine driver received this request of 9 chars/bytes:
++SIND: 11
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s1
+machine driver received this request of 8 chars/bytes:
++SIND: 3
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s1
+machine driver received this request of 8 chars/bytes:
++SIND: 4
+found matching transaction:
+s1t1
+state changed to s3
+will send this response of 2 chars/bytes:
+AT
+---------------------------------------------------
+current machine state:
+s3
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s3t1
+state changed to s4
+will send this response of 2 chars/bytes:
+AT
+---------------------------------------------------
+current machine state:
+s4
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s4t1
+state changed to s5
+will send this response of 9 chars/bytes:
+AT+CMEE=2
+---------------------------------------------------
+current machine state:
+s5
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s5t1
+state changed to s6
+will send this response of 9 chars/bytes:
+AT+CGATT?
+---------------------------------------------------
+current machine state:
+s6
+machine driver received this request of 9 chars/bytes:
++CGATT: 1
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------
+current machine state:
+s6
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s6t1
+state changed to s7
+will send this response of 29 chars/bytes:
+AT+CGDCONT=1,"IP","wholesale"
+---------------------------------------------------
+current machine state:
+s7
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s7t1
+state changed to s8
+will send this response of 18 chars/bytes:
+AT+CGPCO=0,"","",1
+---------------------------------------------------
+current machine state:
+s8
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s8t1
+state changed to s9
+will send this response of 12 chars/bytes:
+AT+CGACT=1,1
+---------------------------------------------------
+current machine state:
+s9
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s9t1
+state changed to s10
+will send this response of 40 chars/bytes:
+AT+SDATACONF=1,"TCP","74.125.129.141",80
+---------------------------------------------------
+current machine state:
+s10
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s10t1
+state changed to s11
+will send this response of 2 chars/bytes:
+AT
+---------------------------------------------------
+current machine state:
+s11
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s11t1
+state changed to s12
+will send this response of 17 chars/bytes:
+AT+SDATASTART=1,1
+---------------------------------------------------
+current machine state:
+s12
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s12t1
+state changed to s14
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s14
+machine driver received this request of 28 chars/bytes:
++SOCKSTATUS:  1,0,0104,0,0,0
+found matching transaction:
+s14t1
+state changed to s14
+---------------------------------------------------
+current machine state:
+s14
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s14t3
+state changed to s11
+will send this response of 17 chars/bytes:
+AT+SDATASTART=1,0
+---------------------------------------------------
+current machine state:
+s11
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s11t1
+state changed to s12
+will send this response of 17 chars/bytes:
+AT+SDATASTART=1,1
+---------------------------------------------------
+current machine state:
+s12
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s12t1
+state changed to s14
+will send this response of 16 chars/bytes:
+AT+SDATASTATUS=1
+---------------------------------------------------
+current machine state:
+s14
+machine driver received this request of 28 chars/bytes:
++SOCKSTATUS:  1,1,0102,0,0,0
+found matching transaction:
+s14t2
+state changed to s15
+---------------------------------------------------
+current machine state:
+s15
+machine driver received this request of 2 chars/bytes:
+OK
+found matching transaction:
+s15t1
+state changed to s16
+will send this response of 109 chars/bytes:
+AT+SDATATSEND=1,90,474554202f20485454502f312e310d0a486f73743a20646872616b696e2e61707073706f742e636f6d0d0a0d0a
+---------------------------------------------------
+current machine state:
+s16
+machine driver received this request of 35 chars/bytes:
++CME ERROR: operation not supported
+request does not match any transactions
+received None, not sending any response
+---------------------------------------------------

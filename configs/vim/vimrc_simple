@@ -36,3 +36,17 @@ set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%07l,%07v][%p%%]\ [%L]
 set laststatus=2 " always show the status line
 
 colorscheme vik
+
+" use <Ctrl>+N/<Ctrl>+P to cycle through files:
+"nnoremap <C-N> :next<CR>
+"nnoremap <C-P> :prev<CR>
+nnoremap <C-N> :tabn<CR>
+nnoremap <C-P> :tabp<CR>
+nnoremap <C-Tab> :tabne<CR>
+nnoremap <C-S-Tab> :tabpr<CR>
+" [<Ctrl>+N by default is like j, and <Ctrl>+P like k.]
+nnoremap <C-Left> <C-W>h
+nnoremap <C-Right> <C-W>l
+nnoremap <C-Up> <C-W>k
+nnoremap <C-Down> <C-W>j
+
