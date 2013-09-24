@@ -126,7 +126,8 @@ allStates:
         -   expectedMessage: ^\+STCPD
             name: s16t2
             nextState: s16
-            transitionResponse: AT+SDATASTATUS=1
+            transitionResponse: AT+SDATAREAD=1
+#            transitionResponse: AT+SDATASTATUS=1
             nowait: 1
         -   expectedMessage: ^\+STCPC
             name: s16t2
