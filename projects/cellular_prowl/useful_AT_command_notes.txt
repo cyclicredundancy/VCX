@@ -38,13 +38,22 @@ at+cmee=2
 ate1
 
 ===============================================================
-5) check current date time (which will be incorrect)
+5) date time (which will be incorrect)
+
+check date time:
 
 at+cclk?
 
     +CCLK: "14/03/15,00:12:18"
     
     OK
+
+set date time:
+total 17 chars formatted as - “yy/mm/dd, hh:mm:ss”
+
+
+AT+CCLK=”07/01/29,13:27:10”
+
 
 ===============================================================
 6) check misc status flags
