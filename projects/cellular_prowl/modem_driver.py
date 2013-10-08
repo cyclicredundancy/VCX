@@ -51,14 +51,8 @@ def main():
     
     print "INFO: about to open handle to serial port, your board may get reset."
     time.sleep(1)
-<<<<<<< HEAD
-    #ser = serial.Serial(port='COM6',baudrate='9600')
-    ser = serial.Serial(port='/dev/ttyUSB0',baudrate='115200')
-    #settings = ser.getSettingsDict()
-=======
     ser = serial.Serial(port=options.port, baudrate=options.baud)
     settings = ser.getSettingsDict()
->>>>>>> 85a97235099e2f2b960b34b07d22e32bae747e0e
     #print "connection details:\n"+ str(settings)
     #Use this to modify settings on the fly, if allowed
     settings['timeout'] = 1;
