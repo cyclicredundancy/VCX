@@ -26,3 +26,7 @@ alias vi "vim"
 alias vim "vim -p"
 alias gvim "gvim -p"
 
+#setenv DISPLAY ":0"
+
+#print our ip address on login
+#ip -o  -f inet addr

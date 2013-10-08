@@ -57,15 +57,20 @@ allStates:
         -   expectedMessage: OK
             name: s9t1
             nextState: s10
-            transitionResponse: AT+SDATACONF=1,"TCP","dhrakin.appspot.com",80
+#api.prowlapp.com
+            transitionResponse: AT+SDATACONF=1,"TCP","209.20.72.170",80
+#google.com
+#            transitionResponse: AT+SDATACONF=1,"TCP","74.125.239.4",80
+#DNS does not seem to work
+#            transitionResponse: AT+SDATACONF=1,"TCP","dhrakin.appspot.com",80
     s10:
         name: s10
         transactionContracts:
         -   expectedMessage: OK
             name: s10t1
             nextState: s11
-            transitionResponse: AT
-#            transitionResponse: AT+SDATARXMD=1,1,0
+#            transitionResponse: AT
+            transitionResponse: AT+SDATARXMD=1,1,0
     s11:
         name: s11
         transactionContracts:
@@ -101,7 +106,15 @@ allStates:
         -   expectedMessage: OK
             name: s15t1
             nextState: s16
-            transitionResponse: AT+SDATATSEND=1,90,474554202f20485454502f312e310d0a486f73743a20646872616b696e2e61707073706f742e636f6d0d0a0d0a
+#            transitionResponse: AT+SDATASEND=1,90
+#            transitionResponse: AT+SDATASEND=1,94
+            transitionResponse: AT+SDATASEND=1,264
+#            transitionResponse: AT+SDATASEND=1,40
+            ctrlZ: 1
+#            responsePart2: 474554202f20485454502f312e310d0a0d0a0d0a
+#            responsePart2: 474554202f20485454502f312e310d0a486f73743a20646872616b696e2e61707073706f742e636f6d0d0a0d0a
+#            responsePart2: 474554202f20485454502f312e310d0a486f73743a20646872616b696e2e61707073706f742e636f6d0d0a0d0a0d0a
+            responsePart2: 474554202f7075626c69636170692f6164643f6170696b65793d32613762383035306634316334373134373666313932616562343734373430636466326662616261266170706c69636174696f6e3d666f6f266576656e743d66756e6b20485454502f312e300d0a486f73743a207777772e70726f776c6170702e636f6d0d0a0d0a0d0a
     s16:
         name: s16
         transactionContracts:
@@ -109,16 +122,45 @@ allStates:
             name: s16t1
             nextState: s16
             transitionResponse: AT+SDATAREAD=1
-        -   expectedMessage: \+SDATA
+            nowait: 1
+        -   expectedMessage: ^\+STCPD
             name: s16t2
             nextState: s16
+            transitionResponse: AT+SDATAREAD=1
+#            transitionResponse: AT+SDATASTATUS=1
+            nowait: 1
+        -   expectedMessage: ^\+STCPC
+            name: s16t2
+            nextState: s17
             transitionResponse: AT+SDATASTATUS=1
+            nowait: 1
+#    s16post:
+#        name: s16post
+#        transactionContracts:
+#        -   expectedMessage:
+#            name: s16t1
+#            nextState: s17
+#            transitionResponse: AT+SDATAREAD=1
+#            nowait: 1
+#            readFlush: 1
+#    s16:
+#        name: s16
+#        transactionContracts:
+#        -   expectedMessage: OK
+#            name: s16t1
+#            nextState: s16
+#            transitionResponse: AT+SDATAREAD=1
+#        -   expectedMessage: \+SDATA
+#            name: s16t2
+#            nextState: s16
+#            transitionResponse: AT+SDATASTATUS=1
     s17:
         name: s17
         transactionContracts:
         -   expectedMessage: OK
             name: s17t1
-            nextState: s16
+            nextState: s17
             transitionResponse: AT
 currentState: s1
 initialState: s1
+initialExcitation: AT+CFUN=1,1

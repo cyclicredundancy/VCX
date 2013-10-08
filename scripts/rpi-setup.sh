@@ -51,3 +51,14 @@ sudo easy_install pyserial
 #Note that rfb port 5901 implies :1 display.
 #
 #$ sudo /etc/init.d/avahi-daemon restart
+
+#watchdog: http://pi.gadgetoid.com/post/001-who-watches-the-watcher
+#sudo modprobe bcm2708_wdog
+#sudo vi /etc/modules
+# Add the line "bcm2708_wdog"
+#sudo apt-get install watchdog chkconfig
+#chkconfig watchdog on
+#sudo /etc/init.d/watchdog start
+#sudo vi /etc/watchdog.conf
+# Uncomment the line watchdog-device = /dev/watchdog
+# You might also want to uncomment max-load-1, or add something like "max-load-1 = 24" to reset your Pi if the load average exceeds 24 in any 1-minute span.
