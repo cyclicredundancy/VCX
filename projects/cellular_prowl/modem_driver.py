@@ -22,52 +22,66 @@ def serial_cellular_machine_driver(request, machine) :
                 print "found matching transaction:\n%s" % (tranx['name'])
                 machine['currentState'] = tranx['nextState']
                 print "state changed to %s" % (machine['currentState'])
-                #return tranx['transitionResponse']
                 return tranx
-
-        print "request does not match any transactions"
+        print "request does not match any expected transaction"
     else:
-        print "received empty request"
+        print "received empty request, doing nothing"
     return None
 
 def main():
     parser = OptionParser()
     parser.add_option("-f", "--file", help="path to the state machine YAML file", dest="filepath")
+    parser.add_option("-p", "--port", help="name of serial port device", dest="port", default="/dev/ttyAMA0")
+    parser.add_option("-b", "--baud", help="baud rate", dest="baud", default="115200")
     (options, args) = parser.parse_args()
     
-    print "[welcome to modem_driver]";
+    print "INFO: Welcome to state machine based serial modem driver";
     
-    print "loading state machine setup from YAML: %s" % (options.filepath)
-    f = open(options.filepath)
-    my_mach = yaml.load(f)
-    f.close()
+    print "INFO: loading state machine setup from YAML: %s" % (options.filepath)
+    fd = open(options.filepath)
+    my_mach = yaml.load(fd)
+    fd.close()
     
-    #f = open('cellular_state_machine.yaml', "w")
-    #yaml.dump(my_mach, f, indent=4, default_flow_style=False)
-    #f.close()
+    #fd = open('cellular_state_machine.yaml', "w")
+    #yaml.dump(my_mach, fd, indent=4, default_flow_style=False)
+    #fd.close()
     
     #pprint.pprint(my_mach)
     #time.sleep(1)
     
-    print "about to open handle to serial port, your board will get reset."
+    print "INFO: about to open handle to serial port, your board may get reset."
     time.sleep(1)
-    ser = serial.Serial(port='COM6',baudrate='9600')
-    #settings = ser.getSettingsDict()
+    ser = serial.Serial(port=options.port, baudrate=options.baud)
+    settings = ser.getSettingsDict()
     #print "connection details:\n"+ str(settings)
     #Use this to modify settings on the fly, if allowed
-    #settings['timeout'] = 0;
-    #ser.applySettingsDict(settings)
+    settings['timeout'] = 1;
+    ser.applySettingsDict(settings)
+    print "INFO: emptying leftover messages from serial read buffer"
+    while (1):
+        data = ser.readline()
+        if (data):
+            print("clear: "+data)
+        else:
+            break
     
     # seed initial machine excitation
-    #ser.write("echo\n")
-    
+    ser.write("AT\r\n")
+    print "initial excitation:\n%s\n" % (my_mach['initialExcitation'])
+    ser.write(my_mach['initialExcitation']+"\r\n")
+
     # clean up the pipe, first line is junk
-    #data = ser.readline()
+    print("init0: "+ser.readline())
+    print("init1: "+ser.readline())
+    settings['timeout'] = None;
+    ser.applySettingsDict(settings)
     
     while (1):
         print "---------------------------------------------------"
         data = ser.readline()
+        print ("rx0: "+data)
         data = ser.readline()
+        print ("rx1: "+data)
         if (data) :
             tranx = {}
             tranx = serial_cellular_machine_driver(data.rstrip("\n\r"), my_mach)
@@ -91,8 +105,18 @@ def main():
                         if ( 'nowait' not in tranx or tranx['nowait'] != 1 ):
                             time.sleep(1)
                         ser.write(response+"\r\n")
-                #ser.write(response)
-                #ser.write("\n\r")
+                    if ( 'readFlush' in tranx and tranx['readFlush'] == 1 ):
+                        print "INFO: readFlush"
+                        settings['timeout'] = 1;
+                        ser.applySettingsDict(settings)
+                        while (1):
+                            data = ser.readline()
+                            if (data):
+                                print("flush: "+data)
+                            else:
+                                break
+                        settings['timeout'] = None;
+                        ser.applySettingsDict(settings)
         else:
             print "oops, probably received None data"
             break

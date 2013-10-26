@@ -6,6 +6,7 @@ history -L
 
 set path =  ( \
                 $path \
+                /home/vdhar/bin \
                 /usr/local/cuda-5.0/bin \
             )
 setenv MANPAGER less
@@ -25,4 +26,7 @@ alias vi "vim"
 alias vim "vim -p"
 alias gvim "gvim -p"
 
-setenv DISPLAY ":0"
+#setenv DISPLAY ":0"
+
+#print our ip address on login
+#ip -o  -f inet addr
