@@ -1,0 +1,32 @@
+
+Using the following command to connect to serial port:
+sudo miniterm.py -p /dev/ttyUSB0 -b 115200 -e -D -D -D
+
+
+
+
+Streaming Frame decoding
+
+keep on reading bytes till we get a 00 followed FF
+from: preamble 
+to: start of packet code
+
+    if next two bytes 00 followed by FF
+    then: its an ACK frame
+    next bytes should be the postamble
+    
+    if next two bytes are FF followed by 00
+    then: its a NACK frame
+    next bytes should be the postabmle
+
+    LEN - length of TFI and PD
+
+    LCS - length checksum
+
+    TFI - direction of frame, sent from host or PN532. D4=>host D5=>PN532
+
+    DATA - PD0 to PDn
+
+    DCS - TFI and DATA checksum
+
+    POSTABMLE

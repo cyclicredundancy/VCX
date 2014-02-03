@@ -138,6 +138,7 @@ void loop()
   for (int s=1; s<2001; s++) {
     delay(5);
     k = read_switch();
+    fetch_time();
     if (k) { //some key was pressed
       lcd.setBacklight(8); //max backlight
       if (k == 1) {
@@ -326,8 +327,8 @@ void init_servo()
 }
 
 void dispense_food()
-{  
-  feed_hour = 5; // reset to default value
+{
+  //feed_hour = 5; // reset to default value
   dispense_count ++;
   if (use_lcd) {
     String s = String(String("dispense ") + String(dispense_count,DEC) + String(" start "));

@@ -5,6 +5,18 @@ Still missing:
 - gprs tcp/ip connection over gprs
 
 ===============================================================
+0) basic syntax
+
+<at-command-string><CR>
+
+return message:
+<CR><LF>
+<at-command-response><CR>
+OK<CR>
+
+
+
+===============================================================
 1) Reboot modem
 
 at+cfun=1,1

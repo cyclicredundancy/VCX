@@ -6,6 +6,7 @@ history -L
 
 set path =  ( \
                 $path \
+                /home/vdhar/bin \
                 /usr/local/cuda-5.0/bin \
             )
 setenv MANPAGER less
