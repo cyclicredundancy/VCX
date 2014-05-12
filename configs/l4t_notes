@@ -1,0 +1,72 @@
+### flashing rootfs etc. ###
+
+See blog post:
+http://cyclicredundancy.wordpress.com/2014/05/10/flashing-the-rootfs-on-a-nvidia-jetson-tk1/
+
+First download the following two.
+
+board support package (BSP):
+https://developer.nvidia.com/sites/default/files/akamai/mobile/files/L4T/Tegra124_Linux_R19.2.0_armhf.tbz2
+
+File system:
+https://developer.nvidia.com/sites/default/files/akamai/mobile/files/L4T/Tegra_Linux_Sample-Root-Filesystem_R19.2.0_armhf.tbz2
+
+Steps:
+
+1. on your PC extract the BSP
+ > sudo tar xpf ${RELEASE_NAME}
+
+2. on your PC extract the file system
+ > cd Linux_for_Tegra/rootfs/
+ > sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R19.2.0_armhf.tbz2
+
+3. on your PC apply binaries
+ > cd ../
+ > sudo ./apply_binaries.sh
+
+4. from your PC flash to TK1 eMMC over usb
+
+   a) Put your system into "reset recovery mode" by holding down the "RECOVERY"
+      button and press "RESET" button once on the main board.
+   b) Ensure your Linux host system is connected to the target device
+      through the USB cable for flashing.
+
+ > sudo ./flash.sh -S 8GiB jetson-tk1 mmcblk0p1
+
+
+
+
+### POST INSTALL ###
+
+# get correct time
+sudo ntpdate pool.ntp.org
+
+# setup timezone, select US/Pacific
+sudo dpkg-reconfigure tzdata
+
+# set sysclock, only if internet is down
+#sudo date mmddhhmmyyyy.ss
+#sudo date 050607002014
+
+# check time on HW RTC
+sudo hwclock --debug
+
+# sync HW RTC to sysclock
+sudo hwclock -w
+
+# enable universe in the apt source list
+sudo vi /etc/apt/sources.list
+
+# update and upgrade
+sudo apt-get update && sudo apt-get upgrade
+
+# install useful packages
+sudo apt-get install git screen tree tcsh vim-gtk
+
+# misc cleanup
+sudo apt-get autoclean & sudo apt-get clean
+
+# enable X forwarding over ssh
+#sudo vi /etc/ssh/ssh_config
+
+
