@@ -38,6 +38,13 @@ Steps:
 
 ### POST INSTALL ###
 
+# start stop restart
+sudo poweroff
+sudo reboot
+
+#you have to be root to use ping
+sudo ping google.com
+
 # get correct time
 sudo ntpdate pool.ntp.org
 
@@ -68,5 +75,21 @@ sudo apt-get autoclean & sudo apt-get clean
 
 # enable X forwarding over ssh
 #sudo vi /etc/ssh/ssh_config
+
+# disable gui desktop and window manager
+sudo mv /etc/init/lightdm.conf /etc/init/lightdm.conf.disabled
+# from here: http://www.pathbreak.com/blog/ubuntu-startup-init-scripts-runlevels-upstart-jobs-explained
+
+# add automatic time update at startup and to crontab
+sudo vi /etc/rc.local
+# add the following lines
+ntpdate-debian
+hwclock -w
+# edit crontab for root
+sudo crontab -e
+# add following lines
+5 * * * * ntpdate-debian
+7 * * * * hwclock -w
+
 
 
