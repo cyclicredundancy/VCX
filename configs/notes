@@ -1,0 +1,29 @@
+# enable universe in the apt source list
+sudo vi /etc/apt/sources.list
+
+# update and upgrade
+sudo apt-get update && sudo apt-get upgrade
+
+# install useful packages
+sudo apt-get install git screen tree tcsh vim-gtk
+
+# misc cleanup
+sudo apt-get autoclean & sudo apt-get clean
+
+# enable X forwarding over ssh
+sudo vi /etc/ssh/ssh_config
+
+# setup timezone
+sudo dpkg-reconfigure tzdata
+
+# set sysclock
+#sudo date mmddhhmmyyyy.ss
+sudo date 050607002014
+
+# check time on HW RTC
+sudo hwclock --debug
+
+# sync HW RTC to sysclock
+sudo hwclock -w
+
+
