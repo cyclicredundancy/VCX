@@ -24,3 +24,6 @@ Both bootloader and application can be modified and/or re-built using Microchip'
 
 *Brian Schmalz
 www.schmalzhaus.com
+
+Vikram: follow instructions from the following location for rebuilding and editing firmware
+https://code.google.com/p/eggbotcode/wiki/EiBotBoardFirmwareBuildInstructions
