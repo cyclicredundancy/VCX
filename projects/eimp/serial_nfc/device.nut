@@ -1,4 +1,4 @@
-// electric-imp device code
+// electric-imp device code for uart/serial communication with dfrobot PN532 nfc module to read mifare tags
 
 server.log("Device starting.........................................");
  

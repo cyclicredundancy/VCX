@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Sun May 11 23:52:21 2014
+Linker Map File - Created Sun Nov 02 01:18:26 2014
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -93,48 +93,48 @@ Linker Map File - Created Sun May 11 23:52:21 2014
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-           BlinkUSBStatus   0x000e50    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-          ClassReqHandler   0x000f5a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-               ClearArray   0x000b92    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-               EraseFlash   0x0002cc    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-      HIDGetReportHandler   0x000c88    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-                HIDInitEP   0x000c8c    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-              HIDRxReport   0x000d2a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-      HIDSetReportHandler   0x000c8a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-              HIDTxReport   0x000cb6    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-                     Init   0x000da2    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-         InitializeSystem   0x000df6    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                LongDelay   0x00038e    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-                     Main   0x000dda    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                ProcessIO   0x00004a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-        USBCheckBusStatus   0x0009a8    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-       USBCheckHIDRequest   0x000bbc    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-       USBCheckStdRequest   0x00070e    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-         USBCtrlEPService   0x0003be    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
- USBCtrlEPServiceComplete   0x00068a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-      USBCtrlTrfInHandler   0x0004f2    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-     USBCtrlTrfOutHandler   0x0004ba    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-      USBCtrlTrfRxService   0x000610    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-   USBCtrlTrfSetupHandler   0x00044c    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-      USBCtrlTrfTxService   0x000532    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-         USBDriverService   0x0009e0    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-         USBModuleDisable   0x0009d2    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-          USBModuleEnable   0x0009c4    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-  USBProtocolResetHandler   0x000b30    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-            USBSoftDetach   0x0009dc    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-          USBStallHandler   0x000b0c    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-  USBStdFeatureReqHandler   0x00091c    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-      USBStdGetDscHandler   0x0007b2    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-   USBStdGetStatusHandler   0x00089a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-      USBStdSetCfgHandler   0x000852    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-               USBSuspend   0x000a58    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-                 USBTasks   0x000e48    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-       USBWakeFromSuspend   0x000afc    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-               USB_CD_Ptr   0x000f50    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-               USB_SD_Ptr   0x000f54    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-                 UserInit   0x000032    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-       WriteFlashSubBlock   0x0002f2    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+           BlinkUSBStatus   0x000e50    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+          ClassReqHandler   0x000f5a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+               ClearArray   0x000b92    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+               EraseFlash   0x0002cc    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+      HIDGetReportHandler   0x000c88    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+                HIDInitEP   0x000c8c    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+              HIDRxReport   0x000d2a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+      HIDSetReportHandler   0x000c8a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+              HIDTxReport   0x000cb6    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+                     Init   0x000da2    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+         InitializeSystem   0x000df6    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                LongDelay   0x00038e    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+                     Main   0x000dda    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                ProcessIO   0x00004a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+        USBCheckBusStatus   0x0009a8    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+       USBCheckHIDRequest   0x000bbc    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+       USBCheckStdRequest   0x00070e    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+         USBCtrlEPService   0x0003be    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+ USBCtrlEPServiceComplete   0x00068a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+      USBCtrlTrfInHandler   0x0004f2    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+     USBCtrlTrfOutHandler   0x0004ba    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+      USBCtrlTrfRxService   0x000610    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+   USBCtrlTrfSetupHandler   0x00044c    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+      USBCtrlTrfTxService   0x000532    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+         USBDriverService   0x0009e0    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+         USBModuleDisable   0x0009d2    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+          USBModuleEnable   0x0009c4    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+  USBProtocolResetHandler   0x000b30    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+            USBSoftDetach   0x0009dc    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+          USBStallHandler   0x000b0c    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+  USBStdFeatureReqHandler   0x00091c    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+      USBStdGetDscHandler   0x0007b2    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+   USBStdGetStatusHandler   0x00089a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+      USBStdSetCfgHandler   0x000852    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+               USBSuspend   0x000a58    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+                 USBTasks   0x000e48    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+       USBWakeFromSuspend   0x000afc    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+               USB_CD_Ptr   0x000f50    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+               USB_SD_Ptr   0x000f54    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+                 UserInit   0x000032    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+       WriteFlashSubBlock   0x0002f2    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
        ___case_2_lbl00008   0x0000bc    program     static                          
        ___case_3_lbl00011   0x00013e    program     static                          
        ___case_4_lbl00015   0x000162    program     static                          
@@ -204,14 +204,14 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
         ___while_lbl00045   0x0003b0    program     static                          
         ___while_lbl00046   0x000ba6    program     static                          
         ___while_lbl00047   0x000bb4    program     static                          
-               __config_0   0x00fff8    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_1   0x00fff9    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_2   0x00fffa    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_3   0x00fffb    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_4   0x00fffc    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_5   0x00fffd    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_6   0x00fffe    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_7   0x00ffff    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_0   0x00fff8    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_1   0x00fff9    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_2   0x00fffa    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_3   0x00fffb    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_4   0x00fffc    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_5   0x00fffd    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_6   0x00fffe    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_7   0x00ffff    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
                __tmplbl_0   0x000dca    program     static                          
                __tmplbl_0   0x00018c    program     static                          
                __tmplbl_1   0x0001b2    program     static                          
@@ -226,19 +226,19 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
                __tmplbl_5   0x00030c    program     static                          
                __tmplbl_6   0x000324    program     static                          
             __zero_memory   0x000f5c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-              _boot_entry   0x00001e    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                   _entry   0x000000    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                _high_isr   0x000008    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                 _low_isr   0x000018    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                    cfg01   0x000eac    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+              _boot_entry   0x00001e    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                   _entry   0x000000    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                _high_isr   0x000008    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                 _low_isr   0x000018    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                    cfg01   0x000eac    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
                 compare_l   0x000f72    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-               device_dsc   0x000e9a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-                hid_rpt01   0x000f33    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+               device_dsc   0x000e9a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+                hid_rpt01   0x000f33    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
                    loop_h   0x000f6a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                    loop_l   0x000f74    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-                    sd000   0x000ed5    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-                    sd001   0x000ed9    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-                    sd002   0x000f0d    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+                    sd000   0x000ed5    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+                    sd001   0x000ed9    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+                    sd002   0x000f0d    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
                zero_block   0x000f6a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
@@ -266,8 +266,8 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
                   BAUDCTL   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
               BAUDCTLbits   0x000f7e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                       BSR   0x000fe0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-                BootState   0x000004       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-        BufferedDataIndex   0x000006       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+                BootState   0x000004       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+        BufferedDataIndex   0x000006       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
                   CCP1CON   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
               CCP1CONbits   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                   CCP2CON   0x000fb4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
@@ -298,7 +298,7 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
              CTMUICONbits   0x000fb1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                    CVRCON   0x000f53       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                CVRCONbits   0x000f53       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-              CtrlTrfData   0x000418       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+              CtrlTrfData   0x000418       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
                    DMABCH   0x000f66       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                DMABCHbits   0x000f66       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                    DMABCL   0x000f67       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
@@ -331,7 +331,7 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
                    EECON1   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                EECON1bits   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                    EECON2   0x000fa7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-         ErasePageTracker   0x000005       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+         ErasePageTracker   0x000005       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
                      FSR0   0x000fe9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                     FSR0H   0x000fea       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                     FSR0L   0x000fe9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
@@ -368,8 +368,8 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
                  LATDbits   0x000f8c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                      LATE   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                  LATEbits   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-                 LEDState   0x0000e6       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-           MaxPageToErase   0x000000       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+                 LEDState   0x0000e6       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+           MaxPageToErase   0x000000       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
                    ODCON1   0x000f42       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                ODCON1bits   0x000f42       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                    ODCON2   0x000f41       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
@@ -462,11 +462,11 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
               PWM1CONbits   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                   PWM2CON   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
               PWM2CONbits   0x000fb7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-             PacketFromPC   0x000060       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-               PacketToPC   0x0000a0       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-    ProgramMemStopAddress   0x000001       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-        ProgrammedPointer   0x000007       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-        ProgrammingBuffer   0x00000a       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+             PacketFromPC   0x000060       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+               PacketToPC   0x0000a0       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+    ProgramMemStopAddress   0x000001       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+        ProgrammedPointer   0x000007       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+        ProgrammingBuffer   0x00000a       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
                      RCON   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                  RCONbits   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                     RCREG   0x000faf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
@@ -480,7 +480,7 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
                 RCSTAbits   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                   REFOCON   0x000f3d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
               REFOCONbits   0x000f3d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-                   ROMptr   0x0000e4       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                   ROMptr   0x0000e4       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
                    RPINR1   0x000ee7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                   RPINR12   0x000ef2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                   RPINR13   0x000ef3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
@@ -564,7 +564,7 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
                STATUSbits   0x000fd8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                    STKPTR   0x000ffc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                STKPTRbits   0x000ffc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-                 SetupPkt   0x000410       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                 SetupPkt   0x000410       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
                     T0CON   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                 T0CONbits   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                     T1CON   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
@@ -676,50 +676,50 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
                    WDTCON   0x000fc0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                WDTCONbits   0x000fc0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                      WREG   0x000fe8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-          active_protocol   0x00004b       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-              bTRNIFCount   0x000056       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-   ctrl_trf_session_owner   0x000052       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-           ctrl_trf_state   0x000051       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-                    ep0Bi   0x000404       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                    ep0Bo   0x000400       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                    ep1Bi   0x00040c       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                    ep1Bo   0x000408       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-            hid_report_in   0x000460       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-           hid_report_out   0x000420       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-           hid_rpt_rx_len   0x00004c       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-                idle_rate   0x00004a       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-                led_count   0x00004d       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                     pDst   0x0000e2       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-                     pSrc   0x0000e0       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-      pll_startup_counter   0x00004f       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-         short_pkt_status   0x000055       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-           usb_active_cfg   0x000059       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-             usb_alt_intf   0x00005a       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-         usb_device_state   0x000057       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                 usb_stat   0x000058       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                   wCount   0x000053       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+          active_protocol   0x00004b       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+              bTRNIFCount   0x000056       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+   ctrl_trf_session_owner   0x000052       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+           ctrl_trf_state   0x000051       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+                    ep0Bi   0x000404       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                    ep0Bo   0x000400       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                    ep1Bi   0x00040c       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                    ep1Bo   0x000408       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+            hid_report_in   0x000460       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+           hid_report_out   0x000420       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+           hid_rpt_rx_len   0x00004c       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+                idle_rate   0x00004a       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+                led_count   0x00004d       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                     pDst   0x0000e2       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+                     pSrc   0x0000e0       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+      pll_startup_counter   0x00004f       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+         short_pkt_status   0x000055       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+           usb_active_cfg   0x000059       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+             usb_alt_intf   0x00005a       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+         usb_device_state   0x000057       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                 usb_stat   0x000058       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                   wCount   0x000053       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
 
 
 
                               Symbols - Sorted by Address
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   _entry   0x000000    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                   _entry   0x000000    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
        ___return_lbl00000   0x000004    program     static                          
-                _high_isr   0x000008    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                _high_isr   0x000008    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
        ___return_lbl00001   0x00000c    program     static                          
-                 _low_isr   0x000018    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                 _low_isr   0x000018    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
        ___return_lbl00002   0x00001c    program     static                          
-              _boot_entry   0x00001e    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+              _boot_entry   0x00001e    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
        ___return_lbl00003   0x00002c    program     static                          
-                 UserInit   0x000032    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-                ProcessIO   0x00004a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+                 UserInit   0x000032    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+                ProcessIO   0x00004a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
           ___for_lbl00004   0x00007a    program     static                          
           ___for_lbl00002   0x00008e    program     static                          
           ___for_lbl00003   0x000092    program     static                          
@@ -757,9 +757,9 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
    ___switchexit_lbl00006   0x0002c2    program     static                          
        ___return_lbl00001   0x0002c2    program     static                          
            ___if_lbl00032   0x0002c2    program     static                          
-               EraseFlash   0x0002cc    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+               EraseFlash   0x0002cc    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
        ___return_lbl00034   0x0002f0    program     static                          
-       WriteFlashSubBlock   0x0002f2    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+       WriteFlashSubBlock   0x0002f2    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
         ___while_lbl00036   0x0002fe    program     static                          
                __tmplbl_5   0x00030c    program     static                          
                __tmplbl_6   0x000324    program     static                          
@@ -768,32 +768,32 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
            ___if_lbl00040   0x00037e    program     static                          
         ___while_lbl00037   0x000380    program     static                          
        ___return_lbl00035   0x000384    program     static                          
-                LongDelay   0x00038e    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+                LongDelay   0x00038e    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
           ___for_lbl00046   0x00039a    program     static                          
         ___while_lbl00044   0x0003a2    program     static                          
         ___while_lbl00045   0x0003b0    program     static                          
           ___for_lbl00042   0x0003b0    program     static                          
           ___for_lbl00043   0x0003b4    program     static                          
        ___return_lbl00041   0x0003b4    program     static                          
-         USBCtrlEPService   0x0003be    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-   USBCtrlTrfSetupHandler   0x00044c    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-     USBCtrlTrfOutHandler   0x0004ba    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-      USBCtrlTrfInHandler   0x0004f2    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-      USBCtrlTrfTxService   0x000532    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-      USBCtrlTrfRxService   0x000610    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
- USBCtrlEPServiceComplete   0x00068a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-       USBCheckStdRequest   0x00070e    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-      USBStdGetDscHandler   0x0007b2    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-      USBStdSetCfgHandler   0x000852    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-   USBStdGetStatusHandler   0x00089a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-  USBStdFeatureReqHandler   0x00091c    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-        USBCheckBusStatus   0x0009a8    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-          USBModuleEnable   0x0009c4    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-         USBModuleDisable   0x0009d2    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-            USBSoftDetach   0x0009dc    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-         USBDriverService   0x0009e0    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-               USBSuspend   0x000a58    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+         USBCtrlEPService   0x0003be    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+   USBCtrlTrfSetupHandler   0x00044c    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+     USBCtrlTrfOutHandler   0x0004ba    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+      USBCtrlTrfInHandler   0x0004f2    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+      USBCtrlTrfTxService   0x000532    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+      USBCtrlTrfRxService   0x000610    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+ USBCtrlEPServiceComplete   0x00068a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+       USBCheckStdRequest   0x00070e    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+      USBStdGetDscHandler   0x0007b2    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+      USBStdSetCfgHandler   0x000852    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+   USBStdGetStatusHandler   0x00089a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+  USBStdFeatureReqHandler   0x00091c    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+        USBCheckBusStatus   0x0009a8    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+          USBModuleEnable   0x0009c4    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+         USBModuleDisable   0x0009d2    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+            USBSoftDetach   0x0009dc    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+         USBDriverService   0x0009e0    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+               USBSuspend   0x000a58    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
         ___while_lbl00030   0x000a98    program     static                          
               __tmplbl_11   0x000a9e    program     static                          
               __tmplbl_10   0x000aa4    program     static                          
@@ -801,23 +801,23 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
         ___while_lbl00033   0x000ad0    program     static                          
        ___return_lbl00029   0x000ae8    program     static                          
         ___while_lbl00034   0x000ae8    program     static                          
-       USBWakeFromSuspend   0x000afc    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-          USBStallHandler   0x000b0c    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-  USBProtocolResetHandler   0x000b30    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+       USBWakeFromSuspend   0x000afc    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+          USBStallHandler   0x000b0c    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+  USBProtocolResetHandler   0x000b30    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
         ___while_lbl00043   0x000b5e    program     static                          
         ___while_lbl00044   0x000b6c    program     static                          
        ___return_lbl00042   0x000b90    program     static                          
-               ClearArray   0x000b92    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+               ClearArray   0x000b92    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
         ___while_lbl00046   0x000ba6    program     static                          
        ___return_lbl00045   0x000bb4    program     static                          
         ___while_lbl00047   0x000bb4    program     static                          
-       USBCheckHIDRequest   0x000bbc    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-      HIDGetReportHandler   0x000c88    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-      HIDSetReportHandler   0x000c8a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-                HIDInitEP   0x000c8c    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-              HIDTxReport   0x000cb6    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-              HIDRxReport   0x000d2a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-                     Init   0x000da2    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+       USBCheckHIDRequest   0x000bbc    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+      HIDGetReportHandler   0x000c88    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+      HIDSetReportHandler   0x000c8a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+                HIDInitEP   0x000c8c    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+              HIDTxReport   0x000cb6    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+              HIDRxReport   0x000d2a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+                     Init   0x000da2    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
                __tmplbl_1   0x000dba    program     static                          
                __tmplbl_0   0x000dca    program     static                          
            ___if_lbl00006   0x000dd2    program     static                          
@@ -825,79 +825,79 @@ USBPrepareForNextSetupTrf   0x000706    program     extern C:\cygwin\home\Vikram
            ___if_lbl00009   0x000dd6    program     static                          
         ___while_lbl00008   0x000dd6    program     static                          
        ___return_lbl00004   0x000dd8    program     static                          
-                     Main   0x000dda    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                     Main   0x000dda    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
         ___while_lbl00011   0x000ddc    program     static                          
                __tmplbl_3   0x000de8    program     static                          
                __tmplbl_2   0x000dee    program     static                          
            ___if_lbl00014   0x000df2    program     static                          
         ___while_lbl00012   0x000df4    program     static                          
        ___return_lbl00010   0x000df4    program     static                          
-         InitializeSystem   0x000df6    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                 USBTasks   0x000e48    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-           BlinkUSBStatus   0x000e50    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               device_dsc   0x000e9a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-                    cfg01   0x000eac    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-                    sd000   0x000ed5    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-                    sd001   0x000ed9    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-                    sd002   0x000f0d    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-                hid_rpt01   0x000f33    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-               USB_CD_Ptr   0x000f50    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-               USB_SD_Ptr   0x000f54    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
-          ClassReqHandler   0x000f5a    program     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+         InitializeSystem   0x000df6    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                 USBTasks   0x000e48    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+           BlinkUSBStatus   0x000e50    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               device_dsc   0x000e9a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+                    cfg01   0x000eac    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+                    sd000   0x000ed5    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+                    sd001   0x000ed9    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+                    sd002   0x000f0d    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+                hid_rpt01   0x000f33    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+               USB_CD_Ptr   0x000f50    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+               USB_SD_Ptr   0x000f54    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
+          ClassReqHandler   0x000f5a    program     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdsc.c
             __zero_memory   0x000f5c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                zero_block   0x000f6a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                    loop_h   0x000f6a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                 compare_l   0x000f72    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                    loop_l   0x000f74    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
-               __config_0   0x00fff8    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_1   0x00fff9    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_2   0x00fffa    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_3   0x00fffb    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_4   0x00fffc    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_5   0x00fffd    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_6   0x00fffe    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-               __config_7   0x00ffff    program     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-           MaxPageToErase   0x000000       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-    ProgramMemStopAddress   0x000001       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-                BootState   0x000004       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-         ErasePageTracker   0x000005       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-        BufferedDataIndex   0x000006       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-        ProgrammedPointer   0x000007       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-        ProgrammingBuffer   0x00000a       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-                idle_rate   0x00004a       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-          active_protocol   0x00004b       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-           hid_rpt_rx_len   0x00004c       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-                led_count   0x00004d       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-      pll_startup_counter   0x00004f       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-           ctrl_trf_state   0x000051       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-   ctrl_trf_session_owner   0x000052       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-                   wCount   0x000053       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-         short_pkt_status   0x000055       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-              bTRNIFCount   0x000056       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-         usb_device_state   0x000057       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                 usb_stat   0x000058       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-           usb_active_cfg   0x000059       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-             usb_alt_intf   0x00005a       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
-             PacketFromPC   0x000060       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-               PacketToPC   0x0000a0       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
-                     pSrc   0x0000e0       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-                     pDst   0x0000e2       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
-                   ROMptr   0x0000e4       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                 LEDState   0x0000e6       data     static C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
-                    ep0Bo   0x000400       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                    ep0Bi   0x000404       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                    ep1Bo   0x000408       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                    ep1Bi   0x00040c       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-                 SetupPkt   0x000410       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-              CtrlTrfData   0x000418       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-           hid_report_out   0x000420       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
-            hid_report_in   0x000460       data     extern C:\cygwin\home\Vikram\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+               __config_0   0x00fff8    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_1   0x00fff9    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_2   0x00fffa    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_3   0x00fffb    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_4   0x00fffc    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_5   0x00fffd    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_6   0x00fffe    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+               __config_7   0x00ffff    program     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+           MaxPageToErase   0x000000       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+    ProgramMemStopAddress   0x000001       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+                BootState   0x000004       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+         ErasePageTracker   0x000005       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+        BufferedDataIndex   0x000006       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+        ProgrammedPointer   0x000007       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+        ProgrammingBuffer   0x00000a       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+                idle_rate   0x00004a       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+          active_protocol   0x00004b       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+           hid_rpt_rx_len   0x00004c       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+                led_count   0x00004d       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+      pll_startup_counter   0x00004f       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+           ctrl_trf_state   0x000051       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+   ctrl_trf_session_owner   0x000052       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+                   wCount   0x000053       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+         short_pkt_status   0x000055       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+              bTRNIFCount   0x000056       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+         usb_device_state   0x000057       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                 usb_stat   0x000058       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+           usb_active_cfg   0x000059       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+             usb_alt_intf   0x00005a       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\hid.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usb9.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+                  __tmp_0   0x00005b       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbdrv.c
+             PacketFromPC   0x000060       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+               PacketToPC   0x0000a0       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\Boot46J50Family.c
+                     pSrc   0x0000e0       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+                     pDst   0x0000e2       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbctrltrf.c
+                   ROMptr   0x0000e4       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                 LEDState   0x0000e6       data     static C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\main.c
+                    ep0Bo   0x000400       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                    ep0Bi   0x000404       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                    ep1Bo   0x000408       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                    ep1Bi   0x00040c       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+                 SetupPkt   0x000410       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+              CtrlTrfData   0x000418       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+           hid_report_out   0x000420       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
+            hid_report_in   0x000460       data     extern C:\cygwin\home\Vikram\github\VCX\projects\ebb_serial\EBB_firmware\bootloader.X\source\usbmmap.c
                     RPOR0   0x000ec6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                     RPOR1   0x000ec7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm
                     RPOR2   0x000ec8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f46j50.asm

@@ -19,6 +19,7 @@
       <itemPath>source/RCServo2.h</itemPath>
       <itemPath>source/UBW.h</itemPath>
       <itemPath>source/usb_config.h</itemPath>
+      <itemPath>source/pps.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LibraryFiles"
                    displayName="Library Files"
@@ -53,6 +54,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>source</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="EBBv13_with_bootloader" type="2">

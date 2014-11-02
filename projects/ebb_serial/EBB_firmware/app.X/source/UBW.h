@@ -119,6 +119,7 @@ extern volatile tRC_state g_RC_state[kRC_DATA_SIZE];
 
 /** P U B L I C  P R O T O T Y P E S *****************************************/
 void UserInit(void);
+void UserMeowInit(void);
 void ProcessIO(void);
 void low_ISR(void);
 void high_ISR(void);

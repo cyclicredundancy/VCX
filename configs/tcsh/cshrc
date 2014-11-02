@@ -30,3 +30,8 @@ alias gvim "gvim -p"
 
 #print our ip address on login
 #ip -o  -f inet addr
+
+if ( ! ($?DISPLAY) ) then
+    echo Setting \$DISPLAY to :0.0 since it is undefined
+    setenv DISPLAY :0.0
+endif
