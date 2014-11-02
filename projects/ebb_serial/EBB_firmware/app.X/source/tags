@@ -1,0 +1,1076 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A1steps	.././source/ebb_demo.h	/^	signed int A1steps;$/;"	m	struct:__anon7
+A2steps	.././source/ebb_demo.h	/^	signed int A2steps;$/;"	m	struct:__anon7
+ALLCONFS	.././nbproject/Makefile-impl.mk	/^ALLCONFS=EBBv13_with_bootloader EBBv13_no_bootloader EBBv13_XC8_no_bootloader $/;"	m
+ANALOG_INITATE_MS_BETWEEN_STARTS	.././source/UBW.c	92;"	d	file:
+ASFLAGS	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^ASFLAGS=$/;"	m
+ASFLAGS	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^ASFLAGS=$/;"	m
+ASFLAGS	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^ASFLAGS=$/;"	m
+A_cur_channel	.././source/UBW.c	/^near unsigned char A_cur_channel;$/;"	v
+A_tick_counter	.././source/UBW.c	/^near unsigned int A_tick_counter;$/;"	v
+AllDone	.././source/ebb.c	/^static unsigned char AllDone;$/;"	v	file:
+AnalogConfigure	.././source/UBW.c	/^void AnalogConfigure(unsigned char Channel, unsigned char Enable)$/;"	f
+AnalogEnabledChannels	.././source/UBW.c	/^near volatile unsigned int AnalogEnabledChannels;$/;"	v
+AnalogInitiate	.././source/UBW.c	/^near unsigned char AnalogInitiate;$/;"	v
+BAUDRG	.././source/UBW.c	774;"	d	file:
+BUILD_SUBPROJECTS	.././nbproject/Makefile-impl.mk	/^BUILD_SUBPROJECTS=${BUILD_SUBPROJECTS_${SUBPROJECTS}}$/;"	m
+BUILD_SUBPROJECTS_	.././nbproject/Makefile-impl.mk	/^BUILD_SUBPROJECTS_=.build-subprojects$/;"	m
+BUILD_SUBPROJECTS_NO	.././nbproject/Makefile-impl.mk	/^BUILD_SUBPROJECTS_NO=$/;"	m
+BlinkUSBStatus	.././source/UBW.c	/^void BlinkUSBStatus(void)$/;"	f
+ButtonPushed	.././source/ebb.c	/^static BOOL ButtonPushed;$/;"	v	file:
+CCADMIN	.././Makefile	/^CCADMIN=CCadmin$/;"	m
+CDC_COMM_EP	.././source/usb_config.h	169;"	d
+CDC_COMM_INTF_ID	.././source/usb_config.h	168;"	d
+CDC_COMM_IN_EP_SIZE	.././source/usb_config.h	170;"	d
+CDC_DATA_EP	.././source/usb_config.h	173;"	d
+CDC_DATA_INTF_ID	.././source/usb_config.h	172;"	d
+CDC_DATA_IN_EP_SIZE	.././source/usb_config.h	175;"	d
+CDC_DATA_OUT_EP_SIZE	.././source/usb_config.h	174;"	d
+CFLAGS	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^CFLAGS=$/;"	m
+CFLAGS	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^CFLAGS=$/;"	m
+CFLAGS	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^CFLAGS=$/;"	m
+CLEAN_SUBPROJECTS	.././nbproject/Makefile-impl.mk	/^CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}$/;"	m
+CLEAN_SUBPROJECTS_	.././nbproject/Makefile-impl.mk	/^CLEAN_SUBPROJECTS_=.clean-subprojects$/;"	m
+CLEAN_SUBPROJECTS_NO	.././nbproject/Makefile-impl.mk	/^CLEAN_SUBPROJECTS_NO=$/;"	m
+CLOCK_FREQ	.././source/HardwareProfile_EBB_V10.h	99;"	d
+CLOCK_FREQ	.././source/HardwareProfile_EBB_V11.h	99;"	d
+CLOCK_FREQ	.././source/HardwareProfile_EBB_V12.h	99;"	d
+CLOCK_FREQ	.././source/HardwareProfile_EBB_V13_and_above.h	99;"	d
+CND_ARTIFACT_DIR_EBBv13_XC8_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_ARTIFACT_DIR_EBBv13_XC8_no_bootloader=dist\/EBBv13_XC8_no_bootloader\/production$/;"	m
+CND_ARTIFACT_DIR_EBBv13_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_ARTIFACT_DIR_EBBv13_no_bootloader=dist\/EBBv13_no_bootloader\/production$/;"	m
+CND_ARTIFACT_DIR_EBBv13_with_bootloader	.././nbproject/Makefile-variables.mk	/^CND_ARTIFACT_DIR_EBBv13_with_bootloader=dist\/EBBv13_with_bootloader\/production$/;"	m
+CND_ARTIFACT_NAME_EBBv13_XC8_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_ARTIFACT_NAME_EBBv13_XC8_no_bootloader=app.X.production.hex$/;"	m
+CND_ARTIFACT_NAME_EBBv13_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_ARTIFACT_NAME_EBBv13_no_bootloader=app.X.production.hex$/;"	m
+CND_ARTIFACT_NAME_EBBv13_with_bootloader	.././nbproject/Makefile-variables.mk	/^CND_ARTIFACT_NAME_EBBv13_with_bootloader=app.X.production.hex$/;"	m
+CND_ARTIFACT_PATH_EBBv13_XC8_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_ARTIFACT_PATH_EBBv13_XC8_no_bootloader=dist\/EBBv13_XC8_no_bootloader\/production\/app.X.production.hex$/;"	m
+CND_ARTIFACT_PATH_EBBv13_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_ARTIFACT_PATH_EBBv13_no_bootloader=dist\/EBBv13_no_bootloader\/production\/app.X.production.hex$/;"	m
+CND_ARTIFACT_PATH_EBBv13_with_bootloader	.././nbproject/Makefile-variables.mk	/^CND_ARTIFACT_PATH_EBBv13_with_bootloader=dist\/EBBv13_with_bootloader\/production\/app.X.production.hex$/;"	m
+CND_BASEDIR	.././nbproject/Makefile-variables.mk	/^CND_BASEDIR=`pwd`$/;"	m
+CND_CONF	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^CND_CONF=EBBv13_XC8_no_bootloader$/;"	m
+CND_CONF	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^CND_CONF=EBBv13_no_bootloader$/;"	m
+CND_CONF	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^CND_CONF=EBBv13_with_bootloader$/;"	m
+CND_PACKAGE_DIR_EBBv13_XC8_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_PACKAGE_DIR_EBBv13_XC8_no_bootloader=${CND_DISTDIR}\/EBBv13_XC8_no_bootloader\/package$/;"	m
+CND_PACKAGE_DIR_EBBv13_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_PACKAGE_DIR_EBBv13_no_bootloader=${CND_DISTDIR}\/EBBv13_no_bootloader\/package$/;"	m
+CND_PACKAGE_DIR_EBBv13_with_bootloader	.././nbproject/Makefile-variables.mk	/^CND_PACKAGE_DIR_EBBv13_with_bootloader=${CND_DISTDIR}\/EBBv13_with_bootloader\/package$/;"	m
+CND_PACKAGE_NAME_EBBv13_XC8_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_PACKAGE_NAME_EBBv13_XC8_no_bootloader=app.x.tar$/;"	m
+CND_PACKAGE_NAME_EBBv13_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_PACKAGE_NAME_EBBv13_no_bootloader=app.x.tar$/;"	m
+CND_PACKAGE_NAME_EBBv13_with_bootloader	.././nbproject/Makefile-variables.mk	/^CND_PACKAGE_NAME_EBBv13_with_bootloader=app.x.tar$/;"	m
+CND_PACKAGE_PATH_EBBv13_XC8_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_PACKAGE_PATH_EBBv13_XC8_no_bootloader=${CND_DISTDIR}\/EBBv13_XC8_no_bootloader\/package\/app.x.tar$/;"	m
+CND_PACKAGE_PATH_EBBv13_no_bootloader	.././nbproject/Makefile-variables.mk	/^CND_PACKAGE_PATH_EBBv13_no_bootloader=${CND_DISTDIR}\/EBBv13_no_bootloader\/package\/app.x.tar$/;"	m
+CND_PACKAGE_PATH_EBBv13_with_bootloader	.././nbproject/Makefile-variables.mk	/^CND_PACKAGE_PATH_EBBv13_with_bootloader=${CND_DISTDIR}\/EBBv13_with_bootloader\/package\/app.x.tar$/;"	m
+COMD_END	.././source/ebb_demo.h	/^	COMD_END = 0,$/;"	e	enum:__anon6
+COMD_SM	.././source/ebb_demo.h	/^	COMD_SM, $/;"	e	enum:__anon6
+COMD_SP	.././source/ebb_demo.h	/^	COMD_SP$/;"	e	enum:__anon6
+COMMAND_DELAY	.././source/ebb.h	/^	COMMAND_DELAY,$/;"	e	enum:__anon4
+COMMAND_FIFO_LENGTH	.././source/ebb.c	134;"	d	file:
+COMMAND_MOTOR_MOVE	.././source/ebb.h	/^	COMMAND_MOTOR_MOVE,$/;"	e	enum:__anon4
+COMMAND_NONE	.././source/ebb.h	/^	COMMAND_NONE = 0,$/;"	e	enum:__anon4
+COMMAND_SERVO_MOVE	.././source/ebb.h	/^	COMMAND_SERVO_MOVE$/;"	e	enum:__anon4
+CONF	.././nbproject/Makefile-impl.mk	/^CONF=${DEFAULTCONF}$/;"	m
+CP	.././Makefile	/^CP=cp$/;"	m
+CP	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^CP=cp $/;"	m
+CP	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^CP=cp $/;"	m
+CP	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^CP=cp $/;"	m
+ChannelBit	.././source/UBW.c	/^near volatile unsigned int ChannelBit;$/;"	v
+Command	.././source/ebb.h	/^    CommandType     Command;$/;"	m	struct:__anon5
+CommandFIFO	.././source/ebb.c	/^MoveCommandType CommandFIFO[COMMAND_FIFO_LENGTH];$/;"	v
+CommandType	.././source/ebb.h	/^} CommandType;$/;"	t	typeref:enum:__anon4
+CurrentCommand	.././source/ebb.c	/^static near MoveCommandType CurrentCommand;$/;"	v	file:
+DEBUGGABLE_SUFFIX	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^DEBUGGABLE_SUFFIX=cof$/;"	m
+DEBUGGABLE_SUFFIX	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^DEBUGGABLE_SUFFIX=cof$/;"	m
+DEBUGGABLE_SUFFIX	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^DEBUGGABLE_SUFFIX=cof$/;"	m
+DEFAULTCONF	.././nbproject/Makefile-impl.mk	/^DEFAULTCONF=EBBv13_with_bootloader$/;"	m
+DEFAULT_EBB_SERVO_PORTB_PIN	.././source/RCServo2.h	9;"	d
+DEFAULT_EBB_SERVO_RPN	.././source/RCServo2.h	10;"	d
+DEMO_BOARD	.././source/HardwareProfile.h	54;"	d
+DEPFILES	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})$/;"	m
+DEPFILES	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})$/;"	m
+DEPFILES	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})$/;"	m
+DEP_GEN	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^DEP_GEN=${MP_JAVA_PATH}java -jar "C:\/Program Files (x86)\/Microchip\/MPLABX\/mplab_ide\/mplab_ide\/modules\/..\/..\/bin\/extractobjectdependencies.jar" $/;"	m
+DEP_GEN	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^DEP_GEN=${MP_JAVA_PATH}java -jar "C:\/Program Files (x86)\/Microchip\/MPLABX\/mplab_ide\/mplab_ide\/modules\/..\/..\/bin\/extractobjectdependencies.jar" $/;"	m
+DEP_GEN	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^DEP_GEN=${MP_JAVA_PATH}java -jar "C:\/Program Files (x86)\/Microchip\/MPLABX\/mplab_ide\/mplab_ide\/modules\/..\/..\/bin\/extractobjectdependencies.jar" $/;"	m
+DIR1_BIT	.././source/ebb.h	43;"	d
+DIR2_BIT	.././source/ebb.h	45;"	d
+DISABLE_MOTOR	.././source/ebb.h	7;"	d
+DISTDIR	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^DISTDIR=dist\/${CND_CONF}\/${IMAGE_TYPE}$/;"	m
+DISTDIR	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^DISTDIR=dist\/${CND_CONF}\/${IMAGE_TYPE}$/;"	m
+DISTDIR	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^DISTDIR=dist\/${CND_CONF}\/${IMAGE_TYPE}$/;"	m
+D_tick_counter	.././source/UBW.c	/^near unsigned int D_tick_counter;$/;"	v
+DelayCounter	.././source/ebb.h	/^    UINT32          DelayCounter;   \/\/ NOT Milliseconds! In 25KHz units$/;"	m	struct:__anon5
+DemoModeActive	.././source/ebb.c	/^unsigned int DemoModeActive;$/;"	v
+Dir1AltIO	.././source/HardwareProfile_EBB_V10.h	165;"	d
+Dir1AltIO	.././source/HardwareProfile_EBB_V11.h	154;"	d
+Dir1AltIO	.././source/HardwareProfile_EBB_V12.h	149;"	d
+Dir1AltIO	.././source/HardwareProfile_EBB_V13_and_above.h	150;"	d
+Dir1AltIO	.././source/io_cfg.h	128;"	d
+Dir1AltIO	.././source/io_cfg.h	187;"	d
+Dir1AltIO	.././source/io_cfg.h	243;"	d
+Dir1AltIO	.././source/io_cfg.h	298;"	d
+Dir1AltIO	.././source/io_cfg.h	329;"	d
+Dir1AltIO_TRIS	.././source/HardwareProfile_EBB_V10.h	166;"	d
+Dir1AltIO_TRIS	.././source/HardwareProfile_EBB_V11.h	155;"	d
+Dir1AltIO_TRIS	.././source/HardwareProfile_EBB_V12.h	150;"	d
+Dir1AltIO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	151;"	d
+Dir1AltIO_TRIS	.././source/io_cfg.h	129;"	d
+Dir1AltIO_TRIS	.././source/io_cfg.h	188;"	d
+Dir1AltIO_TRIS	.././source/io_cfg.h	244;"	d
+Dir1AltIO_TRIS	.././source/io_cfg.h	299;"	d
+Dir1AltTRIS	.././source/io_cfg.h	330;"	d
+Dir1IO	.././source/HardwareProfile_EBB_V10.h	155;"	d
+Dir1IO	.././source/HardwareProfile_EBB_V11.h	145;"	d
+Dir1IO	.././source/HardwareProfile_EBB_V12.h	140;"	d
+Dir1IO	.././source/HardwareProfile_EBB_V13_and_above.h	141;"	d
+Dir1IO	.././source/io_cfg.h	118;"	d
+Dir1IO	.././source/io_cfg.h	181;"	d
+Dir1IO	.././source/io_cfg.h	234;"	d
+Dir1IO	.././source/io_cfg.h	289;"	d
+Dir1IO	.././source/io_cfg.h	324;"	d
+Dir1IO_TRIS	.././source/HardwareProfile_EBB_V11.h	146;"	d
+Dir1IO_TRIS	.././source/HardwareProfile_EBB_V12.h	141;"	d
+Dir1IO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	142;"	d
+Dir1IO_TRIS	.././source/io_cfg.h	235;"	d
+Dir1IO_TRIS	.././source/io_cfg.h	290;"	d
+Dir2AltIO	.././source/HardwareProfile_EBB_V10.h	169;"	d
+Dir2AltIO	.././source/HardwareProfile_EBB_V11.h	158;"	d
+Dir2AltIO	.././source/HardwareProfile_EBB_V12.h	153;"	d
+Dir2AltIO	.././source/HardwareProfile_EBB_V13_and_above.h	154;"	d
+Dir2AltIO	.././source/io_cfg.h	132;"	d
+Dir2AltIO	.././source/io_cfg.h	191;"	d
+Dir2AltIO	.././source/io_cfg.h	247;"	d
+Dir2AltIO	.././source/io_cfg.h	302;"	d
+Dir2AltIO	.././source/io_cfg.h	333;"	d
+Dir2AltIO_TRIS	.././source/HardwareProfile_EBB_V10.h	170;"	d
+Dir2AltIO_TRIS	.././source/HardwareProfile_EBB_V11.h	159;"	d
+Dir2AltIO_TRIS	.././source/HardwareProfile_EBB_V12.h	154;"	d
+Dir2AltIO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	155;"	d
+Dir2AltIO_TRIS	.././source/io_cfg.h	133;"	d
+Dir2AltIO_TRIS	.././source/io_cfg.h	192;"	d
+Dir2AltIO_TRIS	.././source/io_cfg.h	248;"	d
+Dir2AltIO_TRIS	.././source/io_cfg.h	303;"	d
+Dir2AltTRIS	.././source/io_cfg.h	334;"	d
+Dir2IO	.././source/HardwareProfile_EBB_V10.h	157;"	d
+Dir2IO	.././source/HardwareProfile_EBB_V11.h	149;"	d
+Dir2IO	.././source/HardwareProfile_EBB_V12.h	144;"	d
+Dir2IO	.././source/HardwareProfile_EBB_V13_and_above.h	145;"	d
+Dir2IO	.././source/io_cfg.h	120;"	d
+Dir2IO	.././source/io_cfg.h	183;"	d
+Dir2IO	.././source/io_cfg.h	238;"	d
+Dir2IO	.././source/io_cfg.h	293;"	d
+Dir2IO	.././source/io_cfg.h	326;"	d
+Dir2IO_TRIS	.././source/HardwareProfile_EBB_V11.h	150;"	d
+Dir2IO_TRIS	.././source/HardwareProfile_EBB_V12.h	145;"	d
+Dir2IO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	146;"	d
+Dir2IO_TRIS	.././source/io_cfg.h	239;"	d
+Dir2IO_TRIS	.././source/io_cfg.h	294;"	d
+Dir3AltIO	.././source/HardwareProfile_EBB_V10.h	173;"	d
+Dir3AltIO	.././source/io_cfg.h	136;"	d
+Dir3AltIO_TRIS	.././source/HardwareProfile_EBB_V10.h	174;"	d
+Dir3AltIO_TRIS	.././source/io_cfg.h	137;"	d
+Dir3IO	.././source/HardwareProfile_EBB_V10.h	159;"	d
+Dir3IO	.././source/io_cfg.h	122;"	d
+Dir4AltIO	.././source/HardwareProfile_EBB_V10.h	177;"	d
+Dir4AltIO	.././source/io_cfg.h	140;"	d
+Dir4AltIO_TRIS	.././source/HardwareProfile_EBB_V10.h	178;"	d
+Dir4AltIO_TRIS	.././source/io_cfg.h	141;"	d
+Dir4IO	.././source/HardwareProfile_EBB_V10.h	161;"	d
+Dir4IO	.././source/io_cfg.h	124;"	d
+DirBits	.././source/ebb.h	/^    UINT8           DirBits;$/;"	m	struct:__anon5
+DriverConfiguration	.././source/ebb.c	/^static DriverConfigurationType DriverConfiguration;$/;"	v	file:
+DriverConfigurationType	.././source/ebb.c	/^} DriverConfigurationType;$/;"	t	typeref:enum:__anon2	file:
+EBB_DEMO_H	.././source/ebb_demo.h	2;"	d
+EBB_H	.././source/ebb.h	3;"	d
+EBB_Init	.././source/ebb.c	/^void EBB_Init(void)$/;"	f
+ENABLE_MOTOR	.././source/ebb.h	6;"	d
+EXTERNAL_CONTROLS_DRIVERS	.././source/ebb.c	/^    EXTERNAL_CONTROLS_DRIVERS$/;"	e	enum:__anon2	file:
+Enable1AltIO	.././source/HardwareProfile_EBB_V10.h	124;"	d
+Enable1AltIO	.././source/HardwareProfile_EBB_V11.h	127;"	d
+Enable1AltIO	.././source/HardwareProfile_EBB_V12.h	124;"	d
+Enable1AltIO	.././source/HardwareProfile_EBB_V13_and_above.h	125;"	d
+Enable1AltIO	.././source/io_cfg.h	164;"	d
+Enable1AltIO	.././source/io_cfg.h	218;"	d
+Enable1AltIO	.././source/io_cfg.h	273;"	d
+Enable1AltIO	.././source/io_cfg.h	87;"	d
+Enable1AltIO_TRIS	.././source/HardwareProfile_EBB_V10.h	125;"	d
+Enable1AltIO_TRIS	.././source/HardwareProfile_EBB_V11.h	128;"	d
+Enable1AltIO_TRIS	.././source/HardwareProfile_EBB_V12.h	125;"	d
+Enable1AltIO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	126;"	d
+Enable1AltIO_TRIS	.././source/io_cfg.h	165;"	d
+Enable1AltIO_TRIS	.././source/io_cfg.h	219;"	d
+Enable1AltIO_TRIS	.././source/io_cfg.h	274;"	d
+Enable1AltIO_TRIS	.././source/io_cfg.h	88;"	d
+Enable1IO	.././source/HardwareProfile_EBB_V10.h	116;"	d
+Enable1IO	.././source/HardwareProfile_EBB_V11.h	122;"	d
+Enable1IO	.././source/HardwareProfile_EBB_V12.h	119;"	d
+Enable1IO	.././source/HardwareProfile_EBB_V13_and_above.h	120;"	d
+Enable1IO	.././source/io_cfg.h	162;"	d
+Enable1IO	.././source/io_cfg.h	213;"	d
+Enable1IO	.././source/io_cfg.h	268;"	d
+Enable1IO	.././source/io_cfg.h	79;"	d
+Enable1IO_TRIS	.././source/HardwareProfile_EBB_V10.h	117;"	d
+Enable1IO_TRIS	.././source/HardwareProfile_EBB_V11.h	123;"	d
+Enable1IO_TRIS	.././source/HardwareProfile_EBB_V12.h	120;"	d
+Enable1IO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	121;"	d
+Enable1IO_TRIS	.././source/io_cfg.h	214;"	d
+Enable1IO_TRIS	.././source/io_cfg.h	269;"	d
+Enable1IO_TRIS	.././source/io_cfg.h	80;"	d
+Enable2AltIO	.././source/HardwareProfile_EBB_V10.h	126;"	d
+Enable2AltIO	.././source/HardwareProfile_EBB_V11.h	129;"	d
+Enable2AltIO	.././source/HardwareProfile_EBB_V12.h	126;"	d
+Enable2AltIO	.././source/HardwareProfile_EBB_V13_and_above.h	127;"	d
+Enable2AltIO	.././source/io_cfg.h	166;"	d
+Enable2AltIO	.././source/io_cfg.h	220;"	d
+Enable2AltIO	.././source/io_cfg.h	275;"	d
+Enable2AltIO	.././source/io_cfg.h	89;"	d
+Enable2AltIO_TRIS	.././source/HardwareProfile_EBB_V10.h	127;"	d
+Enable2AltIO_TRIS	.././source/HardwareProfile_EBB_V11.h	130;"	d
+Enable2AltIO_TRIS	.././source/HardwareProfile_EBB_V12.h	127;"	d
+Enable2AltIO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	128;"	d
+Enable2AltIO_TRIS	.././source/io_cfg.h	167;"	d
+Enable2AltIO_TRIS	.././source/io_cfg.h	221;"	d
+Enable2AltIO_TRIS	.././source/io_cfg.h	276;"	d
+Enable2AltIO_TRIS	.././source/io_cfg.h	90;"	d
+Enable2IO	.././source/HardwareProfile_EBB_V10.h	118;"	d
+Enable2IO	.././source/HardwareProfile_EBB_V11.h	124;"	d
+Enable2IO	.././source/HardwareProfile_EBB_V12.h	121;"	d
+Enable2IO	.././source/HardwareProfile_EBB_V13_and_above.h	122;"	d
+Enable2IO	.././source/io_cfg.h	163;"	d
+Enable2IO	.././source/io_cfg.h	215;"	d
+Enable2IO	.././source/io_cfg.h	270;"	d
+Enable2IO	.././source/io_cfg.h	81;"	d
+Enable2IO_TRIS	.././source/HardwareProfile_EBB_V10.h	119;"	d
+Enable2IO_TRIS	.././source/HardwareProfile_EBB_V11.h	125;"	d
+Enable2IO_TRIS	.././source/HardwareProfile_EBB_V12.h	122;"	d
+Enable2IO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	123;"	d
+Enable2IO_TRIS	.././source/io_cfg.h	216;"	d
+Enable2IO_TRIS	.././source/io_cfg.h	271;"	d
+Enable2IO_TRIS	.././source/io_cfg.h	82;"	d
+Enable3IO	.././source/HardwareProfile_EBB_V10.h	120;"	d
+Enable3IO	.././source/io_cfg.h	83;"	d
+Enable3IO_TRIS	.././source/HardwareProfile_EBB_V10.h	121;"	d
+Enable3IO_TRIS	.././source/io_cfg.h	84;"	d
+Enable4IO	.././source/HardwareProfile_EBB_V10.h	122;"	d
+Enable4IO	.././source/io_cfg.h	85;"	d
+Enable4IO_TRIS	.././source/HardwareProfile_EBB_V10.h	123;"	d
+Enable4IO_TRIS	.././source/io_cfg.h	86;"	d
+ExtractReturnType	.././source/UBW.h	/^} ExtractReturnType;$/;"	t	typeref:enum:__anon9
+ExtractType	.././source/UBW.h	/^} ExtractType;$/;"	t	typeref:enum:__anon8
+FIFOEmpty	.././source/ebb.c	/^near BOOL FIFOEmpty;$/;"	v
+FINAL_IMAGE	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^FINAL_IMAGE=dist\/${CND_CONF}\/${IMAGE_TYPE}\/app.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}$/;"	m
+FINAL_IMAGE	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^FINAL_IMAGE=dist\/${CND_CONF}\/${IMAGE_TYPE}\/app.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}$/;"	m
+FINAL_IMAGE	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^FINAL_IMAGE=dist\/${CND_CONF}\/${IMAGE_TYPE}\/app.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}$/;"	m
+FIXDEPS	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^FIXDEPS=fixDeps$/;"	m
+FIXDEPS	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^FIXDEPS=fixDeps$/;"	m
+FIXDEPS	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^FIXDEPS=fixDeps$/;"	m
+HARDWARE_PROFILE_EBB_V10_H	.././source/HardwareProfile_EBB_V10.h	42;"	d
+HARDWARE_PROFILE_EBB_V11_H	.././source/HardwareProfile_EBB_V11.h	42;"	d
+HARDWARE_PROFILE_EBB_V12_H	.././source/HardwareProfile_EBB_V12.h	42;"	d
+HARDWARE_PROFILE_EBB_V13_H	.././source/HardwareProfile_EBB_V13_and_above.h	42;"	d
+HARDWARE_PROFILE_H	.././source/HardwareProfile.h	52;"	d
+HIGH_ISR_TICKS_PER_MS	.././source/ebb.h	56;"	d
+IMAGE_TYPE	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^IMAGE_TYPE=debug$/;"	m
+IMAGE_TYPE	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^IMAGE_TYPE=production$/;"	m
+IMAGE_TYPE	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^IMAGE_TYPE=debug$/;"	m
+IMAGE_TYPE	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^IMAGE_TYPE=production$/;"	m
+IMAGE_TYPE	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^IMAGE_TYPE=debug$/;"	m
+IMAGE_TYPE	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^IMAGE_TYPE=production$/;"	m
+INITAL_RC2_SLOTS	.././source/RCServo2.h	8;"	d
+INPUT_PIN	.././source/UBW.h	49;"	d
+INPUT_PIN	.././source/io_cfg.h	55;"	d
+IN_FN_PPS_CK2	.././source/pps.h	51;"	d
+IN_FN_PPS_FLT0	.././source/pps.h	55;"	d
+IN_FN_PPS_IC1	.././source/pps.h	46;"	d
+IN_FN_PPS_IC2	.././source/pps.h	47;"	d
+IN_FN_PPS_INT1	.././source/pps.h	41;"	d
+IN_FN_PPS_INT2	.././source/pps.h	42;"	d
+IN_FN_PPS_INT3	.././source/pps.h	43;"	d
+IN_FN_PPS_RX2DT2	.././source/pps.h	50;"	d
+IN_FN_PPS_SCK2IN	.././source/pps.h	53;"	d
+IN_FN_PPS_SDI2	.././source/pps.h	52;"	d
+IN_FN_PPS_SS2IN	.././source/pps.h	54;"	d
+IN_FN_PPS_T0CK	.././source/pps.h	44;"	d
+IN_FN_PPS_T1G	.././source/pps.h	48;"	d
+IN_FN_PPS_T3CK	.././source/pps.h	45;"	d
+IN_FN_PPS_T3G	.././source/pps.h	49;"	d
+IN_PIN_PPS_MASK	.././source/pps.h	39;"	d
+IN_PIN_PPS_RP0	.././source/pps.h	16;"	d
+IN_PIN_PPS_RP1	.././source/pps.h	17;"	d
+IN_PIN_PPS_RP10	.././source/pps.h	26;"	d
+IN_PIN_PPS_RP11	.././source/pps.h	27;"	d
+IN_PIN_PPS_RP12	.././source/pps.h	28;"	d
+IN_PIN_PPS_RP13	.././source/pps.h	29;"	d
+IN_PIN_PPS_RP17	.././source/pps.h	30;"	d
+IN_PIN_PPS_RP18	.././source/pps.h	31;"	d
+IN_PIN_PPS_RP19	.././source/pps.h	32;"	d
+IN_PIN_PPS_RP2	.././source/pps.h	18;"	d
+IN_PIN_PPS_RP20	.././source/pps.h	33;"	d
+IN_PIN_PPS_RP21	.././source/pps.h	34;"	d
+IN_PIN_PPS_RP22	.././source/pps.h	35;"	d
+IN_PIN_PPS_RP23	.././source/pps.h	36;"	d
+IN_PIN_PPS_RP24	.././source/pps.h	37;"	d
+IN_PIN_PPS_RP3	.././source/pps.h	19;"	d
+IN_PIN_PPS_RP4	.././source/pps.h	20;"	d
+IN_PIN_PPS_RP5	.././source/pps.h	21;"	d
+IN_PIN_PPS_RP6	.././source/pps.h	22;"	d
+IN_PIN_PPS_RP7	.././source/pps.h	23;"	d
+IN_PIN_PPS_RP8	.././source/pps.h	24;"	d
+IN_PIN_PPS_RP9	.././source/pps.h	25;"	d
+IN_PIN_PPS_VSS	.././source/pps.h	38;"	d
+IO_CFG_H	.././source/io_cfg.h	49;"	d
+ISR_A_FIFO	.././source/UBW.c	/^volatile unsigned int ISR_A_FIFO[16];                       \/\/ Stores the most recent analog conversions$/;"	v
+ISR_A_FIFO_in	.././source/UBW.c	/^near volatile unsigned char ISR_A_FIFO_in;				\/\/ In pointer$/;"	v
+ISR_A_FIFO_length	.././source/UBW.c	/^near volatile unsigned char ISR_A_FIFO_length;			\/\/ Current FIFO depth$/;"	v
+ISR_A_FIFO_out	.././source/UBW.c	/^near volatile unsigned char ISR_A_FIFO_out;				\/\/ Out pointer$/;"	v
+ISR_A_RepeatRate	.././source/UBW.c	/^near volatile unsigned int ISR_A_RepeatRate;			\/\/ How many 1ms ticks between Analog updates$/;"	v
+ISR_D_FIFO	.././source/UBW.c	/^volatile unsigned char ISR_D_FIFO[3][kISR_FIFO_D_DEPTH];	\/\/ FIFO of actual data$/;"	v
+ISR_D_FIFO_in	.././source/UBW.c	/^near volatile unsigned char ISR_D_FIFO_in;				\/\/ In pointer$/;"	v
+ISR_D_FIFO_length	.././source/UBW.c	/^near volatile unsigned char ISR_D_FIFO_length;			\/\/ Current FIFO depth$/;"	v
+ISR_D_FIFO_out	.././source/UBW.c	/^near volatile unsigned char ISR_D_FIFO_out;				\/\/ Out pointer$/;"	v
+ISR_D_RepeatRate	.././source/UBW.c	/^near volatile unsigned int ISR_D_RepeatRate;			\/\/ How many 1ms ticks between Digital updates$/;"	v
+InitializeSystem	.././source/main.c	/^static void InitializeSystem(void)$/;"	f	file:
+LDLIBSOPTIONS	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^LDLIBSOPTIONS=$/;"	m
+LDLIBSOPTIONS	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^LDLIBSOPTIONS=$/;"	m
+LDLIBSOPTIONS	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^LDLIBSOPTIONS=$/;"	m
+Layer	.././source/ebb.c	/^static char Layer;$/;"	v	file:
+LongDelay	.././source/UBW.c	/^void LongDelay(void)$/;"	f
+MAX_RC2_SERVOS	.././source/RCServo2.h	7;"	d
+MAX_RC_DURATION	.././source/ebb.c	131;"	d	file:
+MKDIR	.././Makefile	/^MKDIR=mkdir$/;"	m
+MKDIR	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^MKDIR=gnumkdir -p$/;"	m
+MKDIR	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^MKDIR=gnumkdir -p$/;"	m
+MKDIR	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^MKDIR=gnumkdir -p$/;"	m
+MP_AR	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^MP_AR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin\\mplib.exe"$/;"	m
+MP_AR	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^MP_AR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin\\mplib.exe"$/;"	m
+MP_AR	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^MP_AR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.47\\bin\\mplib.exe"$/;"	m
+MP_AR_DIR	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^MP_AR_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin"$/;"	m
+MP_AR_DIR	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^MP_AR_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin"$/;"	m
+MP_AR_DIR	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^MP_AR_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.47\\bin"$/;"	m
+MP_AS	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^MP_AS="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin\\..\\mpasm\\MPASMWIN.exe"$/;"	m
+MP_AS	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^MP_AS="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin\\..\\mpasm\\MPASMWIN.exe"$/;"	m
+MP_AS	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^MP_AS="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.47\\bin\\..\\mpasm\\MPASMWIN.exe"$/;"	m
+MP_AS_DIR	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^MP_AS_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin\\..\\mpasm"$/;"	m
+MP_AS_DIR	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^MP_AS_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin\\..\\mpasm"$/;"	m
+MP_AS_DIR	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^MP_AS_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.47\\bin\\..\\mpasm"$/;"	m
+MP_CC	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^MP_CC="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin\\mcc18.exe"$/;"	m
+MP_CC	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^MP_CC="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin\\mcc18.exe"$/;"	m
+MP_CC	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^MP_CC="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.47\\bin\\mcc18.exe"$/;"	m
+MP_CC_DIR	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^MP_CC_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin"$/;"	m
+MP_CC_DIR	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^MP_CC_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin"$/;"	m
+MP_CC_DIR	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^MP_CC_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.47\\bin"$/;"	m
+MP_JAVA_PATH	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^MP_JAVA_PATH="C:\\Program Files (x86)\\Microchip\\MPLABX\\sys\\java\\jre1.7.0_17\/bin\/"$/;"	m
+MP_JAVA_PATH	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^MP_JAVA_PATH="C:\\Program Files (x86)\\Microchip\\MPLABX\\sys\\java\\jre1.7.0_17\/bin\/"$/;"	m
+MP_JAVA_PATH	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^MP_JAVA_PATH="C:\\Program Files (x86)\\Microchip\\MPLABX\\sys\\java\\jre1.7.0_25-windows-x64\\java-windows\/bin\/"$/;"	m
+MP_LD	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^MP_LD="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin\\mplink.exe"$/;"	m
+MP_LD	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^MP_LD="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin\\mplink.exe"$/;"	m
+MP_LD	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^MP_LD="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.47\\bin\\mplink.exe"$/;"	m
+MP_LD_DIR	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^MP_LD_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin"$/;"	m
+MP_LD_DIR	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^MP_LD_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.44\\bin"$/;"	m
+MP_LD_DIR	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^MP_LD_DIR="C:\\Program Files (x86)\\Microchip\\mplabc18\\v3.47\\bin"$/;"	m
+MP_LINKER_DEBUG_OPTION	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^MP_LINKER_DEBUG_OPTION=$/;"	m
+MP_LINKER_DEBUG_OPTION	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^MP_LINKER_DEBUG_OPTION=$/;"	m
+MP_LINKER_DEBUG_OPTION	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^MP_LINKER_DEBUG_OPTION=  -u_DEBUGSTACK$/;"	m
+MP_PROCESSOR_OPTION	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^MP_PROCESSOR_OPTION=18F46J50$/;"	m
+MP_PROCESSOR_OPTION	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^MP_PROCESSOR_OPTION=18F46J50$/;"	m
+MP_PROCESSOR_OPTION	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^MP_PROCESSOR_OPTION=18F46J50$/;"	m
+MP_PROCESSOR_OPTION_LD	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^MP_PROCESSOR_OPTION_LD=18f46j50$/;"	m
+MP_PROCESSOR_OPTION_LD	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^MP_PROCESSOR_OPTION_LD=18f46j50$/;"	m
+MP_PROCESSOR_OPTION_LD	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^MP_PROCESSOR_OPTION_LD=18f46j50$/;"	m
+MS1_1IO	.././source/HardwareProfile_EBB_V10.h	130;"	d
+MS1_1IO	.././source/HardwareProfile_EBB_V11.h	133;"	d
+MS1_1IO	.././source/io_cfg.h	170;"	d
+MS1_1IO	.././source/io_cfg.h	93;"	d
+MS1_1IO_TRIS	.././source/HardwareProfile_EBB_V10.h	131;"	d
+MS1_1IO_TRIS	.././source/HardwareProfile_EBB_V11.h	134;"	d
+MS1_1IO_TRIS	.././source/io_cfg.h	94;"	d
+MS1_2IO	.././source/HardwareProfile_EBB_V10.h	134;"	d
+MS1_2IO	.././source/HardwareProfile_EBB_V11.h	137;"	d
+MS1_2IO	.././source/io_cfg.h	172;"	d
+MS1_2IO	.././source/io_cfg.h	97;"	d
+MS1_2IO_TRIS	.././source/HardwareProfile_EBB_V10.h	135;"	d
+MS1_2IO_TRIS	.././source/HardwareProfile_EBB_V11.h	138;"	d
+MS1_2IO_TRIS	.././source/io_cfg.h	98;"	d
+MS1_3IO	.././source/HardwareProfile_EBB_V10.h	138;"	d
+MS1_3IO	.././source/io_cfg.h	101;"	d
+MS1_3IO_TRIS	.././source/HardwareProfile_EBB_V10.h	139;"	d
+MS1_3IO_TRIS	.././source/io_cfg.h	102;"	d
+MS1_4IO	.././source/HardwareProfile_EBB_V10.h	142;"	d
+MS1_4IO	.././source/io_cfg.h	105;"	d
+MS1_4IO_TRIS	.././source/HardwareProfile_EBB_V10.h	143;"	d
+MS1_4IO_TRIS	.././source/io_cfg.h	106;"	d
+MS1_IO	.././source/HardwareProfile_EBB_V12.h	130;"	d
+MS1_IO	.././source/HardwareProfile_EBB_V13_and_above.h	131;"	d
+MS1_IO	.././source/io_cfg.h	224;"	d
+MS1_IO	.././source/io_cfg.h	279;"	d
+MS1_IO_TRIS	.././source/HardwareProfile_EBB_V12.h	131;"	d
+MS1_IO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	132;"	d
+MS1_IO_TRIS	.././source/io_cfg.h	225;"	d
+MS1_IO_TRIS	.././source/io_cfg.h	280;"	d
+MS2_1IO	.././source/HardwareProfile_EBB_V10.h	132;"	d
+MS2_1IO	.././source/HardwareProfile_EBB_V11.h	135;"	d
+MS2_1IO	.././source/io_cfg.h	171;"	d
+MS2_1IO	.././source/io_cfg.h	95;"	d
+MS2_1IO_TRIS	.././source/HardwareProfile_EBB_V10.h	133;"	d
+MS2_1IO_TRIS	.././source/HardwareProfile_EBB_V11.h	136;"	d
+MS2_1IO_TRIS	.././source/io_cfg.h	96;"	d
+MS2_2IO	.././source/HardwareProfile_EBB_V10.h	136;"	d
+MS2_2IO	.././source/HardwareProfile_EBB_V11.h	139;"	d
+MS2_2IO	.././source/io_cfg.h	173;"	d
+MS2_2IO	.././source/io_cfg.h	99;"	d
+MS2_2IO_TRIS	.././source/HardwareProfile_EBB_V10.h	137;"	d
+MS2_2IO_TRIS	.././source/HardwareProfile_EBB_V11.h	140;"	d
+MS2_2IO_TRIS	.././source/io_cfg.h	100;"	d
+MS2_3IO	.././source/HardwareProfile_EBB_V10.h	140;"	d
+MS2_3IO	.././source/io_cfg.h	103;"	d
+MS2_3IO_TRIS	.././source/HardwareProfile_EBB_V10.h	141;"	d
+MS2_3IO_TRIS	.././source/io_cfg.h	104;"	d
+MS2_4IO	.././source/HardwareProfile_EBB_V10.h	144;"	d
+MS2_4IO	.././source/io_cfg.h	107;"	d
+MS2_4IO_TRIS	.././source/HardwareProfile_EBB_V10.h	145;"	d
+MS2_4IO_TRIS	.././source/io_cfg.h	108;"	d
+MS2_IO	.././source/HardwareProfile_EBB_V12.h	132;"	d
+MS2_IO	.././source/HardwareProfile_EBB_V13_and_above.h	133;"	d
+MS2_IO	.././source/io_cfg.h	226;"	d
+MS2_IO	.././source/io_cfg.h	281;"	d
+MS2_IO_TRIS	.././source/HardwareProfile_EBB_V12.h	133;"	d
+MS2_IO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	134;"	d
+MS2_IO_TRIS	.././source/io_cfg.h	227;"	d
+MS2_IO_TRIS	.././source/io_cfg.h	282;"	d
+MS3_IO	.././source/HardwareProfile_EBB_V12.h	134;"	d
+MS3_IO	.././source/HardwareProfile_EBB_V13_and_above.h	135;"	d
+MS3_IO	.././source/io_cfg.h	228;"	d
+MS3_IO	.././source/io_cfg.h	283;"	d
+MS3_IO_TRIS	.././source/HardwareProfile_EBB_V12.h	135;"	d
+MS3_IO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	136;"	d
+MS3_IO_TRIS	.././source/io_cfg.h	229;"	d
+MS3_IO_TRIS	.././source/io_cfg.h	284;"	d
+MV	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^MV=mv $/;"	m
+MV	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^MV=mv $/;"	m
+MV	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^MV=mv $/;"	m
+MoveCommandType	.././source/ebb.h	/^} MoveCommandType;$/;"	t	typeref:struct:__anon5
+NUMBER_OF_STEPPERS	.././source/ebb.h	10;"	d
+NUMBER_OF_STEPPERS	.././source/ebb.h	47;"	d
+NodeCount	.././source/ebb.c	/^static unsigned long NodeCount;$/;"	v	file:
+OBJECTDIR	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^OBJECTDIR=build\/${CND_CONF}\/${IMAGE_TYPE}$/;"	m
+OBJECTDIR	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^OBJECTDIR=build\/${CND_CONF}\/${IMAGE_TYPE}$/;"	m
+OBJECTDIR	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^OBJECTDIR=build\/${CND_CONF}\/${IMAGE_TYPE}$/;"	m
+OBJECTFILES	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^OBJECTFILES=${OBJECTDIR}\/_ext\/343710134\/usb_device.o ${OBJECTDIR}\/_ext\/131024517\/usb_function_cdc.o ${OBJECTDIR}\/source\/ebb.o ${OBJECTDIR}\/source\/main.o ${OBJECTDIR}\/source\/RCServo2.o ${OBJECTDIR}\/source\/UBW.o ${OBJECTDIR}\/source\/usb_descriptors.o$/;"	m
+OBJECTFILES	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^OBJECTFILES=${OBJECTDIR}\/_ext\/343710134\/usb_device.o ${OBJECTDIR}\/_ext\/131024517\/usb_function_cdc.o ${OBJECTDIR}\/source\/ebb.o ${OBJECTDIR}\/source\/main.o ${OBJECTDIR}\/source\/RCServo2.o ${OBJECTDIR}\/source\/UBW.o ${OBJECTDIR}\/source\/usb_descriptors.o$/;"	m
+OBJECTFILES	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^OBJECTFILES=${OBJECTDIR}\/_ext\/343710134\/usb_device.o ${OBJECTDIR}\/_ext\/131024517\/usb_function_cdc.o ${OBJECTDIR}\/source\/ebb.o ${OBJECTDIR}\/source\/main.o ${OBJECTDIR}\/source\/RCServo2.o ${OBJECTDIR}\/source\/UBW.o ${OBJECTDIR}\/source\/usb_descriptors.o$/;"	m
+OBJECTFILES_QUOTED_IF_SPACED	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}\/_ext\/343710134\/usb_device.o ${OBJECTDIR}\/_ext\/131024517\/usb_function_cdc.o ${OBJECTDIR}\/source\/ebb.o ${OBJECTDIR}\/source\/main.o ${OBJECTDIR}\/source\/RCServo2.o ${OBJECTDIR}\/source\/UBW.o ${OBJECTDIR}\/source\/usb_descriptors.o$/;"	m
+OBJECTFILES_QUOTED_IF_SPACED	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}\/_ext\/343710134\/usb_device.o ${OBJECTDIR}\/_ext\/131024517\/usb_function_cdc.o ${OBJECTDIR}\/source\/ebb.o ${OBJECTDIR}\/source\/main.o ${OBJECTDIR}\/source\/RCServo2.o ${OBJECTDIR}\/source\/UBW.o ${OBJECTDIR}\/source\/usb_descriptors.o$/;"	m
+OBJECTFILES_QUOTED_IF_SPACED	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}\/_ext\/343710134\/usb_device.o ${OBJECTDIR}\/_ext\/131024517\/usb_function_cdc.o ${OBJECTDIR}\/source\/ebb.o ${OBJECTDIR}\/source\/main.o ${OBJECTDIR}\/source\/RCServo2.o ${OBJECTDIR}\/source\/UBW.o ${OBJECTDIR}\/source\/usb_descriptors.o$/;"	m
+OS_CURRENT	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^OS_CURRENT="$(shell uname -s)"$/;"	m
+OS_CURRENT	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^OS_CURRENT="$(shell uname -s)"$/;"	m
+OS_CURRENT	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^OS_CURRENT="$(shell uname -s)"$/;"	m
+OUTPUT_PIN	.././source/UBW.h	50;"	d
+OUTPUT_PIN	.././source/io_cfg.h	56;"	d
+OUTPUT_SUFFIX	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^OUTPUT_SUFFIX=cof$/;"	m
+OUTPUT_SUFFIX	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^OUTPUT_SUFFIX=hex$/;"	m
+OUTPUT_SUFFIX	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^OUTPUT_SUFFIX=cof$/;"	m
+OUTPUT_SUFFIX	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^OUTPUT_SUFFIX=hex$/;"	m
+OUTPUT_SUFFIX	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^OUTPUT_SUFFIX=cof$/;"	m
+OUTPUT_SUFFIX	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^OUTPUT_SUFFIX=hex$/;"	m
+OUT_FN_PPS_C1OUT	.././source/pps.h	67;"	d
+OUT_FN_PPS_C2OUT	.././source/pps.h	68;"	d
+OUT_FN_PPS_CCP1P1A	.././source/pps.h	75;"	d
+OUT_FN_PPS_CCP2P2A	.././source/pps.h	79;"	d
+OUT_FN_PPS_DT2	.././source/pps.h	70;"	d
+OUT_FN_PPS_MASK	.././source/pps.h	83;"	d
+OUT_FN_PPS_NULL	.././source/pps.h	66;"	d
+OUT_FN_PPS_P1B	.././source/pps.h	76;"	d
+OUT_FN_PPS_P1C	.././source/pps.h	77;"	d
+OUT_FN_PPS_P1D	.././source/pps.h	78;"	d
+OUT_FN_PPS_P2B	.././source/pps.h	80;"	d
+OUT_FN_PPS_P2C	.././source/pps.h	81;"	d
+OUT_FN_PPS_P2D	.././source/pps.h	82;"	d
+OUT_FN_PPS_SCK2	.././source/pps.h	72;"	d
+OUT_FN_PPS_SDO2	.././source/pps.h	71;"	d
+OUT_FN_PPS_SSDMA	.././source/pps.h	73;"	d
+OUT_FN_PPS_TX2CK2	.././source/pps.h	69;"	d
+OUT_FN_PPS_ULPWU	.././source/pps.h	74;"	d
+OUT_PIN_PPS_RP0	.././source/pps.h	85;"	d
+OUT_PIN_PPS_RP1	.././source/pps.h	86;"	d
+OUT_PIN_PPS_RP10	.././source/pps.h	95;"	d
+OUT_PIN_PPS_RP11	.././source/pps.h	96;"	d
+OUT_PIN_PPS_RP12	.././source/pps.h	97;"	d
+OUT_PIN_PPS_RP13	.././source/pps.h	98;"	d
+OUT_PIN_PPS_RP14	.././source/pps.h	99;"	d
+OUT_PIN_PPS_RP15	.././source/pps.h	100;"	d
+OUT_PIN_PPS_RP16	.././source/pps.h	101;"	d
+OUT_PIN_PPS_RP17	.././source/pps.h	102;"	d
+OUT_PIN_PPS_RP18	.././source/pps.h	103;"	d
+OUT_PIN_PPS_RP19	.././source/pps.h	107;"	d
+OUT_PIN_PPS_RP2	.././source/pps.h	87;"	d
+OUT_PIN_PPS_RP20	.././source/pps.h	108;"	d
+OUT_PIN_PPS_RP21	.././source/pps.h	109;"	d
+OUT_PIN_PPS_RP22	.././source/pps.h	110;"	d
+OUT_PIN_PPS_RP23	.././source/pps.h	111;"	d
+OUT_PIN_PPS_RP24	.././source/pps.h	112;"	d
+OUT_PIN_PPS_RP3	.././source/pps.h	88;"	d
+OUT_PIN_PPS_RP4	.././source/pps.h	89;"	d
+OUT_PIN_PPS_RP5	.././source/pps.h	90;"	d
+OUT_PIN_PPS_RP6	.././source/pps.h	91;"	d
+OUT_PIN_PPS_RP7	.././source/pps.h	92;"	d
+OUT_PIN_PPS_RP8	.././source/pps.h	93;"	d
+OUT_PIN_PPS_RP9	.././source/pps.h	94;"	d
+OVERFLOW_MUL	.././source/ebb.c	129;"	d	file:
+OutByte	.././source/ebb.c	/^static unsigned char OutByte;$/;"	v	file:
+PATH	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^PATH:=C:\/Program Files (x86)\/Microchip\/MPLABX\/mplab_ide\/mplab_ide\/modules\/..\/..\/bin\/:$(PATH)$/;"	m
+PATH	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^PATH:=C:\/Program Files (x86)\/Microchip\/MPLABX\/mplab_ide\/mplab_ide\/modules\/..\/..\/bin\/:$(PATH)$/;"	m
+PATH	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^PATH:=C:\/Program Files (x86)\/Microchip\/MPLABX\/mplab_ide\/mplab_ide\/modules\/..\/..\/bin\/:$(PATH)$/;"	m
+PATH_TO_IDE_BIN	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^PATH_TO_IDE_BIN=C:\/Program Files (x86)\/Microchip\/MPLABX\/mplab_ide\/mplab_ide\/modules\/..\/..\/bin\/$/;"	m
+PATH_TO_IDE_BIN	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^PATH_TO_IDE_BIN=C:\/Program Files (x86)\/Microchip\/MPLABX\/mplab_ide\/mplab_ide\/modules\/..\/..\/bin\/$/;"	m
+PATH_TO_IDE_BIN	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^PATH_TO_IDE_BIN=C:\/Program Files (x86)\/Microchip\/MPLABX\/mplab_ide\/mplab_ide\/modules\/..\/..\/bin\/$/;"	m
+PEN_DOWN	.././source/ebb.h	/^	PEN_DOWN = 0,$/;"	e	enum:__anon3
+PEN_UP	.././source/ebb.h	/^	PEN_UP$/;"	e	enum:__anon3
+PEN_UP_DOWN_RPN	.././source/HardwareProfile_EBB_V13_and_above.h	116;"	d
+PIC_CONTROLS_DRIVERS	.././source/ebb.c	/^	PIC_CONTROLS_DRIVERS = 0,$/;"	e	enum:__anon2	file:
+PIC_CONTROLS_EXTERNAL	.././source/ebb.c	/^	PIC_CONTROLS_EXTERNAL,$/;"	e	enum:__anon2	file:
+POSSIBLE_DEPFILES	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^POSSIBLE_DEPFILES=${OBJECTDIR}\/_ext\/343710134\/usb_device.o.d ${OBJECTDIR}\/_ext\/131024517\/usb_function_cdc.o.d ${OBJECTDIR}\/source\/ebb.o.d ${OBJECTDIR}\/source\/main.o.d ${OBJECTDIR}\/source\/RCServo2.o.d ${OBJECTDIR}\/source\/UBW.o.d ${OBJECTDIR}\/source\/usb_descriptors.o.d$/;"	m
+POSSIBLE_DEPFILES	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^POSSIBLE_DEPFILES=${OBJECTDIR}\/_ext\/343710134\/usb_device.o.d ${OBJECTDIR}\/_ext\/131024517\/usb_function_cdc.o.d ${OBJECTDIR}\/source\/ebb.o.d ${OBJECTDIR}\/source\/main.o.d ${OBJECTDIR}\/source\/RCServo2.o.d ${OBJECTDIR}\/source\/UBW.o.d ${OBJECTDIR}\/source\/usb_descriptors.o.d$/;"	m
+POSSIBLE_DEPFILES	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^POSSIBLE_DEPFILES=${OBJECTDIR}\/_ext\/343710134\/usb_device.o.d ${OBJECTDIR}\/_ext\/131024517\/usb_function_cdc.o.d ${OBJECTDIR}\/source\/ebb.o.d ${OBJECTDIR}\/source\/main.o.d ${OBJECTDIR}\/source\/RCServo2.o.d ${OBJECTDIR}\/source\/UBW.o.d ${OBJECTDIR}\/source\/usb_descriptors.o.d$/;"	m
+PPSInput	.././source/pps.h	59;"	d
+PPSLock	.././source/pps.h	119;"	d
+PPSOutput	.././source/pps.h	116;"	d
+PPSUnLock	.././source/pps.h	118;"	d
+PROGRAMMABLE_WITH_USB_HID_BOOTLOADER	.././source/HardwareProfile_EBB_V10.h	82;"	d
+PROGRAMMABLE_WITH_USB_HID_BOOTLOADER	.././source/HardwareProfile_EBB_V11.h	82;"	d
+PROGRAMMABLE_WITH_USB_HID_BOOTLOADER	.././source/HardwareProfile_EBB_V12.h	82;"	d
+PROJECTNAME	.././nbproject/Makefile-impl.mk	/^PROJECTNAME=app.X$/;"	m
+PenState	.././source/ebb.c	/^static PenStateType PenState;$/;"	v	file:
+PenStateType	.././source/ebb.h	/^} PenStateType;$/;"	t	typeref:enum:__anon3
+PenUpDownIO	.././source/HardwareProfile_EBB_V10.h	112;"	d
+PenUpDownIO	.././source/HardwareProfile_EBB_V11.h	112;"	d
+PenUpDownIO	.././source/HardwareProfile_EBB_V12.h	115;"	d
+PenUpDownIO	.././source/HardwareProfile_EBB_V13_and_above.h	115;"	d
+PenUpDownIO	.././source/io_cfg.h	158;"	d
+PenUpDownIO	.././source/io_cfg.h	209;"	d
+PenUpDownIO	.././source/io_cfg.h	264;"	d
+PenUpDownIO	.././source/io_cfg.h	319;"	d
+PenUpDownIO	.././source/io_cfg.h	75;"	d
+PenUpDownIO_TRIS	.././source/HardwareProfile_EBB_V10.h	113;"	d
+PenUpDownIO_TRIS	.././source/HardwareProfile_EBB_V11.h	113;"	d
+PenUpDownIO_TRIS	.././source/HardwareProfile_EBB_V12.h	116;"	d
+PenUpDownIO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	117;"	d
+PenUpDownIO_TRIS	.././source/io_cfg.h	159;"	d
+PenUpDownIO_TRIS	.././source/io_cfg.h	210;"	d
+PenUpDownIO_TRIS	.././source/io_cfg.h	265;"	d
+PenUpDownIO_TRIS	.././source/io_cfg.h	320;"	d
+PenUpDownIO_TRIS	.././source/io_cfg.h	76;"	d
+ProcessIO	.././source/UBW.c	/^void ProcessIO(void)$/;"	f
+QC_ms_timer	.././source/ebb.c	/^unsigned char QC_ms_timer;$/;"	v
+RANLIB	.././Makefile	/^RANLIB=ranlib$/;"	m
+RCSERVO2_H	.././source/RCServo2.h	3;"	d
+RCServo2_Init	.././source/RCServo2.c	/^void RCServo2_Init(void)$/;"	f
+RCServo2_Move	.././source/RCServo2.c	/^UINT8 RCServo2_Move($/;"	f
+RCServo2_S2_command	.././source/RCServo2.c	/^void RCServo2_S2_command (void)$/;"	f
+RCServo2_get_channel_from_RPn	.././source/RCServo2.c	/^UINT8 RCServo2_get_channel_from_RPn(UINT8 RPn)$/;"	f
+REMAPPED_HIGH_INTERRUPT_VECTOR_ADDRESS	.././source/main.c	102;"	d	file:
+REMAPPED_HIGH_INTERRUPT_VECTOR_ADDRESS	.././source/main.c	106;"	d	file:
+REMAPPED_HIGH_INTERRUPT_VECTOR_ADDRESS	.././source/main.c	98;"	d	file:
+REMAPPED_LOW_INTERRUPT_VECTOR_ADDRESS	.././source/main.c	103;"	d	file:
+REMAPPED_LOW_INTERRUPT_VECTOR_ADDRESS	.././source/main.c	107;"	d	file:
+REMAPPED_LOW_INTERRUPT_VECTOR_ADDRESS	.././source/main.c	99;"	d	file:
+REMAPPED_RESET_VECTOR_ADDRESS	.././source/main.c	101;"	d	file:
+REMAPPED_RESET_VECTOR_ADDRESS	.././source/main.c	105;"	d	file:
+REMAPPED_RESET_VECTOR_ADDRESS	.././source/main.c	97;"	d	file:
+RM	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^RM=rm -f $/;"	m
+RM	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^RM=rm -f $/;"	m
+RM	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^RM=rm -f $/;"	m
+RPnBit	.././source/UBW.c	/^const char RPnBit[25] = {$/;"	v
+RPnLATPort	.././source/UBW.c	/^volatile near unsigned char * RPnLATPort[25] = {$/;"	v
+RPnTRISPort	.././source/UBW.c	/^volatile near unsigned char * RPnTRISPort[25] = {$/;"	v
+RefRA0_IO_TRIS	.././source/HardwareProfile_EBB_V12.h	112;"	d
+RefRA0_IO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	112;"	d
+Remapped_High_ISR	.././source/main.c	/^void Remapped_High_ISR (void)$/;"	f
+Remapped_Low_ISR	.././source/main.c	/^void Remapped_Low_ISR (void)$/;"	f
+SHELL	.././nbproject/Makefile-local-EBBv13_XC8_no_bootloader.mk	/^SHELL=cmd.exe$/;"	m
+SHELL	.././nbproject/Makefile-local-EBBv13_no_bootloader.mk	/^SHELL=cmd.exe$/;"	m
+SHELL	.././nbproject/Makefile-local-EBBv13_with_bootloader.mk	/^SHELL=cmd.exe$/;"	m
+SOLENOID_OFF	.././source/ebb.c	/^	SOLENOID_OFF = 0,$/;"	e	enum:__anon1	file:
+SOLENOID_ON	.././source/ebb.c	/^	SOLENOID_ON,$/;"	e	enum:__anon1	file:
+SOLENOID_PWM	.././source/ebb.c	/^	SOLENOID_PWM$/;"	e	enum:__anon1	file:
+SOURCEFILES	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^SOURCEFILES=..\/Microchip\/USB\/usb_device.c ..\/Microchip\/USB\/CDC Device Driver\/usb_function_cdc.c source\/ebb.c source\/main.c source\/RCServo2.c source\/UBW.c source\/usb_descriptors.c$/;"	m
+SOURCEFILES	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^SOURCEFILES=..\/Microchip\/USB\/usb_device.c ..\/Microchip\/USB\/CDC Device Driver\/usb_function_cdc.c source\/ebb.c source\/main.c source\/RCServo2.c source\/UBW.c source\/usb_descriptors.c$/;"	m
+SOURCEFILES	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^SOURCEFILES=..\/Microchip\/USB\/usb_device.c ..\/Microchip\/USB\/CDC Device Driver\/usb_function_cdc.c source\/ebb.c source\/main.c source\/RCServo2.c source\/UBW.c source\/usb_descriptors.c$/;"	m
+SOURCEFILES_QUOTED_IF_SPACED	.././nbproject/Makefile-EBBv13_XC8_no_bootloader.mk	/^SOURCEFILES_QUOTED_IF_SPACED=..\/Microchip\/USB\/usb_device.c "..\/Microchip\/USB\/CDC Device Driver\/usb_function_cdc.c" source\/ebb.c source\/main.c source\/RCServo2.c source\/UBW.c source\/usb_descriptors.c$/;"	m
+SOURCEFILES_QUOTED_IF_SPACED	.././nbproject/Makefile-EBBv13_no_bootloader.mk	/^SOURCEFILES_QUOTED_IF_SPACED=..\/Microchip\/USB\/usb_device.c "..\/Microchip\/USB\/CDC Device Driver\/usb_function_cdc.c" source\/ebb.c source\/main.c source\/RCServo2.c source\/UBW.c source\/usb_descriptors.c$/;"	m
+SOURCEFILES_QUOTED_IF_SPACED	.././nbproject/Makefile-EBBv13_with_bootloader.mk	/^SOURCEFILES_QUOTED_IF_SPACED=..\/Microchip\/USB\/usb_device.c "..\/Microchip\/USB\/CDC Device Driver\/usb_function_cdc.c" source\/ebb.c source\/main.c source\/RCServo2.c source\/UBW.c source\/usb_descriptors.c$/;"	m
+STEP1_BIT	.././source/ebb.h	42;"	d
+STEP2_BIT	.././source/ebb.h	44;"	d
+SUBPROJECTS	.././nbproject/Makefile-impl.mk	/^SUBPROJECTS=${SUB_${SUB}}$/;"	m
+SUB_no	.././nbproject/Makefile-impl.mk	/^SUB_no=NO$/;"	m
+ServoChannel	.././source/ebb.h	/^    UINT8           ServoChannel;$/;"	m	struct:__anon5
+ServoPosition	.././source/ebb.h	/^    UINT16          ServoPosition;$/;"	m	struct:__anon5
+ServoRPn	.././source/ebb.h	/^    UINT8           ServoRPn;$/;"	m	struct:__anon5
+ServoRate	.././source/ebb.h	/^    UINT16          ServoRate;$/;"	m	struct:__anon5
+SetPinLATFromRPn	.././source/UBW.c	/^void SetPinLATFromRPn(char Pin, char State)$/;"	f
+SetPinTRISFromRPn	.././source/UBW.c	/^void SetPinTRISFromRPn(char Pin, char State)$/;"	f
+Sleep1IO	.././source/HardwareProfile_EBB_V10.h	148;"	d
+Sleep1IO	.././source/HardwareProfile_EBB_V11.h	116;"	d
+Sleep1IO	.././source/io_cfg.h	111;"	d
+Sleep1IO	.././source/io_cfg.h	176;"	d
+Sleep1IO_TRIS	.././source/HardwareProfile_EBB_V11.h	117;"	d
+Sleep2IO	.././source/HardwareProfile_EBB_V10.h	149;"	d
+Sleep2IO	.././source/HardwareProfile_EBB_V11.h	118;"	d
+Sleep2IO	.././source/io_cfg.h	112;"	d
+Sleep2IO	.././source/io_cfg.h	177;"	d
+Sleep2IO_TRIS	.././source/HardwareProfile_EBB_V11.h	119;"	d
+Sleep3IO	.././source/HardwareProfile_EBB_V10.h	150;"	d
+Sleep3IO	.././source/io_cfg.h	113;"	d
+Sleep4IO	.././source/HardwareProfile_EBB_V10.h	151;"	d
+Sleep4IO	.././source/io_cfg.h	114;"	d
+SolenoidDelay	.././source/ebb.c	/^static unsigned int SolenoidDelay;$/;"	v	file:
+SolenoidState	.././source/ebb.c	/^static SolenoidStateType SolenoidState;$/;"	v	file:
+SolenoidStateType	.././source/ebb.c	/^} SolenoidStateType;$/;"	t	typeref:enum:__anon1	file:
+Step1AltIO	.././source/HardwareProfile_EBB_V10.h	163;"	d
+Step1AltIO	.././source/HardwareProfile_EBB_V11.h	152;"	d
+Step1AltIO	.././source/HardwareProfile_EBB_V12.h	147;"	d
+Step1AltIO	.././source/HardwareProfile_EBB_V13_and_above.h	148;"	d
+Step1AltIO	.././source/io_cfg.h	126;"	d
+Step1AltIO	.././source/io_cfg.h	185;"	d
+Step1AltIO	.././source/io_cfg.h	241;"	d
+Step1AltIO	.././source/io_cfg.h	296;"	d
+Step1AltIO	.././source/io_cfg.h	327;"	d
+Step1AltIO_TRIS	.././source/HardwareProfile_EBB_V10.h	164;"	d
+Step1AltIO_TRIS	.././source/HardwareProfile_EBB_V11.h	153;"	d
+Step1AltIO_TRIS	.././source/HardwareProfile_EBB_V12.h	148;"	d
+Step1AltIO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	149;"	d
+Step1AltIO_TRIS	.././source/io_cfg.h	127;"	d
+Step1AltIO_TRIS	.././source/io_cfg.h	186;"	d
+Step1AltIO_TRIS	.././source/io_cfg.h	242;"	d
+Step1AltIO_TRIS	.././source/io_cfg.h	297;"	d
+Step1AltTRIS	.././source/io_cfg.h	328;"	d
+Step1IO	.././source/HardwareProfile_EBB_V10.h	154;"	d
+Step1IO	.././source/HardwareProfile_EBB_V11.h	143;"	d
+Step1IO	.././source/HardwareProfile_EBB_V12.h	138;"	d
+Step1IO	.././source/HardwareProfile_EBB_V13_and_above.h	139;"	d
+Step1IO	.././source/io_cfg.h	117;"	d
+Step1IO	.././source/io_cfg.h	180;"	d
+Step1IO	.././source/io_cfg.h	232;"	d
+Step1IO	.././source/io_cfg.h	287;"	d
+Step1IO	.././source/io_cfg.h	323;"	d
+Step1IO_TRIS	.././source/HardwareProfile_EBB_V11.h	144;"	d
+Step1IO_TRIS	.././source/HardwareProfile_EBB_V12.h	139;"	d
+Step1IO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	140;"	d
+Step1IO_TRIS	.././source/io_cfg.h	233;"	d
+Step1IO_TRIS	.././source/io_cfg.h	288;"	d
+Step2AltIO	.././source/HardwareProfile_EBB_V10.h	167;"	d
+Step2AltIO	.././source/HardwareProfile_EBB_V11.h	156;"	d
+Step2AltIO	.././source/HardwareProfile_EBB_V12.h	151;"	d
+Step2AltIO	.././source/HardwareProfile_EBB_V13_and_above.h	152;"	d
+Step2AltIO	.././source/io_cfg.h	130;"	d
+Step2AltIO	.././source/io_cfg.h	189;"	d
+Step2AltIO	.././source/io_cfg.h	245;"	d
+Step2AltIO	.././source/io_cfg.h	300;"	d
+Step2AltIO	.././source/io_cfg.h	331;"	d
+Step2AltIO_TRIS	.././source/HardwareProfile_EBB_V10.h	168;"	d
+Step2AltIO_TRIS	.././source/HardwareProfile_EBB_V11.h	157;"	d
+Step2AltIO_TRIS	.././source/HardwareProfile_EBB_V12.h	152;"	d
+Step2AltIO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	153;"	d
+Step2AltIO_TRIS	.././source/io_cfg.h	131;"	d
+Step2AltIO_TRIS	.././source/io_cfg.h	190;"	d
+Step2AltIO_TRIS	.././source/io_cfg.h	246;"	d
+Step2AltIO_TRIS	.././source/io_cfg.h	301;"	d
+Step2AltTRIS	.././source/io_cfg.h	332;"	d
+Step2IO	.././source/HardwareProfile_EBB_V10.h	156;"	d
+Step2IO	.././source/HardwareProfile_EBB_V11.h	147;"	d
+Step2IO	.././source/HardwareProfile_EBB_V12.h	142;"	d
+Step2IO	.././source/HardwareProfile_EBB_V13_and_above.h	143;"	d
+Step2IO	.././source/io_cfg.h	119;"	d
+Step2IO	.././source/io_cfg.h	182;"	d
+Step2IO	.././source/io_cfg.h	236;"	d
+Step2IO	.././source/io_cfg.h	291;"	d
+Step2IO	.././source/io_cfg.h	325;"	d
+Step2IO_TRIS	.././source/HardwareProfile_EBB_V11.h	148;"	d
+Step2IO_TRIS	.././source/HardwareProfile_EBB_V12.h	143;"	d
+Step2IO_TRIS	.././source/HardwareProfile_EBB_V13_and_above.h	144;"	d
+Step2IO_TRIS	.././source/io_cfg.h	237;"	d
+Step2IO_TRIS	.././source/io_cfg.h	292;"	d
+Step3AltIO	.././source/HardwareProfile_EBB_V10.h	171;"	d
+Step3AltIO	.././source/io_cfg.h	134;"	d
+Step3AltIO_TRIS	.././source/HardwareProfile_EBB_V10.h	172;"	d
+Step3AltIO_TRIS	.././source/io_cfg.h	135;"	d
+Step3IO	.././source/HardwareProfile_EBB_V10.h	158;"	d
+Step3IO	.././source/io_cfg.h	121;"	d
+Step4AltIO	.././source/HardwareProfile_EBB_V10.h	175;"	d
+Step4AltIO	.././source/io_cfg.h	138;"	d
+Step4AltIO_TRIS	.././source/HardwareProfile_EBB_V10.h	176;"	d
+Step4AltIO_TRIS	.././source/io_cfg.h	139;"	d
+Step4IO	.././source/HardwareProfile_EBB_V10.h	160;"	d
+Step4IO	.././source/io_cfg.h	123;"	d
+StepAcc	.././source/ebb.c	/^static near unsigned int StepAcc[NUMBER_OF_STEPPERS];$/;"	v	file:
+StepAdd	.././source/ebb.h	/^    INT16           StepAdd[NUMBER_OF_STEPPERS];$/;"	m	struct:__anon5
+StepsCounter	.././source/ebb.h	/^    UINT16          StepsCounter[NUMBER_OF_STEPPERS];$/;"	m	struct:__anon5
+StoredEngraverPower	.././source/ebb.c	/^static UINT StoredEngraverPower;$/;"	v	file:
+TIMER1_H_RELOAD	.././source/ebb.h	55;"	d
+TIMER1_L_RELOAD	.././source/ebb.h	54;"	d
+TookStep	.././source/ebb.c	/^static unsigned char TookStep;$/;"	v	file:
+UBW_H	.././source/UBW.h	38;"	d
+USBCBCheckOtherReq	.././source/main.c	/^void USBCBCheckOtherReq(void)$/;"	f
+USBCBEP0DataReceived	.././source/main.c	/^void USBCBEP0DataReceived(void)$/;"	f
+USBCBErrorHandler	.././source/main.c	/^void USBCBErrorHandler(void)$/;"	f
+USBCBInitEP	.././source/main.c	/^void USBCBInitEP(void)$/;"	f
+USBCBSendResume	.././source/main.c	/^void USBCBSendResume(void)$/;"	f
+USBCBStdSetDscHandler	.././source/main.c	/^void USBCBStdSetDscHandler(void)$/;"	f
+USBCBSuspend	.././source/main.c	/^void USBCBSuspend(void)$/;"	f
+USBCBWakeFromSuspend	.././source/main.c	/^void USBCBWakeFromSuspend(void)$/;"	f
+USBCB_SOF_Handler	.././source/main.c	/^void USBCB_SOF_Handler(void)$/;"	f
+USBCFG_H	.././source/usb_config.h	55;"	d
+USB_BUS_SENSE	.././source/HardwareProfile_EBB_V10.h	70;"	d
+USB_BUS_SENSE	.././source/HardwareProfile_EBB_V10.h	72;"	d
+USB_BUS_SENSE	.././source/HardwareProfile_EBB_V11.h	70;"	d
+USB_BUS_SENSE	.././source/HardwareProfile_EBB_V11.h	72;"	d
+USB_BUS_SENSE	.././source/HardwareProfile_EBB_V12.h	70;"	d
+USB_BUS_SENSE	.././source/HardwareProfile_EBB_V12.h	72;"	d
+USB_BUS_SENSE	.././source/HardwareProfile_EBB_V13_and_above.h	70;"	d
+USB_BUS_SENSE	.././source/HardwareProfile_EBB_V13_and_above.h	72;"	d
+USB_CDC_SUPPORT_ABSTRACT_CONTROL_MANAGEMENT_CAPABILITIES_D1	.././source/usb_config.h	178;"	d
+USB_CD_Ptr	.././source/usb_descriptors.c	/^ROM BYTE *ROM USB_CD_Ptr[]=$/;"	v
+USB_ENABLE_ALL_HANDLERS	.././source/usb_config.h	150;"	d
+USB_ENABLE_STATUS_STAGE_TIMEOUTS	.././source/usb_config.h	123;"	d
+USB_EP0_BUFF_SIZE	.././source/usb_config.h	58;"	d
+USB_MAX_EP_NUMBER	.././source/usb_config.h	165;"	d
+USB_MAX_NUM_INT	.././source/usb_config.h	65;"	d
+USB_NUM_STRING_DESCRIPTORS	.././source/usb_config.h	147;"	d
+USB_PING_PONG_MODE	.././source/usb_config.h	81;"	d
+USB_POLLING	.././source/usb_config.h	86;"	d
+USB_PULLUP_OPTION	.././source/usb_config.h	90;"	d
+USB_SD_Ptr	.././source/usb_descriptors.c	/^ROM BYTE *ROM USB_SD_Ptr[USB_NUM_STRING_DESCRIPTORS]=$/;"	v
+USB_SPEED_OPTION	.././source/usb_config.h	99;"	d
+USB_STATUS_STAGE_TIMEOUT	.././source/usb_config.h	139;"	d
+USB_SUPPORT_DEVICE	.././source/usb_config.h	145;"	d
+USB_TRANSCEIVER_OPTION	.././source/usb_config.h	93;"	d
+USB_USER_CONFIG_DESCRIPTOR	.././source/usb_config.h	75;"	d
+USB_USER_CONFIG_DESCRIPTOR_INCLUDE	.././source/usb_config.h	76;"	d
+USB_USER_DEVICE_DESCRIPTOR	.././source/usb_config.h	70;"	d
+USB_USER_DEVICE_DESCRIPTOR_INCLUDE	.././source/usb_config.h	71;"	d
+USB_USE_CDC	.././source/usb_config.h	162;"	d
+USER_USB_CALLBACK_EVENT_HANDLER	.././source/main.c	/^BOOL USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, WORD size)$/;"	f
+USE_USB_BUS_SENSE_IO	.././source/HardwareProfile_EBB_V10.h	67;"	d
+USE_USB_BUS_SENSE_IO	.././source/HardwareProfile_EBB_V13_and_above.h	67;"	d
+UseAltPause	.././source/ebb.c	/^static BOOL UseAltPause;$/;"	v	file:
+UserInit	.././source/UBW.c	/^void UserInit(void)$/;"	f
+UserMeowInit	.././source/UBW.c	/^void UserMeowInit(void) {$/;"	f
+__PPS_H	.././source/pps.h	13;"	d
+__USB_DESCRIPTORS_C	.././source/usb_descriptors.c	154;"	d	file:
+_reset	.././source/main.c	/^void _reset (void)$/;"	f
+_user_putc	.././source/UBW.c	/^int _user_putc (char c)$/;"	f
+advance_RX_buf_out	.././source/UBW.h	87;"	d
+bDscType	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[10];}sd002={$/;"	m	struct:__anon13	file:
+bDscType	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[11];}sd001={$/;"	m	struct:__anon12	file:
+bDscType	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[1];}sd000={$/;"	m	struct:__anon11	file:
+bLength	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[10];}sd002={$/;"	m	struct:__anon13	file:
+bLength	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[11];}sd001={$/;"	m	struct:__anon12	file:
+bLength	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[1];}sd000={$/;"	m	struct:__anon11	file:
+bitclr	.././source/UBW.h	53;"	d
+bitset	.././source/UBW.h	52;"	d
+bittst	.././source/UBW.h	54;"	d
+checkReturnCode	.././nbproject/Package-EBBv13_XC8_no_bootloader.bash	/^function checkReturnCode$/;"	f
+checkReturnCode	.././nbproject/Package-EBBv13_no_bootloader.bash	/^function checkReturnCode$/;"	f
+checkReturnCode	.././nbproject/Package-EBBv13_with_bootloader.bash	/^function checkReturnCode$/;"	f
+check_and_send_TX_data	.././source/UBW.c	/^void check_and_send_TX_data (void)$/;"	f
+comd	.././source/ebb_demo.h	/^	comd_type comd;$/;"	m	struct:__anon7
+comd_counter	.././source/ebb.c	/^unsigned int comd_counter;$/;"	v
+comd_type	.././source/ebb_demo.h	/^} comd_type;$/;"	t	typeref:enum:__anon6
+configDescriptor1	.././source/usb_descriptors.c	/^ROM BYTE configDescriptor1[]={$/;"	v
+copyFileToTmpDir	.././nbproject/Package-EBBv13_XC8_no_bootloader.bash	/^function copyFileToTmpDir$/;"	f
+copyFileToTmpDir	.././nbproject/Package-EBBv13_no_bootloader.bash	/^function copyFileToTmpDir$/;"	f
+copyFileToTmpDir	.././nbproject/Package-EBBv13_with_bootloader.bash	/^function copyFileToTmpDir$/;"	f
+device_dsc	.././source/usb_descriptors.c	/^ROM USB_DEVICE_DESCRIPTOR device_dsc=$/;"	v
+duration	.././source/ebb_demo.h	/^	unsigned int duration;$/;"	m	struct:__anon7
+error_byte	.././source/UBW.c	/^near unsigned char error_byte;$/;"	v
+extract_digit	.././source/UBW.c	/^signed char extract_digit(unsigned long * acc,	unsigned char digits)$/;"	f
+extract_number	.././source/UBW.c	/^ExtractReturnType extract_number($/;"	f
+gPulseCounters	.././source/UBW.c	/^unsigned int gPulseCounters[4] = {0,0,0,0};$/;"	v
+gPulseLen	.././source/UBW.c	/^unsigned int gPulseLen[4] = {0,0,0,0};$/;"	v
+gPulseRate	.././source/UBW.c	/^unsigned int gPulseRate[4] = {0,0,0,0};$/;"	v
+gPulsesOn	.././source/UBW.c	/^unsigned char gPulsesOn = FALSE;$/;"	v
+gRC2Ptr	.././source/RCServo2.c	/^UINT8  gRC2Ptr;$/;"	v
+gRC2RPORPtr	.././source/RCServo2.c	/^far ram UINT8 * gRC2RPORPtr;$/;"	v
+gRC2RPn	.././source/RCServo2.c	/^UINT8  gRC2RPn[MAX_RC2_SERVOS];$/;"	v
+gRC2Rate	.././source/RCServo2.c	/^UINT16 gRC2Rate[MAX_RC2_SERVOS];$/;"	v
+gRC2SlotMS	.././source/RCServo2.c	/^UINT8  gRC2SlotMS;$/;"	v
+gRC2Slots	.././source/RCServo2.c	/^UINT8  gRC2Slots;$/;"	v
+gRC2Target	.././source/RCServo2.c	/^UINT16 gRC2Target[MAX_RC2_SERVOS];$/;"	v
+gRC2Value	.././source/RCServo2.c	/^UINT16 gRC2Value[MAX_RC2_SERVOS];$/;"	v
+gRC2msCounter	.././source/RCServo2.c	/^UINT8  gRC2msCounter;$/;"	v
+gUseOldDurationUnits	.././source/ebb.c	/^BOOL gUseOldDurationUnits;$/;"	v
+gUseRCPenServo	.././source/ebb.c	/^BOOL gUseRCPenServo;$/;"	v
+gUseSolenoid	.././source/ebb.c	/^BOOL gUseSolenoid;$/;"	v
+g_BO_init	.././source/UBW.c	/^unsigned char g_BO_init;$/;"	v
+g_BO_strobe_delay	.././source/UBW.c	/^unsigned char g_BO_strobe_delay;$/;"	v
+g_BO_strobe_mask	.././source/UBW.c	/^unsigned char g_BO_strobe_mask;$/;"	v
+g_BO_wait_delay	.././source/UBW.c	/^unsigned char g_BO_wait_delay;$/;"	v
+g_BO_wait_mask	.././source/UBW.c	/^unsigned char g_BO_wait_mask;$/;"	v
+g_RC_next_ptr	.././source/UBW.c	/^near unsigned char g_RC_next_ptr;$/;"	v
+g_RC_primed_ptr	.././source/UBW.c	/^near unsigned char g_RC_primed_ptr;$/;"	v
+g_RC_state	.././source/UBW.c	/^volatile tRC_state g_RC_state[kRC_DATA_SIZE];				\/\/ Stores states for each pin for RC command$/;"	v
+g_RC_timing_ptr	.././source/UBW.c	/^near unsigned char g_RC_timing_ptr;$/;"	v
+g_RC_value	.././source/UBW.c	/^volatile unsigned int g_RC_value[kRC_DATA_SIZE];			\/\/ Stores reload values for TMR0$/;"	v
+g_RX_buf	.././source/UBW.c	/^unsigned char g_RX_buf[kRX_BUF_SIZE];$/;"	v
+g_RX_buf_in	.././source/UBW.c	/^unsigned char g_RX_buf_in;$/;"	v
+g_RX_buf_out	.././source/UBW.c	/^unsigned char g_RX_buf_out;$/;"	v
+g_RX_command_buf	.././source/UBW.c	/^unsigned char g_RX_command_buf[kRX_COMMAND_BUF_SIZE];$/;"	v
+g_TX_buf	.././source/UBW.c	/^unsigned char g_TX_buf[kTX_BUF_SIZE];$/;"	v
+g_TX_buf_in	.././source/UBW.c	/^unsigned char g_TX_buf_in;$/;"	v
+g_TX_buf_out	.././source/UBW.c	/^unsigned char g_TX_buf_out;$/;"	v
+g_USART_RX_buf	.././source/UBW.c	/^unsigned char g_USART_RX_buf[kUSART_RX_BUF_SIZE];$/;"	v
+g_USART_RX_buf_in	.././source/UBW.c	/^unsigned char g_USART_RX_buf_in;$/;"	v
+g_USART_RX_buf_out	.././source/UBW.c	/^unsigned char g_USART_RX_buf_out;$/;"	v
+g_USART_TX_buf	.././source/UBW.c	/^unsigned char g_USART_TX_buf[kUSART_TX_BUF_SIZE];$/;"	v
+g_USART_TX_buf_in	.././source/UBW.c	/^unsigned char g_USART_TX_buf_in;$/;"	v
+g_USART_TX_buf_out	.././source/UBW.c	/^unsigned char g_USART_TX_buf_out;$/;"	v
+g_ack_enable	.././source/UBW.c	/^BOOL	g_ack_enable;$/;"	v
+g_servo2_RPn	.././source/RCServo2.c	/^UINT8  g_servo2_RPn;$/;"	v
+g_servo2_max	.././source/RCServo2.c	/^UINT16 g_servo2_max;$/;"	v
+g_servo2_min	.././source/RCServo2.c	/^UINT16 g_servo2_min;$/;"	v
+g_servo2_rate_down	.././source/RCServo2.c	/^UINT16 g_servo2_rate_down;$/;"	v
+g_servo2_rate_up	.././source/RCServo2.c	/^UINT16 g_servo2_rate_up;$/;"	v
+high_ISR	.././source/ebb.c	/^void high_ISR(void)$/;"	f
+i	.././source/ebb.c	/^static unsigned char i;$/;"	v	file:
+iPPSInput	.././source/pps.h	58;"	d
+iPPSOutput	.././source/pps.h	115;"	d
+kASCII_CHAR	.././source/UBW.h	/^	,kASCII_CHAR$/;"	e	enum:__anon8
+kCHAR	.././source/UBW.h	/^	 kCHAR$/;"	e	enum:__anon8
+kCR	.././source/UBW.c	89;"	d	file:
+kERROR_BYTE_EXTRA_CHARACTERS	.././source/UBW.h	64;"	d
+kERROR_BYTE_MISSING_PARAMETER	.././source/UBW.h	61;"	d
+kERROR_BYTE_PARAMETER_OUTSIDE_LIMIT	.././source/UBW.h	63;"	d
+kERROR_BYTE_PRINTED_ERROR	.././source/UBW.h	62;"	d
+kERROR_BYTE_RX_BUFFER_OVERRUN	.././source/UBW.h	60;"	d
+kERROR_BYTE_STEPS_TO_FAST	.././source/UBW.h	58;"	d
+kERROR_BYTE_TX_BUF_OVERRUN	.././source/UBW.h	59;"	d
+kERROR_BYTE_UNKNOWN_COMMAND	.././source/UBW.h	65;"	d
+kEXTRACT_COMMA_MISSING	.././source/UBW.h	/^	,kEXTRACT_COMMA_MISSING$/;"	e	enum:__anon9
+kEXTRACT_INVALID_TYPE	.././source/UBW.h	/^	,kEXTRACT_INVALID_TYPE$/;"	e	enum:__anon9
+kEXTRACT_MISSING_PARAMETER	.././source/UBW.h	/^	,kEXTRACT_MISSING_PARAMETER$/;"	e	enum:__anon9
+kEXTRACT_OK	.././source/UBW.h	/^	 kEXTRACT_OK = 0$/;"	e	enum:__anon9
+kEXTRACT_PARAMETER_OUTSIDE_LIMIT	.././source/UBW.h	/^	,kEXTRACT_PARAMETER_OUTSIDE_LIMIT$/;"	e	enum:__anon9
+kINT	.././source/UBW.h	/^	,kINT$/;"	e	enum:__anon8
+kISR_FIFO_A_DEPTH	.././source/UBW.c	86;"	d	file:
+kISR_FIFO_D_DEPTH	.././source/UBW.c	87;"	d	file:
+kLF	.././source/UBW.c	90;"	d	file:
+kLONG	.././source/UBW.h	/^	,kLONG$/;"	e	enum:__anon8
+kOFF	.././source/UBW.h	/^	 kOFF = 1$/;"	e	enum:__anon10
+kOPTIONAL	.././source/UBW.h	47;"	d
+kPR4_RELOAD	.././source/UBW.c	88;"	d	file:
+kPRIMED	.././source/UBW.h	/^	,kPRIMED$/;"	e	enum:__anon10
+kRC_DATA_SIZE	.././source/UBW.h	108;"	d
+kREQUIRED	.././source/UBW.h	46;"	d
+kRX_BUF_SIZE	.././source/UBW.h	43;"	d
+kRX_COMMAND_BUF_SIZE	.././source/UBW.h	44;"	d
+kTIMING	.././source/UBW.h	/^	,kTIMING$/;"	e	enum:__anon10
+kTX_BUF_SIZE	.././source/UBW.h	42;"	d
+kUCASE_ASCII_CHAR	.././source/UBW.h	/^	,kUCASE_ASCII_CHAR$/;"	e	enum:__anon8
+kUCHAR	.././source/UBW.h	/^	,kUCHAR$/;"	e	enum:__anon8
+kUINT	.././source/UBW.h	/^	,kUINT$/;"	e	enum:__anon8
+kULONG	.././source/UBW.h	/^	,kULONG$/;"	e	enum:__anon8
+kUSART_RX_BUF_SIZE	.././source/UBW.c	84;"	d	file:
+kUSART_TX_BUF_SIZE	.././source/UBW.c	83;"	d	file:
+kWAITING	.././source/UBW.h	/^	,kWAITING$/;"	e	enum:__anon10
+low_ISR	.././source/UBW.c	/^void low_ISR(void)$/;"	f
+mInitAllLEDs	.././source/HardwareProfile_EBB_V10.h	103;"	d
+mInitAllLEDs	.././source/HardwareProfile_EBB_V11.h	103;"	d
+mInitAllLEDs	.././source/HardwareProfile_EBB_V12.h	103;"	d
+mInitAllLEDs	.././source/HardwareProfile_EBB_V13_and_above.h	103;"	d
+mInitAllLEDs	.././source/io_cfg.h	148;"	d
+mInitAllLEDs	.././source/io_cfg.h	199;"	d
+mInitAllLEDs	.././source/io_cfg.h	255;"	d
+mInitAllLEDs	.././source/io_cfg.h	310;"	d
+mInitAllLEDs	.././source/io_cfg.h	66;"	d
+mInitSwitch	.././source/HardwareProfile_EBB_V10.h	108;"	d
+mInitSwitch	.././source/HardwareProfile_EBB_V11.h	108;"	d
+mInitSwitch	.././source/HardwareProfile_EBB_V12.h	108;"	d
+mInitSwitch	.././source/HardwareProfile_EBB_V13_and_above.h	108;"	d
+mInitSwitch	.././source/io_cfg.h	153;"	d
+mInitSwitch	.././source/io_cfg.h	204;"	d
+mInitSwitch	.././source/io_cfg.h	260;"	d
+mInitSwitch	.././source/io_cfg.h	315;"	d
+mInitSwitch	.././source/io_cfg.h	71;"	d
+mLED_1	.././source/HardwareProfile_EBB_V10.h	104;"	d
+mLED_1	.././source/HardwareProfile_EBB_V11.h	104;"	d
+mLED_1	.././source/HardwareProfile_EBB_V12.h	104;"	d
+mLED_1	.././source/HardwareProfile_EBB_V13_and_above.h	104;"	d
+mLED_1	.././source/io_cfg.h	149;"	d
+mLED_1	.././source/io_cfg.h	200;"	d
+mLED_1	.././source/io_cfg.h	256;"	d
+mLED_1	.././source/io_cfg.h	311;"	d
+mLED_1	.././source/io_cfg.h	67;"	d
+mLED_1_Off	.././source/HardwareProfile_EBB_V10.h	187;"	d
+mLED_1_Off	.././source/HardwareProfile_EBB_V11.h	168;"	d
+mLED_1_Off	.././source/HardwareProfile_EBB_V12.h	163;"	d
+mLED_1_Off	.././source/HardwareProfile_EBB_V13_and_above.h	164;"	d
+mLED_1_Off	.././source/io_cfg.h	347;"	d
+mLED_1_On	.././source/HardwareProfile_EBB_V10.h	184;"	d
+mLED_1_On	.././source/HardwareProfile_EBB_V11.h	165;"	d
+mLED_1_On	.././source/HardwareProfile_EBB_V12.h	160;"	d
+mLED_1_On	.././source/HardwareProfile_EBB_V13_and_above.h	161;"	d
+mLED_1_On	.././source/io_cfg.h	344;"	d
+mLED_1_Toggle	.././source/HardwareProfile_EBB_V10.h	190;"	d
+mLED_1_Toggle	.././source/HardwareProfile_EBB_V11.h	171;"	d
+mLED_1_Toggle	.././source/HardwareProfile_EBB_V12.h	166;"	d
+mLED_1_Toggle	.././source/HardwareProfile_EBB_V13_and_above.h	167;"	d
+mLED_1_Toggle	.././source/io_cfg.h	350;"	d
+mLED_2	.././source/HardwareProfile_EBB_V10.h	105;"	d
+mLED_2	.././source/HardwareProfile_EBB_V11.h	105;"	d
+mLED_2	.././source/HardwareProfile_EBB_V12.h	105;"	d
+mLED_2	.././source/HardwareProfile_EBB_V13_and_above.h	105;"	d
+mLED_2	.././source/io_cfg.h	150;"	d
+mLED_2	.././source/io_cfg.h	201;"	d
+mLED_2	.././source/io_cfg.h	257;"	d
+mLED_2	.././source/io_cfg.h	312;"	d
+mLED_2	.././source/io_cfg.h	68;"	d
+mLED_2_Off	.././source/HardwareProfile_EBB_V10.h	188;"	d
+mLED_2_Off	.././source/HardwareProfile_EBB_V11.h	169;"	d
+mLED_2_Off	.././source/HardwareProfile_EBB_V12.h	164;"	d
+mLED_2_Off	.././source/HardwareProfile_EBB_V13_and_above.h	165;"	d
+mLED_2_Off	.././source/io_cfg.h	348;"	d
+mLED_2_On	.././source/HardwareProfile_EBB_V10.h	185;"	d
+mLED_2_On	.././source/HardwareProfile_EBB_V11.h	166;"	d
+mLED_2_On	.././source/HardwareProfile_EBB_V12.h	161;"	d
+mLED_2_On	.././source/HardwareProfile_EBB_V13_and_above.h	162;"	d
+mLED_2_On	.././source/io_cfg.h	345;"	d
+mLED_2_Toggle	.././source/HardwareProfile_EBB_V10.h	191;"	d
+mLED_2_Toggle	.././source/HardwareProfile_EBB_V11.h	172;"	d
+mLED_2_Toggle	.././source/HardwareProfile_EBB_V12.h	167;"	d
+mLED_2_Toggle	.././source/HardwareProfile_EBB_V13_and_above.h	168;"	d
+mLED_2_Toggle	.././source/io_cfg.h	351;"	d
+mLED_Both_Off	.././source/HardwareProfile_EBB_V10.h	193;"	d
+mLED_Both_Off	.././source/HardwareProfile_EBB_V11.h	174;"	d
+mLED_Both_Off	.././source/HardwareProfile_EBB_V12.h	169;"	d
+mLED_Both_Off	.././source/HardwareProfile_EBB_V13_and_above.h	170;"	d
+mLED_Both_Off	.././source/io_cfg.h	353;"	d
+mLED_Both_On	.././source/HardwareProfile_EBB_V10.h	194;"	d
+mLED_Both_On	.././source/HardwareProfile_EBB_V11.h	175;"	d
+mLED_Both_On	.././source/HardwareProfile_EBB_V12.h	170;"	d
+mLED_Both_On	.././source/HardwareProfile_EBB_V13_and_above.h	171;"	d
+mLED_Both_On	.././source/io_cfg.h	354;"	d
+mLED_Only_1_On	.././source/HardwareProfile_EBB_V10.h	195;"	d
+mLED_Only_1_On	.././source/HardwareProfile_EBB_V11.h	176;"	d
+mLED_Only_1_On	.././source/HardwareProfile_EBB_V12.h	171;"	d
+mLED_Only_1_On	.././source/HardwareProfile_EBB_V13_and_above.h	172;"	d
+mLED_Only_1_On	.././source/io_cfg.h	355;"	d
+mLED_Only_2_On	.././source/HardwareProfile_EBB_V10.h	196;"	d
+mLED_Only_2_On	.././source/HardwareProfile_EBB_V11.h	177;"	d
+mLED_Only_2_On	.././source/HardwareProfile_EBB_V12.h	172;"	d
+mLED_Only_2_On	.././source/HardwareProfile_EBB_V13_and_above.h	173;"	d
+mLED_Only_2_On	.././source/io_cfg.h	356;"	d
+mLED_USB_Toggle	.././source/HardwareProfile_EBB_V10.h	182;"	d
+mLED_USB_Toggle	.././source/HardwareProfile_EBB_V11.h	163;"	d
+mLED_USB_Toggle	.././source/HardwareProfile_EBB_V12.h	158;"	d
+mLED_USB_Toggle	.././source/HardwareProfile_EBB_V13_and_above.h	159;"	d
+mLED_USB_Toggle	.././source/io_cfg.h	342;"	d
+main	.././source/main.c	/^void main(void)$/;"	f
+makeDirectory	.././nbproject/Package-EBBv13_XC8_no_bootloader.bash	/^function makeDirectory$/;"	f
+makeDirectory	.././nbproject/Package-EBBv13_no_bootloader.bash	/^function makeDirectory$/;"	f
+makeDirectory	.././nbproject/Package-EBBv13_with_bootloader.bash	/^function makeDirectory$/;"	f
+packet_list	.././source/ebb_demo.c	/^packet_type far rom packet_list[] = $/;"	v
+packet_type	.././source/ebb_demo.h	/^} packet_type;$/;"	t	typeref:struct:__anon7
+parse_AC_packet	.././source/UBW.c	/^void parse_AC_packet(void)$/;"	f
+parse_A_packet	.././source/UBW.c	/^void parse_A_packet(void)$/;"	f
+parse_BC_packet	.././source/UBW.c	/^void parse_BC_packet(void)$/;"	f
+parse_BL_packet	.././source/UBW.c	/^void parse_BL_packet()$/;"	f
+parse_BO_packet	.././source/UBW.c	/^void parse_BO_packet(void)$/;"	f
+parse_BS_packet	.././source/UBW.c	/^void parse_BS_packet(void)$/;"	f
+parse_CI_packet	.././source/UBW.c	/^void parse_CI_packet (void)$/;"	f
+parse_CK_packet	.././source/UBW.c	/^void parse_CK_packet()$/;"	f
+parse_CS_packet	.././source/UBW.c	/^void parse_CS_packet (void)$/;"	f
+parse_CU_packet	.././source/UBW.c	/^void parse_CU_packet(void)$/;"	f
+parse_CX_packet	.././source/UBW.c	/^void parse_CX_packet(void)$/;"	f
+parse_C_packet	.././source/UBW.c	/^void parse_C_packet(void)$/;"	f
+parse_EM_packet	.././source/ebb.c	/^void parse_EM_packet(void)$/;"	f
+parse_I_packet	.././source/UBW.c	/^void parse_I_packet(void)$/;"	f
+parse_MR_packet	.././source/UBW.c	/^void parse_MR_packet(void)$/;"	f
+parse_MW_packet	.././source/UBW.c	/^void parse_MW_packet(void)$/;"	f
+parse_ND_packet	.././source/ebb.c	/^void parse_ND_packet(void)$/;"	f
+parse_NI_packet	.././source/ebb.c	/^void parse_NI_packet(void)$/;"	f
+parse_O_packet	.././source/UBW.c	/^void parse_O_packet(void)$/;"	f
+parse_PC_packet	.././source/UBW.c	/^void parse_PC_packet (void)$/;"	f
+parse_PD_packet	.././source/UBW.c	/^void parse_PD_packet(void)$/;"	f
+parse_PG_packet	.././source/UBW.c	/^void parse_PG_packet (void)$/;"	f
+parse_PI_packet	.././source/UBW.c	/^void parse_PI_packet(void)$/;"	f
+parse_PO_packet	.././source/UBW.c	/^void parse_PO_packet(void)$/;"	f
+parse_QB_packet	.././source/ebb.c	/^void parse_QB_packet(void)$/;"	f
+parse_QC_packet	.././source/ebb.c	/^void parse_QC_packet(void)$/;"	f
+parse_QL_packet	.././source/ebb.c	/^void parse_QL_packet(void)$/;"	f
+parse_QM_packet	.././source/ebb.c	/^void parse_QM_packet(void)$/;"	f
+parse_QN_packet	.././source/ebb.c	/^void parse_QN_packet(void)$/;"	f
+parse_QP_packet	.././source/ebb.c	/^void parse_QP_packet(void)$/;"	f
+parse_RC_packet	.././source/UBW.c	/^void parse_RC_packet(void)$/;"	f
+parse_RI_packet	.././source/UBW.c	/^void parse_RI_packet (void)$/;"	f
+parse_RM_packet	.././source/ebb.c	/^void parse_RM_packet(void)$/;"	f
+parse_RS_packet	.././source/UBW.c	/^void parse_RS_packet (void)$/;"	f
+parse_RX_packet	.././source/UBW.c	/^void parse_RX_packet(void)$/;"	f
+parse_R_packet	.././source/UBW.c	/^void parse_R_packet(void)$/;"	f
+parse_SC_packet	.././source/ebb.c	/^void parse_SC_packet (void)$/;"	f
+parse_SE_packet	.././source/ebb.c	/^void parse_SE_packet(void)$/;"	f
+parse_SI_packet	.././source/UBW.c	/^void parse_SI_packet (void)$/;"	f
+parse_SL_packet	.././source/ebb.c	/^void parse_SL_packet(void)$/;"	f
+parse_SM_packet	.././source/ebb.c	/^void parse_SM_packet (void)$/;"	f
+parse_SN_packet	.././source/ebb.c	/^void parse_SN_packet(void)$/;"	f
+parse_SP_packet	.././source/ebb.c	/^void parse_SP_packet(void)$/;"	f
+parse_SS_packet	.././source/UBW.c	/^void parse_SS_packet (void)$/;"	f
+parse_TP_packet	.././source/ebb.c	/^void parse_TP_packet(void)$/;"	f
+parse_TX_packet	.././source/UBW.c	/^void parse_TX_packet(void)$/;"	f
+parse_T_packet	.././source/UBW.c	/^void parse_T_packet(void)$/;"	f
+parse_V_packet	.././source/UBW.c	/^void parse_V_packet(void)$/;"	f
+parse_packet	.././source/UBW.c	/^void parse_packet(void)$/;"	f
+print_ack	.././source/UBW.c	/^void print_ack(void)$/;"	f
+print_status	.././source/UBW.c	/^void print_status(void)$/;"	f
+process_SM	.././source/ebb.c	/^static void process_SM($/;"	f	file:
+process_SP	.././source/ebb.c	/^void process_SP(PenStateType NewState, UINT16 CommandDuration)$/;"	f
+sd000	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[1];}sd000={$/;"	v	typeref:struct:__anon11
+sd001	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[11];}sd001={$/;"	v	typeref:struct:__anon12
+sd002	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[10];}sd002={$/;"	v	typeref:struct:__anon13
+self_power	.././source/HardwareProfile_EBB_V10.h	62;"	d
+self_power	.././source/HardwareProfile_EBB_V10.h	64;"	d
+self_power	.././source/HardwareProfile_EBB_V11.h	62;"	d
+self_power	.././source/HardwareProfile_EBB_V11.h	64;"	d
+self_power	.././source/HardwareProfile_EBB_V12.h	62;"	d
+self_power	.././source/HardwareProfile_EBB_V12.h	64;"	d
+self_power	.././source/HardwareProfile_EBB_V13_and_above.h	62;"	d
+self_power	.././source/HardwareProfile_EBB_V13_and_above.h	64;"	d
+self_power	.././source/io_cfg.h	59;"	d
+st_LFCR	.././source/UBW.c	/^const rom char st_LFCR[] = {"\\r\\n"};$/;"	v
+st_OK	.././source/UBW.c	/^const rom char st_OK[] = {"OK\\r\\n"};$/;"	v
+st_version	.././source/UBW.c	/^	const rom char st_version[] = {"EBBv10 EB Firmware Version 2.2.1\\r\\n"};$/;"	v
+st_version	.././source/UBW.c	/^	const rom char st_version[] = {"EBBv11 EB Firmware Version 2.2.1\\r\\n"};$/;"	v
+st_version	.././source/UBW.c	/^	const rom char st_version[] = {"EBBv12 EB Firmware Version 2.2.1\\r\\n"};$/;"	v
+st_version	.././source/UBW.c	/^	const rom char st_version[] = {"EBBv13_and_above EB Firmware Meowz Version 2.2.3\\r\\n"};$/;"	v
+st_version	.././source/UBW.c	/^	const rom char st_version[] = {"UBW EB Firmware Version 2.2.1\\r\\n"};$/;"	v
+string	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[10];}sd002={$/;"	m	struct:__anon13	file:
+string	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[11];}sd001={$/;"	m	struct:__anon12	file:
+string	.././source/usb_descriptors.c	/^ROM struct{BYTE bLength;BYTE bDscType;WORD string[1];}sd000={$/;"	m	struct:__anon11	file:
+swProgram	.././source/HardwareProfile_EBB_V10.h	109;"	d
+swProgram	.././source/HardwareProfile_EBB_V11.h	109;"	d
+swProgram	.././source/HardwareProfile_EBB_V12.h	109;"	d
+swProgram	.././source/HardwareProfile_EBB_V13_and_above.h	109;"	d
+swProgram	.././source/io_cfg.h	154;"	d
+swProgram	.././source/io_cfg.h	205;"	d
+swProgram	.././source/io_cfg.h	261;"	d
+swProgram	.././source/io_cfg.h	316;"	d
+swProgram	.././source/io_cfg.h	72;"	d
+swStartDemo	.././source/io_cfg.h	155;"	d
+swStartDemo	.././source/io_cfg.h	206;"	d
+tRC_state	.././source/UBW.h	/^} tRC_state;$/;"	t	typeref:enum:__anon10
+time_between_updates	.././source/UBW.c	/^near unsigned int time_between_updates;$/;"	v
+tris_self_power	.././source/HardwareProfile_EBB_V10.h	60;"	d
+tris_self_power	.././source/HardwareProfile_EBB_V11.h	60;"	d
+tris_self_power	.././source/HardwareProfile_EBB_V12.h	60;"	d
+tris_self_power	.././source/HardwareProfile_EBB_V13_and_above.h	60;"	d
+tris_usb_bus_sense	.././source/HardwareProfile_EBB_V10.h	68;"	d
+tris_usb_bus_sense	.././source/HardwareProfile_EBB_V11.h	68;"	d
+tris_usb_bus_sense	.././source/HardwareProfile_EBB_V12.h	68;"	d
+tris_usb_bus_sense	.././source/HardwareProfile_EBB_V13_and_above.h	68;"	d
+usb_bus_sense	.././source/io_cfg.h	144;"	d
+usb_bus_sense	.././source/io_cfg.h	195;"	d
+usb_bus_sense	.././source/io_cfg.h	251;"	d
+usb_bus_sense	.././source/io_cfg.h	306;"	d
+usb_bus_sense	.././source/io_cfg.h	62;"	d
+xmitc	.././source/UBW.c	/^void xmitc(char data)$/;"	f
+xmits	.././source/UBW.c	/^void xmits(const rom char* data)$/;"	f

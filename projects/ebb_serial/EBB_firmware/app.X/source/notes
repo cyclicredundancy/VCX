@@ -1,0 +1,43 @@
+
+~/github/VCX/projects/ebb_serial/EBB_firmware/app.X/source > grep -R -I PLL .
+./main.c:     #pragma config PLLDIV = 2           //Divide by 2 (8 MHz internal oscillator)
+./main.c:     #pragma config OSC = INTOSCPLL      //Internal oscillator, PLL enabled, PLL used by USB, RA6 and RA7 for I/O use
+./main.c:    OSCTUNEbits.PLLEN = 1;  //Enable the PLL and wait 2+ms until the PLL locks before enabling USB module
+./main.c:       //On the PIC18F46J50 Family of USB microcontrollers, the PLL will not power up and be enabled
+./main.c:       //by default, even if a PLL enabled oscillator configuration is selected (such as HS+PLL).
+./main.c:       //operation.  On these devices, user firmware needs to manually set the OSCTUNE<PLLEN> bit to
+./main.c:       //power up the PLL.
+./main.c:           OSCTUNEbits.PLLEN = 1;  //Enable the PLL and wait 2+ms until the PLL locks before enabling USB module
+./main.c:           //Device switches over automatically to PLL output after PLL is locked and ready.
+~/github/VCX/projects/ebb_serial/EBB_firmware/app.X/source >
+
+
+
+~/github/VCX/projects/ebb_serial/EBB_firmware/app.X/source > grep -R -I OSC .
+./ebb.c:        T1CONbits.T1OSCEN = 0;  // Don't use external osc
+./main.c:     #pragma config CPUDIV = OSC1        //No CPU system clock divide
+./main.c:     #pragma config OSC = INTOSCPLL      //Internal oscillator, PLL enabled, PLL used by USB, RA6 and RA7 for I/O use
+./main.c:     #pragma config LPT1OSC = ON         //high power Timer1 mode
+./main.c:     #pragma config DSWDTOSC = INTOSCREF //DSWDT uses INTOSC/INTRC as clock
+./main.c:     #pragma config RTCOSC = T1OSCREF    //RTCC uses T1OSC/T1CKI as clock
+./main.c:    OSCTUNEbits.PLLEN = 1;  //Enable the PLL and wait 2+ms until the PLL locks before enabling USB module
+./main.c:       OSCCON = 0x60;  //Clock switch to primary clock source.  May not have been running
+./main.c:       //operation.  On these devices, user firmware needs to manually set the OSCTUNE<PLLEN> bit to
+./main.c:           OSCTUNEbits.PLLEN = 1;  //Enable the PLL and wait 2+ms until the PLL locks before enabling USB module
+./UBW.c:    OSCCON = 0b01100011;                // switch to 4MHz INTOSC clock source
+./UBW.c:    //OSCCON = 0b01100000;                // switch to 4MHz INTOSC clock source
+./UBW.c:    //OSCCON = 0b01100000;                // switch to 4MHz INTOSC clock source
+~/github/VCX/projects/ebb_serial/EBB_firmware/app.X/source >
+
+
+INTOSCPLL Internal Oscillator mode, PLL can be
+enabled or disabled in software, port
+function on RA6 and RA7, the internal
+oscillator block is used to derive both the
+primary clock source and the postscaled
+internal clock.
+
+
+bit 6 PLLEN: Frequency Multiplier Enable bit
+1 = 96 MHz PLL is enabled
+0 = 96 MHz PLL is disabled
