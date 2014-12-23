@@ -1,0 +1,12 @@
+
+First test:
+sudo iwlist wlan0 scan
+
+Then configure:
+
+sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
+
+network={
+    ssid="testing"
+    psk="testingPassword"
+}
