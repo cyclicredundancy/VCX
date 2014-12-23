@@ -1,0 +1,10 @@
+
+
+http://stackoverflow.com/questions/3713765/viewing-all-git-diffs-with-vimdiff
+
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+git config --global alias.d difftool
+
+
+

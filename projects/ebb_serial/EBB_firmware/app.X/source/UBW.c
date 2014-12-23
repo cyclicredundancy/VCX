@@ -66,6 +66,8 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <delays.h>
+//#include "pps.h"
+#include <pps.h>
 #include "Usb\usb.h"
 #include "Usb\usb_function_cdc.h"
 #include "usb_config.h"
@@ -134,7 +136,7 @@ const rom char st_LFCR[] = {"\r\n"};
 #elif defined(BOARD_EBB_V12)
 	const rom char st_version[] = {"EBBv12 EB Firmware Version 2.2.1\r\n"};
 #elif defined(BOARD_EBB_V13_AND_ABOVE)
-	const rom char st_version[] = {"EBBv13_and_above EB Firmware Meow Version 2.2.3\r\n"};
+	const rom char st_version[] = {"EBBv13_and_above EB Firmware Meowz Version 2.2.3\r\n"};
 #elif defined(BOARD_UBW)
 	const rom char st_version[] = {"UBW EB Firmware Version 2.2.1\r\n"};
 #endif
@@ -727,7 +729,64 @@ void UserInit(void)
 
 	// Turn on the Timer4
 	T4CONbits.TMR4ON = 1; 
+
+    UserMeowInit();
 }//end UserInit
+
+
+void xmitc(char data)
+{
+    while(PIR3bits.TX2IF == 0);         // wait until transmit buffer is ready for data
+    TXREG2 = data;
+}
+
+void xmits(const rom char* data)
+{
+    while(*data != 0)
+    {
+        xmitc(*data++);
+    }
+}
+
+void UserMeowInit(void) {
+    //OSCCON = 0b01100011;                // switch to 4MHz INTOSC clock source
+    //OSCCON = 0b01100000;                // switch to 4MHz INTOSC clock source
+
+
+    PPSUnLock(); // Unlock the PPS functionality
+
+    // Configure UART PPS pins
+    // Assign the Uart RX function to the correct pin
+    PPSInput( RX2DT2, RP17 );
+    //iPPSInput( IN_FN_PPS_U1RX, IN_PIN_PPS_RP17 );
+
+    // Assign the Uart Tx function to the correct pin
+    //PPSOutput( RP2, TX2CK2 );
+    PPSOutput( TX2CK2, RP2 );
+    //iPPSOutput( OUT_PIN_PPS_RP3, OUT_FN_PPS_U1TX );
+
+    PPSLock(); // Lock the PPS functionality
+
+    //Setup EUSART2
+
+    // BAUDRG is calculated as  = Fosc / (4 * Desired Baudrate) - 1
+    // So, 4MHz / (4 * 115200) - 1 = 8 (approx.)
+    //#define BAUDRG 8
+    //#define BAUDRG 12
+    #define BAUDRG 25 // Fosc=48MHz, and 8b rate = 1, with BRGH_HI = 1, with 0.16% error
+
+    //Open2USART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_EIGHT_BIT & USART_ASYNCH_MODE & USART_ADDEN_OFF, BAUDRG);
+    Open2USART(USART_TX_INT_OFF & USART_RX_INT_OFF & USART_EIGHT_BIT & USART_ASYNCH_MODE & USART_ADDEN_OFF & USART_BRGH_HIGH, BAUDRG);
+    //baud2USART(BAUD_IDLE_TX_PIN_STATE_HIGH & BAUD_IDLE_RX_PIN_STATE_HIGH & BAUD_AUTO_OFF & BAUD_WAKEUP_OFF & BAUD_16_BIT_RATE & USART_RX_INT_ON);
+    baud2USART(BAUD_IDLE_TX_PIN_STATE_HIGH & BAUD_IDLE_RX_PIN_STATE_HIGH & BAUD_AUTO_OFF & BAUD_WAKEUP_OFF & BAUD_8_BIT_RATE);
+    //baud2USART(BAUD_IDLE_TX_PIN_STATE_HIGH & BAUD_IDLE_RX_PIN_STATE_HIGH & BAUD_AUTO_OFF & BAUD_WAKEUP_OFF & BAUD_16_BIT_RATE & USART_RX_INT_ON);
+
+    TXREG2 = '2';
+    //xmits("AAAAAA");
+    xmits(": Hello from PIC EUSART2!\n");
+
+    //OSCCON = 0b01100000;                // switch to 4MHz INTOSC clock source
+}
 
 /******************************************************************************
  * Function:        void ProcessIO(void)
