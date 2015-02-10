@@ -1,4 +1,5 @@
-# python script to control Raspberry Pi Rover made using Pololu motor shield
+# python script to control Raspberry Pi Rover made using Pololu DRV8835 Dual Motor Driver Kit
+# https://www.pololu.com/product/2753
 
 from __future__ import print_function
 import time
