@@ -1,86 +1,78 @@
+# python script to control Raspberry Pi Rover made using Pololu motor shield
+
 from __future__ import print_function
 import time
 from pololu_drv8835_rpi import motors, MAX_SPEED
 
-import sys
-
 motors.setSpeeds(0, 0)
 
-#import pygame, time
-#from pygame.locals import *
-#
-#pygame.display.init()
-#pygame.init()
-##screen = pygame.display.set_mode((640, 480))
-##pygame.display.set_caption('Pygame Keyboard Test')
-##pygame.mouse.set_visible(0)
-#
-#
-#print("doing a function")
-#while True:
-#    for event in pygame.event.get():
-#        if event.type==QUIT:
-#            exit()
-#        if (event.type == KEYUP) or (event.type == KEYDOWN):
-#            print("key pressed")
-#            time.sleep(0.1)
-#        if pygame.key.get_focused():
-#            press=pygame.key.get_pressed()
-#            for i in xrange(0,len(press)): 
-#                if press[i]==1:
-#                    name=pygame.key.name(i)
-#            print("key pressed")
-#
-#        time.sleep(0.1)
+import sys
 
+sys.stdout.write("MAX_SPEED is %d MIN_SPEED is -%d\n" % (MAX_SPEED, MAX_SPEED))
 
 import readchar
 #c = readchar.readchar()
 #key = readchar.readkey()
 print("Type x to exit!!!")
-while True:
-    c = readchar.readchar()
-    if c == 'x':
-        exit()
 
-
-# Set up sequences of motor speeds.
-#test_forward_speeds = list(range(0, MAX_SPEED, 1)) + \
-#  [MAX_SPEED] * 200 + list(range(MAX_SPEED, 0, -1)) + [0]  
-#
-#test_reverse_speeds = list(range(0, -MAX_SPEED, -1)) + \
-#  [-MAX_SPEED] * 200 + list(range(-MAX_SPEED, 0, 1)) + [0]  
-
-#print ''.join(test_forward_speeds)
-#print ''.join(test_reverse_speeds)
-
-sys.stdout.write("MAX_SPEED is %d MIN_SPEED is -%d\n" % (MAX_SPEED, MAX_SPEED))
+# Both motors rotate clockwise (looking into the shaft) with +ve values
+# 1 is left motor 
+speed1=0
+# 2 is right motor
+speed2=0
 
 
 try:
-    for x in range(len(test_forward_speeds)):
-        motors.motor1.setSpeed(test_forward_speeds[x])
-        motors.motor2.setSpeed(test_reverse_speeds[x])
-        time.sleep(0.005)
-
     print("")
-    time.sleep(1)
-    motors.motor1.setSpeed(100)
-    motors.motor2.setSpeed(-100)
-    time.sleep(3)
-    motors.motor1.setSpeed(200)
-    motors.motor2.setSpeed(-200)
-    time.sleep(3)
-    motors.motor1.setSpeed(400)
-    motors.motor2.setSpeed(-400)
-    time.sleep(3)
-    motors.motor1.setSpeed(480)
-    motors.motor2.setSpeed(-480)
-    time.sleep(3)
 
+    count = 0
+    while True:
+        count += 1
+        c = readchar.readchar()
+        if c == 'x':
+            exit()
+        # quickly reset motors using o or r
+        if c == 'r':
+            speed1 =0
+            speed2 =0
+        if c == 'o':
+            speed1 =0
+            speed2 =0
+        # debugging keys using qa and ed
+        if c == 'q':
+            speed1 +=20
+        if c == 'a':
+            speed1 -=20
+        if c == 'e':
+            speed2 +=20
+        if c == 'd':
+            speed2 -=20
+        # steering wheel like controls using ijkl cluster.
+        if c == 'i':
+            speed1 +=20
+            speed2 -=20
+        if c == 'k':
+            speed2 +=20
+            speed1 -=20
+        if c == 'j':
+            speed1 -=20
+            speed2 -=20
+        if c == 'l':
+            speed1 +=20
+            speed2 +=20
+        # clamp speed at max values
+        if (-MAX_SPEED > speed1 or speed1 > MAX_SPEED):
+            speed1 = speed1/abs(speed1)*MAX_SPEED
+        if (-MAX_SPEED > speed2 or speed2 > MAX_SPEED):
+            speed2 = speed2/abs(speed2)*MAX_SPEED
+        motors.motor1.setSpeed(speed1)
+        motors.motor2.setSpeed(speed2)
+        time.sleep(0.05)
+        sys.stdout.write("(%d,%d)\n" % (speed1, speed2))
+ 
 
 finally:
     # Stop the motors, even if there is an exception
     # or the user presses Ctrl+C to kill the process.
     motors.setSpeeds(0, 0)
-    print("")
+    print(".")
