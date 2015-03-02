@@ -26,11 +26,18 @@ tnsy_uart.configure(9600, 8, PARITY_NONE, 1, NO_CTSRTS, tnsy_rx);
 tnsy_uart.flush();
 // agent key message handler
 function sendKey(keyVal) {
+  server.log("sendKey : " + keyVal);
+  //tnsy_uart.write(keyVal);
   tnsy_uart.write(keyVal);
-  server.log("sent key value: " + keyVal);
+}
+// agent key message handler
+function sendEnter(keyVal) {
+  server.log("sendEnter");
+  tnsy_uart.write(0xB0);
 }
 // register a handler for "key" messages from the agent
 agent.on("key", sendKey);
+agent.on("enter", sendEnter);
 /*
 // agent/server alive trace
 function alive() {

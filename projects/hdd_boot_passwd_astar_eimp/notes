@@ -1,0 +1,6 @@
+Example use:
+> curl "https://agent.electricimp.com/kTe9gq1CRFSd?key=password&enter"
+key value sent
+enter value sent
+OK
+

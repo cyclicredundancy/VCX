@@ -1,6 +1,13 @@
+//Note may need arduino 1.6 and TimeOne library
+
 // User --HTTP--> Agent -imp-cloud-> ImpHW --UART--> Teensy --USB-kbd--> PC
 #include <TimerOne.h>
 
+/*
+#ifndef LED_BUILTIN 
+#define LED_BUILTIN 13
+#endif
+*/
 const int led = LED_BUILTIN;  // the pin with a LED
 
 // The interrupt will blink the LED, and keep
@@ -15,7 +22,7 @@ void setup() {
   Serial1.begin(9600);
   pinMode(led, OUTPUT);
   // timer triggers every 1.5 seconds
-  Timer1.initialize(1500000);
+  Timer1.initialize(500000);
   Timer1.attachInterrupt(blinkLED);
   // initialize control over the keyboard:
   Keyboard.begin();  
@@ -29,17 +36,20 @@ void loop() {
   if (Serial1.available() > 0) {
     int inByte = Serial1.read();
     Serial.println("");
-    Serial.print("UART rx: ");
+    Serial.print("UART1 rx: ");
     Serial.println((char)inByte);
+    Serial.println((byte)inByte);
+    Serial.println((int)inByte);
     Serial.print("Sending to keyboard... ");
     //delay(1000);
-    Keyboard.println("password");
+    Keyboard.write((byte)inByte);
+    //Keyboard.print("password");
     Serial.println("Done");
   }
   Serial.print(".");
   delay(1000);
   wrap_count++;
-  if (wrap_count == 20) {
+  if (wrap_count == 30) {
     Serial.println("");
     wrap_count = 0;
     Serial1.print('$');
@@ -47,7 +57,7 @@ void loop() {
   if (Serial.available() > 0) {
     int inByte = Serial.read();
     Serial.println("");
-    Serial.print("UART rx: ");
+    Serial.print("UART0 rx: ");
     Serial.println((char)inByte);
     Serial.print("Sending to Serial1... ");
     delay(200);
