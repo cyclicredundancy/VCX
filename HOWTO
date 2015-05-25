@@ -1,7 +1,17 @@
 Index:
 
+HOWTO_TMUX
 HOWTO_SCREEN
 HOWTO_GIT
+
+
+HOWTO_TMUX
+
+tmux ls
+
+tmux att -t 0
+
+detach: C+a d
 
 
 HOWTO_SCREEN

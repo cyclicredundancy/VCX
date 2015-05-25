@@ -220,4 +220,53 @@ set foldlevel=100 " Don't autofold anything (but I can still fold manually)
 " :he cterm-colors
 
 
+""""""""""""""""""""""""""
+" diff mode vs normal
+""""""""""""""""""""""""""
+
+if &diff
+    set wrap
+    colorscheme blue
+"    if has("gui_running")
+"        colorscheme peachpuff
+"    else 
+"        colorscheme vik 
+"        "hi Comment ctermfg=0
+"        "colorscheme default 
+"    endif
+"    " set this after loading the color theme
+"    set cursorline "underline the cursor line
+"    "highlight the cursor line
+"    hi cursorline guibg=grey
+"    "hi cursorline guibg=Black ctermbg=Black
+else
+"    set wrap
+"    colorscheme vik
+"    " set this after loading the color theme
+    set cursorline
+    hi cursorline guibg=black
+    "hi cursorline guibg=Black ctermbg=Black
+"    let g:svndiff_autoupdate = 1
+"    noremap <F3> :call Svndiff("prev")<CR> 
+"    noremap <F4> :call Svndiff("next")<CR>
+"    noremap <F5> :call Svndiff("clear")<CR>
+"    hi DiffAdd      ctermfg=0 ctermbg=2 guibg='green'
+"    hi DiffDelete   ctermfg=0 ctermbg=1 guibg='red'
+"    hi DiffChange   ctermfg=0 ctermbg=3 guibg='yellow'
+endif
+
+
+
+
+""""""""""""""""""""""""""
+" backup file creation
+""""""""""""""""""""""""""
+
+
+""set nobackup       "no backup files
+""set nowritebackup  "only in case you don't want a backup file while editing
+""set noswapfile     "no swap files
+"set backupdir=~/vimbackups,. " for backup files
+"set directory=~/vimbackups,. " for swap files
+
 
