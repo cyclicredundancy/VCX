@@ -8,3 +8,5 @@
 [color]
 	status = auto
 	diff = auto
+[push]
+	default = simple

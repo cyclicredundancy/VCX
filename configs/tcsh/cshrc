@@ -18,11 +18,11 @@ bindkey -v
 bindkey -k down history-search-forward
 bindkey -k up history-search-backward
 
-
+alias rm "rm -i"
 alias ls "ls --color"
 alias l "ls -lh"
 alias cls "clear"
-alias vi "vim"
+alias vi "vim -p"
 alias vim "vim -p"
 alias gvim "gvim -p"
 
