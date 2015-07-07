@@ -168,8 +168,8 @@ void loop()
   
   if (minute == feed_minute && second < 4) {
     switch(hour) {
-      case 5:
-      case 17:
+      case 6:   // 6 am
+      case 17:  // 5 pm
         dispense();
         break;
     }
