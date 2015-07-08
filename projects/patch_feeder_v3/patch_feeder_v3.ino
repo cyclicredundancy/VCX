@@ -21,7 +21,7 @@ volatile int push = 0;
 // 1=Sunday, 2=Monday, ... 7=Saturday
 byte second, minute, hour, dayOfWeek, dayOfMonth, month, year;
 
-byte feed_minute = 1;
+byte feed_minute = 15;
 
 String stime;
 char cbuf[21] = {0};
@@ -168,7 +168,7 @@ void loop()
   
   if (minute == feed_minute && second < 4) {
     switch(hour) {
-      case 6:   // 6 am
+      case 5:   // 5 am
       case 17:  // 5 pm
         dispense();
         break;

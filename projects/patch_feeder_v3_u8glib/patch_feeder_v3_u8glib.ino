@@ -2,7 +2,7 @@
 #include <Servo.h>
 
 #include <U8glib.h>
-U8GLIB_SSD1306_128X32 u8g(U8G_I2C_OPT_NONE);  // I2C / TWI 
+U8GLIB_SSD1306_128X32 u8g(U8G_I2C_OPT_NONE);  // I2C / TWI
 
 //#include <SeeedOLED.h>
 //#define SOLED
@@ -26,7 +26,8 @@ volatile int push = 0;
 // 1=Sunday, 2=Monday, ... 7=Saturday
 byte second, minute, hour, dayOfWeek, dayOfMonth, month, year;
 
-byte feed_minute = 1;
+byte feed_minute = 15;
+byte feed_hours[] = {5, 17};
 
 String stime;
 char cbuf[21] = {0};
@@ -38,11 +39,11 @@ Servo myServo;
 
 //#Line : value
 //#  0  : Name
-//#  1  : 
+//#  1  :
 //#  2  : push
 //#  3  : click clack count
 //#  4  : servo status
-//#  5  : 
+//#  5  :
 //#  6  : time
 //#  7  : date
 
@@ -89,7 +90,7 @@ void setup()
     u8g.setColorIndex(1);         // pixel on
   }
   else if ( u8g.getMode() == U8G_MODE_HICOLOR ) {
-    u8g.setHiColorByRGB(255,255,255);
+    u8g.setHiColorByRGB(255, 255, 255);
   }
 # endif
 
@@ -98,10 +99,10 @@ void setup()
   Wire.write(0b00011100); // write register bitmap, bit 7 is /EOSC
   Wire.endTransmission();
 
-/*
-  myServo.attach(contiServoPin);
-  myServo.writeMicroseconds(1500);  // Stop rotating
-*/
+  /*
+    myServo.attach(contiServoPin);
+    myServo.writeMicroseconds(1500);  // Stop rotating
+  */
 
   //clearLine(4);
   //SeeedOled.putString("servo: stop");
@@ -135,6 +136,8 @@ void setup()
   Serial.print ("minute:");
   Serial.println (minute, DEC);
 
+  Serial.print ("debug size:");
+  Serial.println (sizeof(feed_hours), DEC);
 }
 
 
@@ -187,23 +190,32 @@ void loop()
   SeeedOled.putString(cbuf);
 # else
   // picture loop
-  u8g.firstPage();  
+  u8g.firstPage();
   do {
     draw();
-  } while( u8g.nextPage() );
+  } while ( u8g.nextPage() );
 # endif
 
-  if (testing && !(second%20)) {
+  if (testing && !(second % 20)) {
     dispense();
   }
-  
+
   if (minute == feed_minute && second < 4) {
+    for (byte i = 0; i <= sizeof(feed_hours); i++)
+    {
+      if (hour == feed_hours[i]) {
+        dispense();
+        break;
+      }
+    }
+    /*
     switch(hour) {
-      case 6:   // 6 am
+      case 5:   // 5 am
       case 17:  // 5 pm
         dispense();
         break;
     }
+    */
   }
 
   //if nothing was pressed delay
@@ -217,39 +229,39 @@ void loop()
 
 void old_dispense()
 {
-    Serial.println("Feed!");
-    clearLine(4);
-    //SeeedOled.putString("Smakitty!");
-    delay(500);
-    myServo.writeMicroseconds(1525);  // Clockwise
-    Serial.println("Done!");
-    delay(8000);
-    myServo.writeMicroseconds(1500);  // Stop rotating
-    Serial.println("Resume!");
+  Serial.println("Feed!");
+  clearLine(4);
+  //SeeedOled.putString("Smakitty!");
+  delay(500);
+  myServo.writeMicroseconds(1525);  // Clockwise
+  Serial.println("Done!");
+  delay(8000);
+  myServo.writeMicroseconds(1500);  // Stop rotating
+  Serial.println("Resume!");
 
-    clearLine(4);
-    //SeeedOled.putString("servo stop");
+  clearLine(4);
+  //SeeedOled.putString("servo stop");
 }
 
 void dispense()
 {
-    myServo.attach(contiServoPin);
-    myServo.writeMicroseconds(1500);  // Stop rotating
+  myServo.attach(contiServoPin);
+  myServo.writeMicroseconds(1500);  // Stop rotating
 
-    Serial.println("Feed!");
-    clearLine(4);
-    //SeeedOled.putString("Smakitty!");
-    delay(500);
-    myServo.writeMicroseconds(1525);  // Clockwise
-    Serial.println("Done!");
-    delay(8000);
-    myServo.writeMicroseconds(1500);  // Stop rotating
-    Serial.println("Resume!");
+  Serial.println("Feed!");
+  clearLine(4);
+  //SeeedOled.putString("Smakitty!");
+  delay(500);
+  myServo.writeMicroseconds(1525);  // Clockwise
+  Serial.println("Done!");
+  delay(8000);
+  myServo.writeMicroseconds(1500);  // Stop rotating
+  Serial.println("Resume!");
 
-    clearLine(4);
-    //SeeedOled.putString("servo stop");
+  clearLine(4);
+  //SeeedOled.putString("servo stop");
 
-    myServo.detach();
+  myServo.detach();
 }
 
 // prints 16 spaces to line 'num'
@@ -369,10 +381,35 @@ void set_time()
 
 
 void draw(void) {
-  // graphic commands to redraw the complete screen should be placed here  
-  u8g.setFont(u8g_font_unifont);
+  // graphic commands to redraw the complete screen should be placed here
+  //u8g.setFont(u8g_font_unifont);
   //u8g.setFont(u8g_font_osb21);
   //u8g.setFont(u8g_font_fur30);
-  u8g.drawStr( 0, 30, "Hello World!");
+  //u8g.setFont(u8g_font_10x20);
+  //u8g.setFont(u8g_font_helvR12);
+  //u8g.setFont(u8g_font_ncenR12);
+  u8g.setFont(u8g_font_fur11);
+  
+  //u8g.drawStr( 0, 30, "Hello World!");
+  stime = String( String("Time: ") +
+            String(hour, DEC) + String(":") +
+            String(minute, DEC) + String(":") +
+            String(second, DEC)
+          );
+  stime.toCharArray(cbuf, 21);
+  Serial.print ("debug:");
+  Serial.println (cbuf);
+  u8g.drawStr( 0,  12, cbuf);
+
+  stime = String("Feed@: ");
+  for (byte i = 0; i <= sizeof(feed_hours); i++)
+  {
+    stime += String(feed_hours[i], DEC) + String(":") +
+             String (feed_minute) + String(" ");
+  }
+  stime.toCharArray(cbuf, 21);
+  Serial.print ("debug:");
+  Serial.println (cbuf);
+  u8g.drawStr( 0,  30, cbuf);
 }
 
