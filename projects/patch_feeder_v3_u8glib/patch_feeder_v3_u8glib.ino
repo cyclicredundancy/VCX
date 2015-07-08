@@ -201,7 +201,7 @@ void loop()
   }
 
   if (minute == feed_minute && second < 4) {
-    for (byte i = 0; i <= sizeof(feed_hours); i++)
+    for (byte i = 0; i < sizeof(feed_hours); i++)
     {
       if (hour == feed_hours[i]) {
         dispense();
@@ -388,7 +388,9 @@ void draw(void) {
   //u8g.setFont(u8g_font_10x20);
   //u8g.setFont(u8g_font_helvR12);
   //u8g.setFont(u8g_font_ncenR12);
-  u8g.setFont(u8g_font_fur11);
+  //u8g.setFont(u8g_font_fur11);
+  //u8g.setFont(u8g_font_6x13); 
+  u8g.setFont(u8g_font_helvR08);
   
   //u8g.drawStr( 0, 30, "Hello World!");
   stime = String( String("Time: ") +
@@ -401,7 +403,7 @@ void draw(void) {
   Serial.println (cbuf);
   u8g.drawStr( 0,  12, cbuf);
 
-  stime = String("Feed@: ");
+  stime = String (sizeof(feed_hours)) + String(" feeds: ");
   for (byte i = 0; i <= sizeof(feed_hours); i++)
   {
     stime += String(feed_hours[i], DEC) + String(":") +
@@ -410,6 +412,6 @@ void draw(void) {
   stime.toCharArray(cbuf, 21);
   Serial.print ("debug:");
   Serial.println (cbuf);
-  u8g.drawStr( 0,  30, cbuf);
+  u8g.drawStr( 0,  28, cbuf);
 }
 
