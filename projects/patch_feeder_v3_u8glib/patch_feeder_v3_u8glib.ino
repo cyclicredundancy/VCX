@@ -1,11 +1,16 @@
+// Patch Feeder firmware for V3 physical design.
+// Design aim is to make an automatic multi feeder for Patch cat.
 #include <Wire.h>
 #include <Servo.h>
-
 #include <U8glib.h>
-U8GLIB_SSD1306_128X32 u8g(U8G_I2C_OPT_NONE);  // I2C / TWI
+U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE);  // I2C / TWI
 
-//#include <SeeedOLED.h>
-//#define SOLED
+// Components used:
+// Freeduino-V1.22 ATmega328 with FTDI on board
+// ChronoDot
+// SEEED Studio TWIG OLED 128x64 monochrome - with u8glib
+// Parallav continuous rotation servo
+// Adafruit rotary encoder 24 clicks
 
 #define encoder0PinA  2
 #define encoder0PinB  7
@@ -26,8 +31,8 @@ volatile int push = 0;
 // 1=Sunday, 2=Monday, ... 7=Saturday
 byte second, minute, hour, dayOfWeek, dayOfMonth, month, year;
 
-byte feed_minute = 15;
-byte feed_hours[] = {5, 17};
+const byte feed_minute = 30;
+const byte feed_hours[2] = {5, 17};
 
 String stime;
 char cbuf[21] = {0};
@@ -36,16 +41,6 @@ bool update_time = 0;
 bool testing = false;
 
 Servo myServo;
-
-//#Line : value
-//#  0  : Name
-//#  1  :
-//#  2  : push
-//#  3  : click clack count
-//#  4  : servo status
-//#  5  :
-//#  6  : time
-//#  7  : date
 
 void setup()
 {
@@ -64,48 +59,15 @@ void setup()
   Serial.begin (115200);
 
   Wire.begin();
-
-# ifdef SOLED
-  SeeedOled.init();  //initialze SEEED OLED display
-  //DDRB|=0x21;
-  //PORTB |= 0x21;
-  SeeedOled.clearDisplay();          //clear the screen and set start position to top left corner
-  SeeedOled.setNormalDisplay();      //Set display to normal mode (i.e non-inverse mode)
-  SeeedOled.setPageMode();           //Set addressing mode to Page Mode
-  SeeedOled.setTextXY(0, 0);         //Set the cursor to Xth Page, Yth Column
-  //SeeedOled.setHorizontalMode();      //Set addressing mode to Horizontal Mode
-  clearLine(0);
-  SeeedOled.putString("PatchMultiFeeder");
-  clearLine(1);
-  //SeeedOled.putString("CW=up CCW=down");
-# else
-  // assign default color value
-  if ( u8g.getMode() == U8G_MODE_R3G3B2 ) {
-    u8g.setColorIndex(255);     // white
-  }
-  else if ( u8g.getMode() == U8G_MODE_GRAY2BIT ) {
-    u8g.setColorIndex(3);         // max intensity
-  }
-  else if ( u8g.getMode() == U8G_MODE_BW ) {
-    u8g.setColorIndex(1);         // pixel on
-  }
-  else if ( u8g.getMode() == U8G_MODE_HICOLOR ) {
-    u8g.setHiColorByRGB(255, 255, 255);
-  }
-# endif
-
   Wire.beginTransmission(rtc_i2c_addr); // address DS3231
   Wire.write(0x0E); // select register
   Wire.write(0b00011100); // write register bitmap, bit 7 is /EOSC
   Wire.endTransmission();
 
-  /*
-    myServo.attach(contiServoPin);
-    myServo.writeMicroseconds(1500);  // Stop rotating
-  */
-
-  //clearLine(4);
-  //SeeedOled.putString("servo: stop");
+  // Completely disable the servo till we decide to move it to avoid 
+  // creeping in continuous rotation servo motors.
+  //myServo.attach(contiServoPin);
+  //myServo.writeMicroseconds(1500);  // Stop rotating
 
   delay(2000);
   Serial.println("READY!");
@@ -136,25 +98,13 @@ void setup()
   Serial.print ("minute:");
   Serial.println (minute, DEC);
 
-  Serial.print ("debug size:");
+  Serial.print ("debug feed_hours size:");
   Serial.println (sizeof(feed_hours), DEC);
 }
 
 
 void loop()
 {
-# ifdef SOLED
-  // First print current status of inputs
-  clearLine(2);
-  SeeedOled.putString("push:");
-  SeeedOled.putNumber(push);
-  clearLine(3);
-  SeeedOled.putString("cli:");
-  SeeedOled.putNumber(clicks);
-  SeeedOled.putString(" cla:");
-  SeeedOled.putNumber(clacks);
-# endif
-
   Serial.print ("pu:");
   Serial.print (push, DEC);
   Serial.print (" cli:");
@@ -169,37 +119,18 @@ void loop()
   //Serial.print ("Range:");
   //Serial.println (sensorValue, DEC);
 
-# ifdef SOLED
-  stime = String(
-            String(hour, DEC) + String(":") +
-            String(minute, DEC) + String(":") +
-            String(second, DEC) + String(":")
-          );
-  stime.toCharArray(cbuf, 21);
-  clearLine(6);
-  SeeedOled.putString(cbuf);
-
-  stime = String(
-            String(dayOfWeek, DEC) + String(":") +
-            String(dayOfMonth, DEC) + String(":") +
-            String(month, DEC) + String(":") +
-            String(year, DEC) + String(":")
-          );
-  stime.toCharArray(cbuf, 21);
-  clearLine(7);
-  SeeedOled.putString(cbuf);
-# else
-  // picture loop
+  // OLED draw loop
   u8g.firstPage();
   do {
     draw();
   } while ( u8g.nextPage() );
-# endif
 
+  // when in testing mode dispense every minute at second==20
   if (testing && !(second % 20)) {
     dispense();
   }
 
+  // real dispense check
   if (minute == feed_minute && second < 4) {
     for (byte i = 0; i < sizeof(feed_hours); i++)
     {
@@ -208,39 +139,15 @@ void loop()
         break;
       }
     }
-    /*
-    switch(hour) {
-      case 5:   // 5 am
-      case 17:  // 5 pm
-        dispense();
-        break;
-    }
-    */
   }
 
   //if nothing was pressed delay
-  delay(200);
+  delay(100);
   fetch_time();
 
   static byte toggle = 0;
   digitalWrite(led, toggle);
   toggle = !toggle;
-}
-
-void old_dispense()
-{
-  Serial.println("Feed!");
-  clearLine(4);
-  //SeeedOled.putString("Smakitty!");
-  delay(500);
-  myServo.writeMicroseconds(1525);  // Clockwise
-  Serial.println("Done!");
-  delay(8000);
-  myServo.writeMicroseconds(1500);  // Stop rotating
-  Serial.println("Resume!");
-
-  clearLine(4);
-  //SeeedOled.putString("servo stop");
 }
 
 void dispense()
@@ -249,29 +156,14 @@ void dispense()
   myServo.writeMicroseconds(1500);  // Stop rotating
 
   Serial.println("Feed!");
-  clearLine(4);
-  //SeeedOled.putString("Smakitty!");
   delay(500);
   myServo.writeMicroseconds(1525);  // Clockwise
   Serial.println("Done!");
   delay(8000);
   myServo.writeMicroseconds(1500);  // Stop rotating
   Serial.println("Resume!");
-
-  clearLine(4);
-  //SeeedOled.putString("servo stop");
-
   myServo.detach();
-}
-
-// prints 16 spaces to line 'num'
-// num: 0 to 7
-void clearLine(int num)
-{
-# ifdef SOLED
-  SeeedOled.setTextXY(num, 0);         //Set the cursor to Xth Page, Yth Column
-  SeeedOled.putString("                ");
-# endif
+  delay(2000);
 }
 
 /////////////////////////////////////////////////////////
@@ -380,38 +272,57 @@ void set_time()
 }
 
 
+/////////////////////////////////////////////////////////
+// SEEED STUDIO 128x64 monochrome OLED display
+/////////////////////////////////////////////////////////
+
+
 void draw(void) {
   // graphic commands to redraw the complete screen should be placed here
-  //u8g.setFont(u8g_font_unifont);
-  //u8g.setFont(u8g_font_osb21);
-  //u8g.setFont(u8g_font_fur30);
-  //u8g.setFont(u8g_font_10x20);
-  //u8g.setFont(u8g_font_helvR12);
-  //u8g.setFont(u8g_font_ncenR12);
-  //u8g.setFont(u8g_font_fur11);
-  //u8g.setFont(u8g_font_6x13); 
-  u8g.setFont(u8g_font_helvR08);
+
+  // switch background and foreground colors every minute to prevent display burn in
+  if ( minute % 2 ) { // if odd minute
+    u8g.setColorIndex(1);
+    u8g.drawBox(0, 0, 127, 63);     // draw cursor bar
+    u8g.setColorIndex(0);
+  } else {
+    u8g.setColorIndex(1);
+  }
+
+/*
+    u8g.setFont(u8g_font_unifont);
+    u8g.setFont(u8g_font_osb21);
+    u8g.setFont(u8g_font_fur30);
+    u8g.setFont(u8g_font_10x20);
+    u8g.setFont(u8g_font_ncenR12);
+    u8g.setFont(u8g_font_fur11);
+    u8g.setFont(u8g_font_6x13); 
+    u8g.setFont(u8g_font_helvR12);
+    u8g.setFont(u8g_font_helvR08);
+*/
+    u8g.setFont(u8g_font_7x13); 
   
-  //u8g.drawStr( 0, 30, "Hello World!");
-  stime = String( String("Time: ") +
+  stime = String( String(" Time: ") +
             String(hour, DEC) + String(":") +
             String(minute, DEC) + String(":") +
             String(second, DEC)
           );
   stime.toCharArray(cbuf, 21);
-  Serial.print ("debug:");
-  Serial.println (cbuf);
   u8g.drawStr( 0,  12, cbuf);
 
-  stime = String (sizeof(feed_hours)) + String(" feeds: ");
-  for (byte i = 0; i <= sizeof(feed_hours); i++)
+  stime = String(" ") + String (sizeof(feed_hours)) + String(" feeds, at:");
+  stime.toCharArray(cbuf, 21);
+  u8g.drawStr( 0,  28, cbuf);
+  
+  stime = String(" ");
+  for (byte i = 0; i < sizeof(feed_hours); i++)
   {
     stime += String(feed_hours[i], DEC) + String(":") +
              String (feed_minute) + String(" ");
   }
   stime.toCharArray(cbuf, 21);
-  Serial.print ("debug:");
-  Serial.println (cbuf);
-  u8g.drawStr( 0,  28, cbuf);
+  u8g.drawStr( 0,  44, cbuf);
+ 
+  u8g.drawStr( 0, 60, " PatchFeeder V3.x");
 }
 
