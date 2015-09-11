@@ -40,7 +40,7 @@ char cbuf[21] = {0};
 void march(unsigned speakerPin);
 
 // compile time testing mode
-#define TESTING
+//#define TESTING
 
 /////////////////////////////////////////////////////////
 // time and portion control
@@ -49,8 +49,8 @@ void march(unsigned speakerPin);
 const byte feed_entries   = 3;
 #ifndef TESTING
 const byte feed_hours[3]  = { 5,  7, 17};
-const byte feed_minute[3] = {30, 15, 30};
-const byte feed_clicks[3] = {16, 64, 64}; // read comments below
+const byte feed_minute[3] = {30, 00, 30};
+const byte feed_clicks[3] = {32, 64, 64}; // read comments below
 #else
 const byte feed_hours[3]  = { 0,  0,  0};
 const byte feed_minute[3] = {30, 31, 32};
