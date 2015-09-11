@@ -53,7 +53,7 @@ const byte feed_minute[3] = {30, 15, 30};
 const byte feed_clicks[3] = {16, 64, 64}; // read comments below
 #else
 const byte feed_hours[3]  = { 0,  0,  0};
-const byte feed_minute[3] = {28, 29, 30};
+const byte feed_minute[3] = {30, 31, 32};
 const byte feed_clicks[3] = {16, 32, 64}; // read comments below
 #endif
 // value tuned as per the duration of dispense() method
@@ -227,7 +227,7 @@ void test_loop()
 void dispense(byte clicks)
 {
   // sound the dinner bell
-# ifdef TESTING
+# ifndef TESTING
   march(buzzer_pin);
 # else
   delay(2000);
