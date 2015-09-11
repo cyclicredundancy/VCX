@@ -24,26 +24,52 @@ U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE);  // I2C / TWI
 
 #define led           13
 
-#define sensorPin     A0 //Sharp IR rangefinder
-
 #define rtc_i2c_addr 0x68
+
+#define buzzer_pin 10
+
+Servo myServo;
 
 // 1=Sunday, 2=Monday, ... 7=Saturday
 byte second, minute, hour, dayOfWeek, dayOfMonth, month, year;
-
-const byte feed_minute = 45;
-const byte feed_hours[2] = {5, 17};
+bool update_time = 0;
 
 String stime;
 char cbuf[21] = {0};
 
-bool update_time = 0;
-bool testing = false;
-
-Servo myServo;
-
-#define buzzer_pin 10
 void march(unsigned speakerPin);
+
+// compile time testing mode
+#define TESTING
+
+/////////////////////////////////////////////////////////
+// time and portion control
+/////////////////////////////////////////////////////////
+
+const byte feed_entries   = 3;
+#ifndef TESTING
+const byte feed_hours[3]  = { 5,  7, 17};
+const byte feed_minute[3] = {30, 15, 30};
+const byte feed_clicks[3] = {16, 64, 64}; // read comments below
+#else
+const byte feed_hours[3]  = { 0,  0,  0};
+const byte feed_minute[3] = {28, 29, 30};
+const byte feed_clicks[3] = {16, 32, 64}; // read comments below
+#endif
+// value tuned as per the duration of dispense() method
+const byte feed_second    = 4;
+
+
+//////// How to set the clicks value ////////
+//24 detents per rotation
+// 4 transitions per detent
+//16 transitions/clicks for 1/6 rotation
+/////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////
+// setup and loop
+/////////////////////////////////////////////////////////
 
 void setup()
 {
@@ -54,8 +80,6 @@ void setup()
   delay(500);
   Serial.print(millis(), DEC);
   Serial.println (" : setup() : pin setup");
-
-  if (testing) march(buzzer_pin);
 
   pinMode(encoder0PinA, INPUT);
   pinMode(encoder0PinB, INPUT);
@@ -72,13 +96,13 @@ void setup()
 
   fetch_time();
 
-  Serial.println ("BEFORE");
-  Serial.print ("hour:");
-  Serial.println (hour, DEC);
-  Serial.print ("minute:");
-  Serial.println (minute, DEC);
-
   if (update_time) {
+    Serial.println ("BEFORE");
+    Serial.print ("hour:");
+    Serial.println (hour, DEC);
+    Serial.print ("minute:");
+    Serial.println (minute, DEC);
+
     ////// Use byte type casting and if you want to hardcode values
     second = (byte) (0);
     minute = (byte) (0);
@@ -88,16 +112,13 @@ void setup()
     month = (byte) (5);
     year = (byte) (15);
     set_time();
+
+    Serial.println ("AFTER");
+    Serial.print ("hour:");
+    Serial.println (hour, DEC);
+    Serial.print ("minute:");
+    Serial.println (minute, DEC);
   }
-
-  Serial.println ("AFTER");
-  Serial.print ("hour:");
-  Serial.println (hour, DEC);
-  Serial.print ("minute:");
-  Serial.println (minute, DEC);
-
-  Serial.print ("debug feed_hours size:");
-  Serial.println (sizeof(feed_hours), DEC);
 }
 
 void loop()
@@ -108,12 +129,8 @@ void loop()
     draw();
   } while ( u8g.nextPage() );
 
-  // when in testing mode dispense every minute at second==20
-  if (testing && !(second % 20)) {
-    dispense();
-  }
-
   // real dispense check
+  /*
   if (minute == feed_minute && second < 4) {
     for (byte i = 0; i < sizeof(feed_hours); i++)
     {
@@ -121,6 +138,17 @@ void loop()
         dispense();
         break;
       }
+    }
+  }
+  */
+  for (byte i = 0; i < feed_entries; i++)
+  {
+    if (hour == feed_hours[i] &&
+        minute == feed_minute[i] &&
+        second < feed_second )
+    {
+      dispense(feed_clicks[i]);
+      break;
     }
   }
 
@@ -196,10 +224,14 @@ void test_loop()
 /////////////////////////////////////////////////////////
 
 
-void dispense()
+void dispense(byte clicks)
 {
   // sound the dinner bell
+# ifdef TESTING
   march(buzzer_pin);
+# else
+  delay(2000);
+# endif
 
   int a = 0, b = 0, x = 0, y = 0, count = 0;
   unsigned long tstamp = 0;
@@ -242,7 +274,7 @@ void dispense()
     //24 detents per rotation
     // 4 transitions per detent
     //16 transition for 1/6 rotation
-    if (count >= 16)
+    if (count >= clicks)
       break;
   };
 
@@ -349,40 +381,40 @@ void draw(void) {
     u8g.setColorIndex(1);
   }
 
-/*
-    u8g.setFont(u8g_font_unifont);
-    u8g.setFont(u8g_font_osb21);
-    u8g.setFont(u8g_font_fur30);
-    u8g.setFont(u8g_font_10x20);
-    u8g.setFont(u8g_font_ncenR12);
-    u8g.setFont(u8g_font_fur11);
-    u8g.setFont(u8g_font_6x13); 
-    u8g.setFont(u8g_font_helvR12);
-    u8g.setFont(u8g_font_helvR08);
-*/
-    u8g.setFont(u8g_font_7x13); 
-  
+  /*
+      u8g.setFont(u8g_font_unifont);
+      u8g.setFont(u8g_font_osb21);
+      u8g.setFont(u8g_font_fur30);
+      u8g.setFont(u8g_font_10x20);
+      u8g.setFont(u8g_font_ncenR12);
+      u8g.setFont(u8g_font_fur11);
+      u8g.setFont(u8g_font_6x13);
+      u8g.setFont(u8g_font_helvR12);
+      u8g.setFont(u8g_font_helvR08);
+  */
+  u8g.setFont(u8g_font_7x13);
+
   stime = String( String(" Time: ") +
-            String(hour, DEC) + String(":") +
-            String(minute, DEC) + String(":") +
-            String(second, DEC)
-          );
+                  String(hour, DEC) + String(":") +
+                  String(minute, DEC) + String(":") +
+                  String(second, DEC)
+                );
   stime.toCharArray(cbuf, 21);
   u8g.drawStr( 0,  12, cbuf);
 
   stime = String(" ") + String (sizeof(feed_hours)) + String(" feeds, at:");
   stime.toCharArray(cbuf, 21);
   u8g.drawStr( 0,  28, cbuf);
-  
+
   stime = String(" ");
   for (byte i = 0; i < sizeof(feed_hours); i++)
   {
     stime += String(feed_hours[i], DEC) + String(":") +
-             String (feed_minute) + String(" ");
+             String (feed_minute[i]) + String(" ");
   }
   stime.toCharArray(cbuf, 21);
   u8g.drawStr( 0,  44, cbuf);
- 
+
   u8g.drawStr( 0, 60, " PatchMultiFeeder");
 }
 
