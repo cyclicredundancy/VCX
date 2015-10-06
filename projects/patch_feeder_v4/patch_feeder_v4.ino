@@ -8,12 +8,12 @@ U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE);  // I2C / TWI
 
 // Components used:
 // Arduino:
-//    EMSL Diavolino with Adafruit bluefruit EZ-LINK OR
-//    Freeduino-V1.22 ATmega328 with FTDI on board
+//    EMSL Diavolino with Adafruit bluefruit EZ-Link
 // ChronoDot RTC
 // SEEED Studio TWIG OLED 128x64 monochrome - with u8glib
 // Parallax continuous rotation servo
 // Adafruit rotary encoder 24 clicks
+//    coupled to servo shaft with Servocity chain and sprocket
 // Piezo buzzer
 
 #define encoder0PinA  2
@@ -43,28 +43,35 @@ void march(unsigned speakerPin);
 //#define TESTING
 
 /////////////////////////////////////////////////////////
-// time and portion control
+// Time and portion control
 /////////////////////////////////////////////////////////
-
-const byte feed_entries   = 3;
-#ifndef TESTING
-const byte feed_hours[3]  = { 5,  7, 17};
-const byte feed_minute[3] = {30, 00, 30};
-const byte feed_clicks[3] = {32, 64, 64}; // read comments below
-#else
-const byte feed_hours[3]  = { 0,  0,  0};
-const byte feed_minute[3] = {30, 31, 32};
-const byte feed_clicks[3] = {16, 32, 64}; // read comments below
-#endif
-// value tuned as per the duration of dispense() method
-const byte feed_second    = 4;
-
 
 //////// How to set the clicks value ////////
 //24 detents per rotation
 // 4 transitions per detent
 //16 transitions/clicks for 1/6 rotation
-/////////////////////////////////////////////
+
+
+#ifdef TESTING
+const byte feed_entries   = 3;
+const byte feed_hours[3]  = {17, 18, 18};
+const byte feed_minute[3] = {59, 02, 04};
+const byte feed_clicks[3] = {64, 64, 64};
+#else
+//@home:
+const byte feed_entries   = 3;
+const byte feed_hours[3]  = { 5,  6, 17};
+const byte feed_minute[3] = {30, 30, 30};
+const byte feed_clicks[3] = {32, 32, 32};
+//Pet Sitter:
+//const byte feed_entries   = 2;
+//const byte feed_hours[2]  = { 5, 21};
+//const byte feed_minute[2] = {30,  0};
+//const byte feed_clicks[2] = {32, 32};
+#endif
+// value tuned as per the duration of dispense() method
+const byte feed_second    = 4;
+
 
 
 /////////////////////////////////////////////////////////
@@ -119,28 +126,41 @@ void setup()
     Serial.print ("minute:");
     Serial.println (minute, DEC);
   }
+
+# ifdef TESTING
+  Serial.print(millis(), DEC);
+  Serial.println (" : setup() : in TESTING mode");
+# endif
 }
 
 void loop()
 {
+  //if nothing was pressed delay
+  delay(100);
+  fetch_time();
+
+  static byte toggle = 0;
+  digitalWrite(led, toggle);
+  toggle = !toggle;
+
   // OLED draw loop
   u8g.firstPage();
   do {
     draw();
   } while ( u8g.nextPage() );
 
-  // real dispense check
-  /*
-  if (minute == feed_minute && second < 4) {
-    for (byte i = 0; i < sizeof(feed_hours); i++)
-    {
-      if (hour == feed_hours[i]) {
-        dispense();
-        break;
-      }
+# ifdef TESTING
+  if (Serial.available() != 0) {
+    if (Serial.read() == '1') {
+      Serial.print(millis(), DEC);
+      Serial.println (" : loop() : TEST triggered");
+      delay(2000);
+      dispense(16);
     }
   }
-  */
+# endif
+
+  // real dispense check
   for (byte i = 0; i < feed_entries; i++)
   {
     if (hour == feed_hours[i] &&
@@ -152,136 +172,11 @@ void loop()
     }
   }
 
-  //if nothing was pressed delay
-  delay(100);
-  fetch_time();
-
-  static byte toggle = 0;
-  digitalWrite(led, toggle);
-  toggle = !toggle;
-
-}
-
-void test_loop()
-{
-  if (Serial.available() == 0)
-    return;
-  if (Serial.read() != '1')
-    return;
-  Serial.print(millis(), DEC);
-  Serial.println (" : loop() : triggered");
-  delay(3000);
-
-  int a = 0, b = 0, x = 0, y = 0, count = 0;
-  unsigned long tstamp = 0;
-
-  tstamp = millis();
-  a = digitalRead(encoder0PinA);
-  b = digitalRead(encoder0PinB);
-  Serial.print(tstamp, DEC);
-  Serial.print(" ");
-  Serial.print(a);
-  Serial.print(b);
-  Serial.println("");
-
-  start_servo();
-
-  while (1) {
-    bool print = false;
-
-    // no debouncing
-    x = digitalRead(encoder0PinA);
-    y = digitalRead(encoder0PinB);
-
-    if (x != a) {
-      print = true;
-      a = x;
-      count ++;
-    }
-    if (y != b) {
-      print = true;
-      b = y;
-      count ++;
-    }
-    if (print) {
-      Serial.print(millis(), DEC);
-      Serial.print(" ");
-      Serial.print(a);
-      Serial.print(b);
-      Serial.println("");
-    }
-    if (count >= 16)
-      break;
-    //if (millis() > (tstamp+5000ul) )
-    //  break;
-  };
-
-  stop_servo();
 }
 
 /////////////////////////////////////////////////////////
 // food dispense control
 /////////////////////////////////////////////////////////
-
-
-void dispense(byte clicks)
-{
-  // sound the dinner bell
-# ifndef TESTING
-  march(buzzer_pin);
-# else
-  delay(2000);
-# endif
-
-  int a = 0, b = 0, x = 0, y = 0, count = 0;
-  unsigned long tstamp = 0;
-
-  tstamp = millis();
-  a = digitalRead(encoder0PinA);
-  b = digitalRead(encoder0PinB);
-  Serial.print(tstamp, DEC);
-  Serial.print(" ");
-  Serial.print(a);
-  Serial.print(b);
-  Serial.println("");
-
-  start_servo();
-
-  while (1) {
-    bool print = false;
-
-    // no debouncing so help us god
-    x = digitalRead(encoder0PinA);
-    y = digitalRead(encoder0PinB);
-
-    if (x != a) {
-      print = true;
-      a = x;
-      count ++;
-    }
-    if (y != b) {
-      print = true;
-      b = y;
-      count ++;
-    }
-    if (print) {
-      Serial.print(millis(), DEC);
-      Serial.print(" ");
-      Serial.print(a);
-      Serial.print(b);
-      Serial.println("");
-    }
-    //24 detents per rotation
-    // 4 transitions per detent
-    //16 transition for 1/6 rotation
-    if (count >= clicks)
-      break;
-  };
-
-  stop_servo();
-
-  delay(2000);
-}
 
 void stop_servo()
 {
@@ -292,12 +187,120 @@ void stop_servo()
   Serial.println(" : stop_servo : stopped");
 }
 
-void start_servo()
+void start_servo(int power)
 {
   myServo.attach(contiServoPin);
-  myServo.writeMicroseconds(1510);  // Clockwise
+  myServo.writeMicroseconds(power);  // Clockwise
   Serial.print(millis(), DEC);
   Serial.println(" : start_servo : started");
+}
+
+void dispense(byte clicks)
+{
+  String dtime = String( 
+                  String(millis(), DEC) +
+                  String(" : dispense@ ") +
+                  String(hour, DEC) + String(":") +
+                  String(minute, DEC) + String(":") +
+                  String(second, DEC)
+                );
+  Serial.println(dtime);
+
+  // sound the dinner bell
+# ifndef TESTING
+  march(buzzer_pin);
+# else
+  tone(buzzer_pin, 2000, 500);
+  delay(600);
+# endif
+
+  int a = 0, b = 0, x = 0, y = 0, count = 0;
+  unsigned long tstamp = 0;
+  unsigned long tstamp_toggle = 0;
+
+  tstamp = millis();
+  tstamp_toggle = tstamp;
+  a = digitalRead(encoder0PinA);
+  b = digitalRead(encoder0PinB);
+  Serial.print(tstamp, DEC);
+  Serial.print(" ");
+  Serial.print(a);
+  Serial.print(b);
+  Serial.println("");
+
+  start_servo(1475);
+
+  while (1) {
+    bool print = false;
+
+    // suspect HW debouncing, No SW debouncing so help us god!
+    x = digitalRead(encoder0PinA);
+    y = digitalRead(encoder0PinB);
+
+    if (x != a) {
+      print = true;
+      tstamp_toggle=millis();
+      a = x;
+      count ++;
+    }
+    if (y != b) {
+      print = true;
+      tstamp_toggle=millis();
+      b = y;
+      count ++;
+    }
+    if (print) {
+      dtime = String( 
+                  String(millis(), DEC) +
+                  String(" : ") +
+                  String(a, DEC) + String(b, DEC)
+                );
+      Serial.println(dtime);
+      /*
+      Serial.print(millis(), DEC);
+      Serial.print(" ");
+      Serial.print(a);
+      Serial.print(b);
+      Serial.println("");
+      */
+    }
+    //24 detents per rotation
+    // 4 transitions per detent
+    //16 transition for 1/6 rotation
+    if (count >= clicks) {
+      stop_servo(); // stop immediately
+      Serial.print(millis(), DEC);
+      Serial.print(" : dispense() : ");
+      Serial.print(count);
+      Serial.print(" >= ");
+      Serial.print(clicks);
+      Serial.println("");
+      break;
+    }
+    // watchdog
+    if (millis()-tstamp_toggle > 15000ul) {
+      // if it has been 15+ seconds since the last transition/toggle
+      //  then stop and abort
+      stop_servo();
+      Serial.print(millis(), DEC);
+      Serial.println(" : dispense() : ABORT");
+      break;
+    } else if (millis()-tstamp_toggle > 10000ul) {
+      // if it has been 10+ seconds since the last transition/toggle
+      //  then increase motor power
+      Serial.print(millis(), DEC);
+      Serial.println(" : dispense() : 10+ power up to 1535");
+      start_servo(1425);
+    } else if (millis()-tstamp_toggle > 5000ul) {
+      // if it has been 5+ seconds since the last transition/toggle
+      //  then increase motor power
+      start_servo(1445);
+      Serial.print(millis(), DEC);
+      Serial.println(" : dispense() : 5+ power up to 1530");
+    }
+  };
+
+  delay(2000);
 }
 
 /////////////////////////////////////////////////////////
