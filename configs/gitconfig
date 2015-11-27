@@ -1,6 +1,6 @@
 [user]
-	name = Vikram D
-	email = cyclicredundancy@gmail.com
+	name = NAME
+	email = EMAIL
 [merge]
 	tool = vimdiff
 [core]
