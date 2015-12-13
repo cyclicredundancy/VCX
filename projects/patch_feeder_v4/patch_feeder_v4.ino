@@ -39,7 +39,7 @@ char cbuf[21] = {0};
 
 void march(unsigned speakerPin);
 
-// compile time testing mode
+// compile time knob to set in testing mode
 //#define TESTING
 
 /////////////////////////////////////////////////////////
@@ -62,12 +62,12 @@ const byte feed_clicks[3] = {64, 64, 64};
 const byte feed_entries   = 3;
 const byte feed_hours[3]  = { 5,  6, 17};
 const byte feed_minute[3] = {30, 30, 30};
-const byte feed_clicks[3] = {32, 32, 32};
+const byte feed_clicks[3] = {32, 32, 48};
 //Pet Sitter:
 //const byte feed_entries   = 2;
-//const byte feed_hours[2]  = { 5, 21};
+//const byte feed_hours[2]  = { 5, 22};
 //const byte feed_minute[2] = {30,  0};
-//const byte feed_clicks[2] = {32, 32};
+//const byte feed_clicks[2] = {32, 48};
 #endif
 // value tuned as per the duration of dispense() method
 const byte feed_second    = 4;
@@ -155,7 +155,7 @@ void loop()
       Serial.print(millis(), DEC);
       Serial.println (" : loop() : TEST triggered");
       delay(2000);
-      dispense(16);
+      dispense(16*6);
     }
   }
 # endif
@@ -192,18 +192,19 @@ void start_servo(int power)
   myServo.attach(contiServoPin);
   myServo.writeMicroseconds(power);  // Clockwise
   Serial.print(millis(), DEC);
-  Serial.println(" : start_servo : started");
+  Serial.print(" : start_servo : power=");
+  Serial.println(power, DEC);
 }
 
 void dispense(byte clicks)
 {
-  String dtime = String( 
-                  String(millis(), DEC) +
-                  String(" : dispense@ ") +
-                  String(hour, DEC) + String(":") +
-                  String(minute, DEC) + String(":") +
-                  String(second, DEC)
-                );
+  String dtime = String(
+                   String(millis(), DEC) +
+                   String(" : dispense@ ") +
+                   String(hour, DEC) + String(":") +
+                   String(minute, DEC) + String(":") +
+                   String(second, DEC)
+                 );
   Serial.println(dtime);
 
   // sound the dinner bell
@@ -217,18 +218,27 @@ void dispense(byte clicks)
   int a = 0, b = 0, x = 0, y = 0, count = 0;
   unsigned long tstamp = 0;
   unsigned long tstamp_toggle = 0;
+  unsigned level = 0;
+  // power: smaller number => higher speed and more torque
+  const unsigned power_start = 1420;
+  const unsigned power_one   = 1400;
+  const unsigned power_two   = 1380;
+  const unsigned power_three = 1360;
+  unsigned power = power_start;
 
   tstamp = millis();
   tstamp_toggle = tstamp;
   a = digitalRead(encoder0PinA);
   b = digitalRead(encoder0PinB);
-  Serial.print(tstamp, DEC);
-  Serial.print(" ");
-  Serial.print(a);
-  Serial.print(b);
-  Serial.println("");
 
-  start_servo(1475);
+  dtime = String(
+            String(tstamp, DEC) +
+            String(" : ") +
+            String(a, DEC) + String(b, DEC)
+          );
+  Serial.println(dtime);
+
+  start_servo(power);
 
   while (1) {
     bool print = false;
@@ -237,33 +247,29 @@ void dispense(byte clicks)
     x = digitalRead(encoder0PinA);
     y = digitalRead(encoder0PinB);
 
+    // check for transitions
     if (x != a) {
       print = true;
-      tstamp_toggle=millis();
+      tstamp_toggle = millis();
       a = x;
       count ++;
     }
     if (y != b) {
       print = true;
-      tstamp_toggle=millis();
+      tstamp_toggle = millis();
       b = y;
       count ++;
     }
     if (print) {
-      dtime = String( 
-                  String(millis(), DEC) +
-                  String(" : ") +
-                  String(a, DEC) + String(b, DEC)
-                );
+      // print if a transition was seen
+      dtime = String(
+                String(millis(), DEC) +
+                String(" : ") +
+                String(a, DEC) + String(b, DEC)
+              );
       Serial.println(dtime);
-      /*
-      Serial.print(millis(), DEC);
-      Serial.print(" ");
-      Serial.print(a);
-      Serial.print(b);
-      Serial.println("");
-      */
     }
+    
     //24 detents per rotation
     // 4 transitions per detent
     //16 transition for 1/6 rotation
@@ -276,27 +282,60 @@ void dispense(byte clicks)
       Serial.print(clicks);
       Serial.println("");
       break;
+
+      dtime = String(
+                String(millis(), DEC) +
+                String(" : ") +
+
+      String(" : dispense() : ") +
+      String(count) + 
+      String(" >= ") + 
+      String(clicks) +
+
+                String(a, DEC) + String(b, DEC)
+              );
+      Serial.println(dtime);
+
     }
     // watchdog
-    if (millis()-tstamp_toggle > 15000ul) {
+    unsigned long since_click = (millis() - tstamp_toggle);
+    if (since_click > 15000ul) {
       // if it has been 15+ seconds since the last transition/toggle
       //  then stop and abort
       stop_servo();
       Serial.print(millis(), DEC);
-      Serial.println(" : dispense() : ABORT");
+      Serial.println(" : dispense() : 15sec+ ABORT");
+      tone(buzzer_pin, 2000, 500);
+      delay(600);
+      tone(buzzer_pin, 1900, 500);
+      delay(600);
+      tone(buzzer_pin, 1800, 500);
+      delay(600);
       break;
-    } else if (millis()-tstamp_toggle > 10000ul) {
-      // if it has been 10+ seconds since the last transition/toggle
-      //  then increase motor power
-      Serial.print(millis(), DEC);
-      Serial.println(" : dispense() : 10+ power up to 1535");
-      start_servo(1425);
-    } else if (millis()-tstamp_toggle > 5000ul) {
-      // if it has been 5+ seconds since the last transition/toggle
-      //  then increase motor power
-      start_servo(1445);
-      Serial.print(millis(), DEC);
-      Serial.println(" : dispense() : 5+ power up to 1530");
+    } else if (since_click > 9000ul) {
+      // 9+ seconds since the last transition/toggle
+      if (level==2) {
+        Serial.print(millis(), DEC);
+        Serial.println(" : dispense() : 9sec+ power up");
+        start_servo(power_three);
+        level++;
+      }
+    } else if (since_click > 6000ul) {
+      // 6+ seconds since the last transition/toggle
+      if (level==1) {
+        Serial.print(millis(), DEC);
+        Serial.println(" : dispense() : 6sec+ power up");
+        start_servo(power_two);
+        level++;
+      }
+    } else if (since_click > 3000ul) {
+      // 3+ seconds since the last transition/toggle
+      if (level==0) {
+        Serial.print(millis(), DEC);
+        Serial.println(" : dispense() : 3sec+ power up");
+        start_servo(power_one);
+        level++;
+      }
     }
   };
 
